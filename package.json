@@ -1,0 +1,19 @@
+{
+  "name": "cleaver",
+  "version": "0.0.0",
+  "description": "plug-n-play HTML slideshows",
+  "author": "Jordan Scales",
+  "keywords":[
+    "cli",
+    "json",
+    "static",
+    "website"
+  ],
+  "bin": {
+    "cleaver": "./bin/cleaver"
+  },
+  "dependencies" : {
+    "optimist": "0.3.x",
+    "mustache": "0.7.x"
+  }
+}

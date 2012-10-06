@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var main = require(path.join(__dirname,'../lib/main.js'));
+
+var argv = require('optimist').argv;
+main.init(argv);

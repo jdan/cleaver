@@ -1,0 +1,37 @@
+{
+  "name": "hello_world",
+  "author": "Jordan Scales",
+  "description": "Hello World example!",
+  "slides": [
+    {
+      "type": "main",
+      "title": "cleaver",
+      "subtitle": "the simple way to generate static HTML slideshows"
+    },
+    {
+      "type": "text",
+      "title": "What is Cleaver?",
+      "content":
+        "*Cleaver* is the simplest way to generate
+        static HTML presentations from a simple
+        JSON format.
+
+        Conveniently-packed in a node command-line
+        application, `cleaver` makes it easy to
+        create presentations, and makes them
+        portable. Adding your own styles can be
+        done in seconds."
+    },
+    {
+      "type": "list",
+      "title": "Features",
+      "items": [
+        "Small",
+        "Quick",
+        "Portable",
+        "Extensible",
+        "Fun"
+      ]
+    }
+  ]
+}
