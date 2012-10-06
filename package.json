@@ -14,6 +14,7 @@
   },
   "dependencies" : {
     "optimist": "0.3.x",
-    "mustache": "0.7.x"
+    "mustache": "0.7.x",
+    "node-markdown", "0.1.x"
   }
 }
