@@ -43,7 +43,7 @@ Consider a *very* basic example as shown below:
     {
       "type": "main",
       "title": "Cleaver 101",
-      "subtitle": "A first look at quick HTML presentations",
+      "subtitle": "A first look at quick HTML presentations"
     },
     {
       "type": "text",
@@ -67,7 +67,7 @@ Consider a *very* basic example as shown below:
 }
 ```
 
-### Header Information
+## Header Information
 
 **name**: A string representing the name of the document. Currently, cleaver renders to `output.html`,
   regardless of a given name.
@@ -77,7 +77,7 @@ Consider a *very* basic example as shown below:
 
 **description**: An option description of the slideshow.
 
-### Slides
+## Slides
 
 **main**: Intro slide containing a `title` and `subtitle`. (`templates/_main.mustache`)
 
@@ -88,9 +88,11 @@ Consider a *very* basic example as shown below:
 
 **author**: Automatically-populated, this slide uses information from the `author` hash. (`templates/_author.mustache`)
 
-### Further Information
+## Further Information
 
 **Cleaver** produces a *single* document, `output.html` containg CSS and JavaScript (jQuery) code. Everything is 
   rendered from `templates/layout.mustache`.
 
 To navigate the slideshow: H, J, BACK, DOWN, and Backspace all go back a slide, while everything else goes forward.
+
+[MIT Licensed](https://github.com/prezjordan/cleaver/blob/master/LICENSE)
