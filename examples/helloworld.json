@@ -18,11 +18,11 @@
       "content":
         "**Cleaver** is the simplest way to generate interactive HTML presentations from simple JSON.>>
 
+        Get it from [npm](http://npmjs.org): `npm install -g cleaver`>>
+
         One command turns a few lines of JSON into a beautiful slideshow. No coding necessary.>>
 
-        `cleaver --file=path/to/something.json`>>
-
-        Optional `--style` and `--output` flags as well."
+        `cleaver --file=path/to/something.json`"
     },
     {
       "type": "text",
