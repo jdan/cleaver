@@ -1,0 +1,33 @@
+{
+  "name": "Example",
+  "author": {
+    "name": "Aaron Patterson",
+    "twitter": "@tenderlove",
+    "url": "http://tenderlovemaking.com"
+  },
+  "slides": [
+    {
+      "type": "main",
+      "title": "Cleaver 101",
+      "subtitle": "A first look at quick HTML presentations"
+    },
+    {
+      "type": "text",
+      "title": "A textual example",
+      "content": 
+        "Content can be written in **Markdown!** New lines are written
+        with two angle brackets.>>
+
+        Now this will be in a separate paragraph"
+    },
+    {
+      "type": "list",
+      "title": "A list of things",
+      "items": [
+        "Item 1",
+        "Item B",
+        "Item gamma"
+      ]
+    }
+  ]
+}
