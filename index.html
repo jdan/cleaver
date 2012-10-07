@@ -104,9 +104,46 @@
 </head>
 <body>
   <div id="wrapper">
-    {{#slides}}
-      {{{.}}}
-    {{/slides}}
+      <section class="slide main">
+  <h1 class="title">cleaver</h1>
+  <h2 class="subtitle">the simple way to generate static HTML slideshows</h2>
+</section>
+
+      <section class="slide text">
+  <h1 class="title">What is Cleaver?</h1>
+  <article class="content"><p><strong>Cleaver</strong> is the simplest way to generate interactive HTML presentations from simple JSON.</p><p>        One command turns a few lines of JSON into a beautiful slideshow. No coding necessary.</p><p>        <code>cleaver --file path/to/something.json</code></p></article>
+</section>
+
+      <section class="slide text">
+  <h1 class="title">Example</h1>
+  <article class="content"><pre>{<br />  "name": "Example",<br />  "author": {<br />    "name": "Aaron Patterson",<br />    "twitter": "@tenderlove",<br />    "url": "http://tenderlovemaking.com"<br />  },<br />  "slides": [<br />    {<br />      "type": "main",<br />      "title": "Cleaver 101",<br />      "subtitle": "A first look at quick HTML presentations"<br />    }"<br />  ]<br />}</pre></article>
+</section>
+
+      <section class="slide list">
+  <h1 class="title">Slide Types</h1>
+  <ul class="items">
+      <li class="item">main - just a big ol&#39; title and subtitle</li>
+      <li class="item">text - a simple text slide with a title and markdown content</li>
+      <li class="item">list - basic list with a title and items (an array of strings)</li>
+      <li class="item">author - automatically placed at the end of your presentation based on author in your JSON</li>
+  </ul>
+</section>
+
+      <section class="slide text">
+  <h1 class="title">Code</h1>
+  <article class="content"><p>The source code to <strong>cleaver</strong> is freely        available <a href="http://github.com/prezjordan/cleaver">on GitHub</a>.        </p><p>        If you're curious to see the code used        to generate these slides,        <a href="https://gist.github.com/3847121">here's a gist</a>.</p><p>        Also available as <code>examples/helloworld.json</code>.</p><p>        <strong>Cleaver</strong> is <a href="(https://github.com/prezjordan/cleaver/blob/master/LICENSE">MIT Licensed</a>.</p></article>
+</section>
+
+      <section class="slide author">
+  <h1 class="name">Jordan Scales</h1>
+  <h3 class="twitter">
+    <a href="http://twitter.com/@prezjordan">@prezjordan</a>
+  </h3>
+  <h3 class="url">
+    <a href="http://jscal.es">http://jscal.es</a>
+  </h3>
+</section>
+
   </div>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script type="text/javascript">
