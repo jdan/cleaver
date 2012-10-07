@@ -16,30 +16,45 @@
       "type": "text",
       "title": "What is Cleaver?",
       "content":
-        "**Cleaver** is the simplest way to generate
-        static HTML presentations from a simple
-        JSON format.>>
+        "**Cleaver** is the simplest way to generate interactive HTML presentations from simple JSON.>>
 
-        Conveniently-packed in a node command-line
-        application, `cleaver` makes it easy to
-        create presentations, and makes them
-        portable. Adding your own styles can be
-        done in seconds."
+        One command turns a few lines of JSON into a beautiful slideshow. No coding necessary.>>
+
+        `cleaver --file path/to/something.json`"
+    },
+    {
+      "type": "text",
+      "title": "Example",
+      "content":
+        "<pre>{<br />
+  \"name\": \"Example\",<br />
+  \"author\": {<br />
+    \"name\": \"Aaron Patterson\",<br />
+    \"twitter\": \"@tenderlove\",<br />
+    \"url\": \"http://tenderlovemaking.com\"<br />
+  },<br />
+  \"slides\": [<br />
+    {<br />
+      \"type\": \"main\",<br />
+      \"title\": \"Cleaver 101\",<br />
+      \"subtitle\": \"A first look at quick HTML presentations\"<br />
+    }\"<br />
+  ]<br />
+}</pre>"
     },
     {
       "type": "list",
-      "title": "Features",
+      "title": "Slide Types",
       "items": [
-        "Small",
-        "Quick",
-        "Portable",
-        "Extensible",
-        "Fun"
+        "main - just a big ol' title and subtitle",
+        "text - a simple text slide with a title and markdown content",
+        "list - basic list with a title and items (an array of strings)",
+        "author - automatically placed at the end of your presentation based on author in your JSON"
       ]
     },
     {
       "type": "text",
-      "title": "The code?",
+      "title": "Code",
       "content":
         "The source code to **cleaver** is freely
         available [on GitHub](http://github.com/prezjordan/cleaver).
@@ -47,7 +62,11 @@
 
         If you're curious to see the code used
         to generate these slides,
-        [here's a gist](https://gist.github.com/3847019)."
+        [here's a gist](https://gist.github.com/3847121).>>
+
+        Also available as `examples/helloworld.json`.>>
+
+        **Cleaver** is [MIT Licensed]((https://github.com/prezjordan/cleaver/blob/master/LICENSE)."
     }
   ]
 }
