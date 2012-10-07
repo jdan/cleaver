@@ -1,6 +1,10 @@
 {
-  "name": "hello_world",
-  "author": "Jordan Scales",
+  "name": "Hello, World!",
+  "author": {
+    "name": "Jordan Scales",
+    "twitter": "@prezjordan",
+    "url": "http://jscal.es"
+  },
   "description": "Hello World example!",
   "slides": [
     {
