@@ -36,6 +36,18 @@
         "Extensible",
         "Fun"
       ]
+    },
+    {
+      "type": "text",
+      "title": "The code?",
+      "content":
+        "The source code to **cleaver** is freely
+        available [on GitHub](http://github.com/prezjordan/cleaver).
+        >>
+
+        If you're curious to see the code used
+        to generate these slides,
+        [here's a gist](https://gist.github.com/3846994)."
     }
   ]
 }
