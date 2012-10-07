@@ -15,7 +15,7 @@ npm install -g cleaver
 And use it like so (with an optional `--debug` parameter)
 
 ```
-cleaver --file path/to/something.json
+cleaver --file=path/to/something.json
 ```
 
 ## About
@@ -29,7 +29,7 @@ or placing a measly textbox.
 
 ## Reference
 
-Consider a *very* basic example as shown below:
+Consider a *very* basic (`examples/basic.json`) example as shown below:
 
 ```
 {
@@ -67,15 +67,28 @@ Consider a *very* basic example as shown below:
 }
 ```
 
+Render it like so:
+
+```
+cleaver --file=examples/basic.json
+```
+
+You can also specify an output file (default: `output.html`) and a
+stylesheet:
+
+```
+cleaver --file=examples/basic.json --output=render.html --style=styles/dark.css
+```
+
 ## Header Information
 
-**name**: A string representing the name of the document. Currently, cleaver renders to `output.html`,
-  regardless of a given name.
+**name**: A string representing the name of the document. Cleaver will
+  populate the document's `<title>` with this string.
 
 **author**: A hash containing a name, twitter handle, and homepage URL. This information
   is used to populate the last slide in every presentation.
 
-**description**: An option description of the slideshow.
+**description**: An optional description of the slideshow.
 
 ## Slides
 
@@ -92,6 +105,10 @@ Consider a *very* basic example as shown below:
 
 **Cleaver** produces a *single* document, `output.html` containg CSS and JavaScript (jQuery) code. Everything is 
   rendered from `templates/layout.mustache`.
+
+`styles/default.css` is always rendered first. If an additional
+  stylesheet is specified with the `--style` flag, that will be rendered
+  *after* so you can override the default style. Watch out for specificity.
 
 To navigate the slideshow: H, J, BACK, DOWN, and Backspace all go back a slide, while everything else goes forward.
 

@@ -20,7 +20,7 @@
 
         One command turns a few lines of JSON into a beautiful slideshow. No coding necessary.>>
 
-        `cleaver --file path/to/something.json`"
+        `cleaver --file=path/to/something.json`"
     },
     {
       "type": "text",
