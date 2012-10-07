@@ -1,0 +1,93 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #444;
+  background-color: #aaa;
+}
+
+#wrapper {
+  width: 850px;
+  height: 600px;
+  overflow: hidden;
+  margin: 80px auto 0 auto;
+  box-shadow: 3px 3px 3px #666;
+  background-color: #eee;
+}
+
+section.slide {
+  width: auto;
+  height: 540px;
+  padding: 30px;
+}
+
+section.slide.main h1.title {
+  font-size: 100px;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 30px;
+}
+
+section.slide.main h2.subtitle {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+}
+
+section.slide.text h1.title {
+  font-size: 45px;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+section.slide.text article.content {
+  padding-top: 20px;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+section.slide.list h1.title {
+  font-size: 45px;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+section.slide.list ul.items {
+  padding: 20px 0 0 60px;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+section.slide.author h1.name {
+  font-size: 55px;
+  font-weight: 200px;
+  text-align: center;
+  margin-top: 135px;
+  margin-bottom: 30px;
+}
+
+section.slide.author h3 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+section.slide.author h3 a {
+  text-decoration: none;
+  color: #44a4dd;
+}
+
+section.slide.author h3 a:hover {
+  color: #66b5ff;
+}
+
+code {
+  background-color: #ccc;
+}
+
+.hidden {
+  display: none;
+}

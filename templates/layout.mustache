@@ -1,10 +1,15 @@
 <html>
 <head>
   <title>Test</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  {{#slides}}
-    {{{.}}}
-  {{/slides}}
+  <div id="wrapper">
+    {{#slides}}
+      {{{.}}}
+    {{/slides}}
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
