@@ -1,0 +1,16 @@
+body {
+  background-color: #666;
+  color: #ddd;
+}
+
+#wrapper {
+  box-shadow: 3px 3px 3px #000;
+}
+
+section {
+  background-color: #333;
+}
+
+code {
+  background-color: #777;
+}
