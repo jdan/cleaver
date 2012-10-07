@@ -20,7 +20,7 @@ cleaver --file path/to/something.json
 
 ## About
 
-See it in action [here](http://jordanscales.com/cleaver).
+See it in action [here](http://prezjordan.github.com/cleaver).
 
 **Cleaver** is a one-stop shop for generating HTML presentations in
 record time. Using only an intuitive JSON format, you can produce
