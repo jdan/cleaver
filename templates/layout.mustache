@@ -79,12 +79,12 @@
       font-size: 30px;
     }
 
-    section.slide.author h3 a {
+    a {
       text-decoration: none;
       color: #44a4dd;
     }
 
-    section.slide.author h3 a:hover {
+    a:hover {
       color: #66b5ff;
     }
 
@@ -115,10 +115,22 @@
 
       $(document).on('keydown', function(e) {
         var curr = $('section.active');
-        if (!curr.next().length) {
-          $('section:first').show().addClass('active');
+        var kc = e.keyCode;
+
+        // left, down, H, J, backspace
+        if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74) {
+          if (!curr.prev().length) {
+            $('section:last').show().addClass('active');
+          } else {
+            curr.prev().show().addClass('active');
+          }
         } else {
-          curr.next().show().addClass('active');
+          // everything else
+          if (!curr.next().length) {
+            $('section:first').show().addClass('active');
+          } else {
+            curr.next().show().addClass('active');
+          }
         }
 
         curr.hide().removeClass('active');
