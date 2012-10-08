@@ -13,6 +13,10 @@
       {{{.}}}
     {{/slides}}
   </div>
+  <div id="controls">
+    <div id="prev">&larr;</div>
+    <div id="next">&rarr;</div>
+  </div>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script type="text/javascript">
     $(function() {
@@ -23,27 +27,50 @@
           $(v).addClass('active');
       });
 
-      $(document).on('keydown', function(e) {
+      // go back a slide
+      var go_back = function() {
         var curr = $('section.active');
+        if (!curr.prev().length) {
+          $('section:last').show().addClass('active');
+        } else {
+          curr.prev().show().addClass('active');
+        }
+        curr.hide().removeClass('active');
+      };
+
+      // go forward a slide
+      var go_forward = function() {
+        var curr = $('section.active');
+        if (!curr.next().length) {
+          $('section:first').show().addClass('active');
+        } else {
+          curr.next().show().addClass('active');
+        }
+        curr.hide().removeClass('active');
+      };
+
+      $(document).on('keydown', function(e) {
         var kc = e.keyCode;
 
         // left, down, H, J, backspace
         if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74) {
-          if (!curr.prev().length) {
-            $('section:last').show().addClass('active');
-          } else {
-            curr.prev().show().addClass('active');
-          }
+          go_back();
         } else {
-          // everything else
-          if (!curr.next().length) {
-            $('section:first').show().addClass('active');
-          } else {
-            curr.next().show().addClass('active');
-          }
+          go_forward();
         }
 
-        curr.hide().removeClass('active');
+      });
+
+      // clicking the next box
+      $('#next').on('click', function(e) {
+        e.preventDefault();
+        go_forward();
+      });
+
+      // clicking the prev box
+      $('#prev').on('click', function(e) {
+        e.preventDefault();
+        go_back();
       });
     });
   </script>

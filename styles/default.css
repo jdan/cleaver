@@ -19,6 +19,39 @@ body {
   padding: 30px;
 }
 
+#controls {
+  width: 850px;
+  margin: -60px auto 0 auto;
+}
+
+#controls div {
+  width: 50px;
+  height: 50px;
+  padding: 5px 50px;
+  font-size: 36px;
+  background-color: #ccc;
+}
+
+#controls div:hover {
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+#controls #prev {
+  float: left;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  border-top-right-radius: 20px;
+}
+
+#controls #next {
+  float: right;
+  text-align: right;
+  -webkit-border-top-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  border-top-left-radius: 20px;
+}
+
 .slide.main h1.title {
   font-size: 100px;
   text-align: center;
