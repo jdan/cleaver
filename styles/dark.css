@@ -11,6 +11,14 @@ section {
   background-color: #333;
 }
 
+#controls div {
+  background-color: #444;
+}
+
+#controls div:hover {
+  background-color: #555;
+}
+
 code {
   background-color: #777;
 }
