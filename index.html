@@ -23,6 +23,39 @@
   padding: 30px;
 }
 
+#controls {
+  width: 850px;
+  margin: -60px auto 0 auto;
+}
+
+#controls div {
+  width: 50px;
+  height: 50px;
+  padding: 5px 50px;
+  font-size: 36px;
+  background-color: #ccc;
+}
+
+#controls div:hover {
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+#controls #prev {
+  float: left;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  border-top-right-radius: 20px;
+}
+
+#controls #next {
+  float: right;
+  text-align: right;
+  -webkit-border-top-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  border-top-left-radius: 20px;
+}
+
 .slide.main h1.title {
   font-size: 100px;
   text-align: center;
@@ -147,7 +180,10 @@ pre {
 </section>
 
   </div>
-  <center><p><i>Use the arrow keys to navigate</i></p></center>
+  <div id="controls">
+    <div id="prev">&larr;</div>
+    <div id="next">&rarr;</div>
+  </div>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script type="text/javascript">
     $(function() {
@@ -158,27 +194,50 @@ pre {
           $(v).addClass('active');
       });
 
-      $(document).on('keydown', function(e) {
+      // go back a slide
+      var go_back = function() {
         var curr = $('section.active');
+        if (!curr.prev().length) {
+          $('section:last').show().addClass('active');
+        } else {
+          curr.prev().show().addClass('active');
+        }
+        curr.hide().removeClass('active');
+      };
+
+      // go forward a slide
+      var go_forward = function() {
+        var curr = $('section.active');
+        if (!curr.next().length) {
+          $('section:first').show().addClass('active');
+        } else {
+          curr.next().show().addClass('active');
+        }
+        curr.hide().removeClass('active');
+      };
+
+      $(document).on('keydown', function(e) {
         var kc = e.keyCode;
 
         // left, down, H, J, backspace
         if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74) {
-          if (!curr.prev().length) {
-            $('section:last').show().addClass('active');
-          } else {
-            curr.prev().show().addClass('active');
-          }
+          go_back();
         } else {
-          // everything else
-          if (!curr.next().length) {
-            $('section:first').show().addClass('active');
-          } else {
-            curr.next().show().addClass('active');
-          }
+          go_forward();
         }
 
-        curr.hide().removeClass('active');
+      });
+
+      // clicking the next box
+      $('#next').on('click', function(e) {
+        e.preventDefault();
+        go_forward();
+      });
+
+      // clicking the prev box
+      $('#prev').on('click', function(e) {
+        e.preventDefault();
+        go_back();
       });
     });
   </script>
