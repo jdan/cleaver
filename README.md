@@ -27,6 +27,44 @@ record time. Using only an intuitive JSON format, you can produce
 good-looking, interactive presentations without writing any code
 or placing a measly textbox.
 
+## Development
+
+**Cleaver** uses [node](http://nodejs.org) for development. Once you are
+  all set up and have cloned your fork, you can begin making
+  changes to the code base. The outline is described below.
+
+### bin/
+
+Contains the **cleaver** executable which groups together all of the
+  logic. You can integration test by running this script.
+
+### examples/
+
+Basic examples of **cleaver** usage.
+
+### lib/
+
+**main.js**: is directly called by `./bin/cleaver` and contains logic to
+  check for file input. It then passes arguments to `render()`.
+
+**render.js**: contains a method `render()` which is the core logic of
+  **cleaver**.
+
+### styles/
+
+**default.css**: the initial styling rules (these have low specificity
+  and are easily overwritten.
+
+**dark.css**: an example showing the capabilities of extending styles.
+
+### templates/
+
+**layout.mustache**: contains the overall layout of a **cleaver**
+  render, including CSS and JS placement.
+
+All other templates are denoted with a `_` to signify partial layouts.
+  They are unique to their slide `type`.
+
 ## Reference
 
 Consider a *very* basic (`examples/basic.json`) example as shown below:
