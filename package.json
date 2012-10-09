@@ -1,13 +1,13 @@
 {
   "name": "cleaver",
-  "version": "0.0.4",
+  "version": "0.0.4-1",
   "description": "plug-n-play HTML slideshows",
   "author": "Jordan Scales",
   "keywords":[
     "cli",
     "json",
     "static",
-    "website"
+    "presentation"
   ],
   "bin": {
     "cleaver": "./bin/cleaver"
