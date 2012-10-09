@@ -148,6 +148,9 @@ cleaver --file=examples/basic.json --output=render.html --style=styles/dark.css
   stylesheet is specified with the `--style` flag, that will be rendered
   *after* so you can override the default style. Watch out for specificity.
 
-To navigate the slideshow: H, J, BACK, DOWN, and Backspace all go back a slide, while everything else goes forward.
+To navigate the slideshow: 
+
+* **reverse**: H, J, LEFT, DOWN, and Backspace
+* **forward**: K, L, ENTER, UP, RIGHT, and Space
 
 [MIT Licensed](https://github.com/prezjordan/cleaver/blob/master/LICENSE)

@@ -52,10 +52,11 @@
       $(document).on('keydown', function(e) {
         var kc = e.keyCode;
 
-        // left, down, H, J, backspace
+        // left, down, H, J, backspace - BACK
+        // up, right, K, L, space, enter - FORWARD
         if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74) {
           go_back();
-        } else {
+        } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76) {
           go_forward();
         }
 
