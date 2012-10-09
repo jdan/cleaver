@@ -118,6 +118,14 @@ stylesheet:
 cleaver --file=examples/basic.json --output=render.html --style=styles/dark.css
 ```
 
+By default, **cleaver** will place navigation arrows in the bottom
+  corners of your presentation. To omit those, append a `--nocontrols`
+  flag to your command.
+
+```
+cleaver --file=examples/basic.json --nocontrols
+```
+
 ## Header Information
 
 **name**: A string representing the name of the document. Cleaver will
