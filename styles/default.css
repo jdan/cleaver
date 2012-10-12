@@ -107,20 +107,6 @@ body {
   font-size: 30px;
 }
 
-.slide.images h1.title {
-  font-size: 45px;
-  border-bottom: 1px solid #aaa;
-  margin: 0;
-  padding-bottom: 15px;
-}
-
-.slide.images img.center {
-  display: block;
-  padding-top: 25px;
-  margin: auto;
-}
-
-
 a {
   text-decoration: none;
   color: #44a4dd;
