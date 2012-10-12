@@ -1,0 +1,13 @@
+<section class="slide video">
+  <h1 class="title">{{title}}</h1>
+  <center>
+    <div>
+	  <video class="video-js vjs-default-skin" controls
+		preload="auto" width="{{width}}" height="{{height}}" data-setup="{}">
+		  {{#sources}}
+		    <source src="{{{url}}}" type='video/{{{type}}}'>
+		  {{/sources}}
+	  </video>
+    </div>
+  </center>
+</section>

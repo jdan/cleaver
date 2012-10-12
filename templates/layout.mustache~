@@ -6,7 +6,6 @@
       {{{.}}}
     {{/styles}}
   </style>
-  <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
 </head>
 <body>
   <div id="wrapper">
