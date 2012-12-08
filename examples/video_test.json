@@ -1,0 +1,31 @@
+{
+  "name": "Example Video Implementation",
+  "author": {
+    "name": "Nicholas Bevacqua",
+    "twitter": "no twitter, sorry",
+    "url": "http://github.com/soss"
+  },
+  "slides": [
+    {
+      "type": "main",
+      "title": "Cleaver 101",
+      "subtitle": "A first look at quick HTML presentations"
+    },
+    {
+      "type": "video",
+      "title": "test video",
+      "width": 640,
+      "height": 264,
+      "sources": [
+        {
+          "url": "http://video-js.zencoder.com/oceans-clip.mp4",
+          "type": "mp4" 
+        },
+        {
+          "url": "http://video-js.zencoder.com/oceans-clip.webm",
+          "type": "webm" 
+        }
+      ]
+    }
+  ]
+}

@@ -107,6 +107,13 @@ body {
   font-size: 30px;
 }
 
+.slide.video h1.title {
+  font-size: 45px;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
 a {
   text-decoration: none;
   color: #44a4dd;

@@ -6,6 +6,11 @@
       {{{.}}}
     {{/styles}}
   </style>
+
+  {{#video_required}}
+  <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+  {{/video_required}}
+
 </head>
 <body>
   <div id="wrapper">
@@ -19,7 +24,13 @@
       <div id="next">&rarr;</div>
     </div>
   {{/controls}}
+  
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  
+  {{#video_required}}
+  <script type="text/javascript" src="http://vjs.zencdn.net/c/video.js"></script>
+  {{/video_required}}
+
   <script type="text/javascript">
     $(function() {
       $('section').each(function(i, v) {
