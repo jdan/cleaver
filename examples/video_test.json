@@ -1,0 +1,28 @@
+{
+  "name": "Example Video Implementation",
+  "author": {
+    "name": "Nicholas Bevacqua",
+    "twitter": "no twitter, sorry",
+    "url": "http://github.com/gamerultimate"
+  },
+  "slides": [
+    {
+      "type": "main",
+      "title": "Cleaver 101",
+      "subtitle": "Video.js integration"
+    },
+    {
+      "type": "video",
+      "sources": [
+		{
+          "url": "http://video-js.zencoder.com/oceans-clip.webm",
+          "type": "webm" 
+        },
+        {
+          "url": "http://video-js.zencoder.com/oceans-clip.mp4",
+          "type": "mp4" 
+        }
+      ]
+    }
+  ]
+}

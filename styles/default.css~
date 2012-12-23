@@ -1,0 +1,139 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #444;
+  background-color: #aaa;
+}
+
+#wrapper {
+  width: 850px;
+  height: 600px;
+  overflow: hidden;
+  margin: 80px auto 0 auto;
+  box-shadow: 3px 3px 3px #666;
+  background-color: #eee;
+}
+
+.slide {
+  width: auto;
+  height: 540px;
+  padding: 30px;
+}
+
+#controls {
+  width: 850px;
+  margin: -60px auto 0 auto;
+}
+
+#controls div {
+  width: 50px;
+  height: 50px;
+  padding: 5px 50px;
+  font-size: 36px;
+  background-color: #ccc;
+}
+
+#controls div:hover {
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+#controls #prev {
+  float: left;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  border-top-right-radius: 20px;
+}
+
+#controls #next {
+  float: right;
+  text-align: right;
+  -webkit-border-top-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  border-top-left-radius: 20px;
+}
+
+.slide.main h1.title {
+  font-size: 100px;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 30px;
+}
+
+.slide.main h2.subtitle {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 200;
+}
+
+.slide.text h1.title {
+  font-size: 45px;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.slide.text article.content {
+  padding-top: 20px;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.slide.list h1.title {
+  font-size: 45px;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.slide.list ul.items {
+  padding: 20px 0 0 60px;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.slide.author h1.name {
+  font-size: 55px;
+  font-weight: 200px;
+  text-align: center;
+  margin-top: 135px;
+  margin-bottom: 30px;
+}
+
+.slide.author h3 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+.slide.video h1.title {
+  font-size: 45px;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #44a4dd;
+}
+
+a:hover {
+  color: #66b5ff;
+}
+
+code {
+  background-color: #ccc;
+}
+
+pre {
+  padding: 10px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.hidden {
+  display: none;
+}
+
