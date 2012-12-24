@@ -158,7 +158,7 @@ cleaver --file=examples/basic.json --nocontrols
 
 **list**: A list slide with properties `title` and `items`, an array of strings. (`templates/_list.mustache`)
 
-**video**: A slide containing a video. It takes the properties `sources`. `Sources` is an array containing objects with `url` and `type` properties. (`templates/_video.mustache`)
+**video**: A slide containing a video. It takes the property `sources`. `Sources` is an array containing objects with `url` and `type` properties. (`templates/_video.mustache`). These will be used by video.js to create the video player onscreen.
 
 **author**: Automatically-populated, this slide uses information from the `author` hash. (`templates/_author.mustache`)
 
