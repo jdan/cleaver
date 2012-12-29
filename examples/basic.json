@@ -28,6 +28,19 @@
         "Item B",
         "Item gamma"
       ]
+    },
+    {
+      "type": "video",
+      "sources": [
+        {
+          "url": "http://video-js.zencoder.com/oceans-clip.mp4",
+          "type": "mp4" 
+        },
+        {
+          "url": "http://video-js.zencoder.com/oceans-clip.webm",
+          "type": "webm" 
+        }
+      ]
     }
   ]
 }

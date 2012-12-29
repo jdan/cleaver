@@ -100,6 +100,19 @@ Consider a *very* basic (`examples/basic.json`) example as shown below:
         "Item B",
         "Item gamma"
       ]
+    },
+    {
+      "type": "video",
+      "sources": [
+        {
+          "url": "http://video-js.zencoder.com/oceans-clip.mp4",
+          "type": "mp4" 
+        },
+        {
+          "url": "http://video-js.zencoder.com/oceans-clip.webm",
+          "type": "webm" 
+        }
+      ]
     }
   ]
 }
@@ -144,6 +157,8 @@ cleaver --file=examples/basic.json --nocontrols
   **NOTE:** Since newlines are escaped in JSON, use `>>` to specify a new paragraph. (`templayes/_text.mustache`)
 
 **list**: A list slide with properties `title` and `items`, an array of strings. (`templates/_list.mustache`)
+
+**video**: A slide containing a video. It takes the property `sources`. `Sources` is an array containing objects with `url` and `type` properties. (`templates/_video.mustache`). These will be used by video.js to create the video player onscreen.
 
 **author**: Automatically-populated, this slide uses information from the `author` hash. (`templates/_author.mustache`)
 
