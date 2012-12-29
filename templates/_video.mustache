@@ -1,9 +1,8 @@
 <section class="slide video">
 	<center>
-		<video class="video-js vjs-default-skin" controls
-		  preload="auto" width="auto" height="500" data-setup="{}">
+		<video class="video-js vjs-default-skin" controls preload="auto" width="auto" height="{{{video_height}}}" data-setup="{}">
 			{{#sources}}
-			  <source src="{{{url}}}" type='video/{{{type}}}'>
+			  <source src="{{{url}}}" type="video/{{{type}}}">
 			{{/sources}}
 		</video>
 	</center>
