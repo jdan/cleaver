@@ -15,6 +15,7 @@
   "dependencies" : {
     "optimist": "0.3.x",
     "mustache": "0.7.x",
+    "q": "0.9.6",
     "node-markdown": "0.1.x"
   }
 }
