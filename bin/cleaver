@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 var path = require('path');
-var main = require(path.join(__dirname,'../lib/main.js'));
+var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
 
 var argv = require('optimist').argv;
-main.init(argv);
+var runner = new Cleaver(argv);
+
+runner.run();
