@@ -10,7 +10,7 @@
 <body>
   <div id="wrapper">
     {{#slides}}
-      {{{.}}}
+      <section class="slide">{{{.}}}</section>
     {{/slides}}
   </div>
   {{#controls}}
@@ -19,8 +19,9 @@
       <div id="next">&rarr;</div>
     </div>
   {{/controls}}
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script type="text/javascript">
+    {{{jquery}}}
+
     $(function() {
       $('section').each(function(i, v) {
         if (i)
