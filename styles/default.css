@@ -52,41 +52,34 @@ body {
   border-top-left-radius: 20px;
 }
 
-.slide.main h1.title {
+.slide h1 {
   font-size: 100px;
   text-align: center;
   margin-top: 150px;
   margin-bottom: 30px;
 }
 
-.slide.main h2.subtitle {
+.slide h2 {
   font-size: 30px;
   text-align: center;
   font-weight: 200;
 }
 
-.slide.text h1.title {
+.slide h3 {
   font-size: 45px;
   border-bottom: 1px solid #aaa;
   margin: 0;
   padding-bottom: 15px;
 }
 
-.slide.text article.content {
+.slide .content {
   padding-top: 20px;
   font-weight: 200;
   font-size: 32px;
   line-height: 44px;
 }
 
-.slide.list h1.title {
-  font-size: 45px;
-  border-bottom: 1px solid #aaa;
-  margin: 0;
-  padding-bottom: 15px;
-}
-
-.slide.list ul.items {
+.slide ul {
   padding: 20px 0 0 60px;
   font-weight: 200;
   font-size: 32px;

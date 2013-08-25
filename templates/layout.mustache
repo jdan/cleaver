@@ -10,7 +10,9 @@
 <body>
   <div id="wrapper">
     {{#slides}}
-      <section class="slide">{{{.}}}</section>
+      <section class="slide">
+        <article class="content">{{{.}}}</article>
+      </section>
     {{/slides}}
   </div>
   {{#controls}}
