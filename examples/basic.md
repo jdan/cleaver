@@ -1,4 +1,4 @@
-name: Example
+title: Example
 author:
   name: Aaron Patterson
   twitter: @tenderlove
