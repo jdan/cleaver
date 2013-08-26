@@ -1,8 +1,8 @@
 title: Example
 author:
-  name: Aaron Patterson
-  twitter: @tenderlove
-  url: http://tenderlovemaking.com
+  name: "Aaron Patterson"
+  twitter: "@tenderlove"
+  url: "http://tenderlovemaking.com"
 
 --
 

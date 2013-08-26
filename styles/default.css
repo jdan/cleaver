@@ -86,18 +86,19 @@ body {
   line-height: 44px;
 }
 
-.slide.author h1.name {
+.slide .author h1.name {
   font-size: 55px;
-  font-weight: 200px;
+  font-weight: 200;
   text-align: center;
   margin-top: 135px;
   margin-bottom: 30px;
 }
 
-.slide.author h3 {
+.slide .author h3 {
   font-weight: 100;
   text-align: center;
   font-size: 30px;
+  border: none;
 }
 
 a {
