@@ -2,8 +2,6 @@
 
 var path = require('path');
 var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
-
-var argv = require('optimist').argv;
-var runner = new Cleaver(argv);
+var runner = new Cleaver(process.argv[2]);
 
 runner.run();
