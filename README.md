@@ -86,7 +86,7 @@ the following fields.
     * **url**: A url to your website
     * **twitter**: Your twitter handle
 * **style**: An optional stylesheet to load
-* **output**: A location to save the rendered document (default: *output.html*)
+* **output**: A location to save the rendered document (default: *cleaver.html*)
 * **controls**: A boolean representing whether or not arrow buttons should be included (default: *true*)
 
 If author is included, the following slide will be automatically inserted
