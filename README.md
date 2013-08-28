@@ -1,10 +1,46 @@
 # Cleaver
 
-a command-line tool for generating HTML slideshows with JSON
+30-second slideshows for hackers
 
----
+## Intro
 
-## Quick Setup
+Cleaver turns this:
+
+    title: Basic Example
+    author:
+      name: "Jordan Scales"
+      twitter: "@jdan"
+      url: "http://jordanscales.com"
+    output: basic.html
+
+    --
+
+    # Cleaver 101
+    ## A first look at quick HTML presentations
+
+    --
+
+    ### A textual example
+
+    Content can be written in **Markdown!** New lines no longer need two angle brackets.
+
+    This will be in a separate paragraph
+
+    --
+
+    ### A list of things
+
+    * Item 1
+    * Item B
+    * Item gamma
+
+    No need for mutliple templates!
+
+Into this:
+
+![output](https://dsz91cxz97a03.cloudfront.net/hHBVUtbREK.gif)
+
+## Quick Start
 
 Get it on NPM.
 
@@ -12,41 +48,92 @@ Get it on NPM.
 npm install -g cleaver
 ```
 
-And use it like so (with an optional `--debug` parameter)
+Run it.
 
 ```
-cleaver --file=path/to/something.json
+cleaver path/to/something.md
 ```
 
-## About
-
-See it in action [here](http://prezjordan.github.io/cleaver).
+## More Info
 
 **Cleaver** is a one-stop shop for generating HTML presentations in
-record time. Using only an intuitive JSON format, you can produce
+record time. Using some spiced up markdown, you can produce
 good-looking, interactive presentations without writing any code
 or placing a measly textbox.
 
-## Development
+All you need to do is write some blocks of markdown, separated by `--`
+on its own line and include metadata at the top.
 
-**Cleaver** uses [node](http://nodejs.org) for development. Once you are
-  all set up and have cloned your fork, you can begin making
-  changes to the code base. The outline is described below.
+Let's walk through the above example piece by piece.
 
-##
+### Metadata
 
-## Further Information
+    title: Basic Example
+    author:
+      name: "Jordan Scales"
+      twitter: "@jdan"
+      url: "http://jordanscales.com"
+    output: basic.html
 
-**Cleaver** produces a *single* document, `output.html` containg CSS and JavaScript (jQuery) code. Everything is
-  rendered from `templates/layout.mustache`.
+The first section of any cleaver document is the metadata. Currently cleaver supports
+the following fields.
 
-`styles/default.css` is always rendered first. If an additional
-  stylesheet is specified with the `--style` flag, that will be rendered
-  *after* so you can override the default style. Watch out for specificity.
+* **title**: The title of the slideshow
+* **author**
+    * **name**: Your full name
+    * **url**: A url to your website
+    * **twitter**: Your twitter handle
+* **style**: An optional stylesheet to load
+* **output**: A location to save the rendered document (default: *output.html*)
+* **controls**: A boolean representing whether or not arrow buttons should be included (default: *true*)
+
+Title is the only required field. If author is included, the following slide will
+be automatically inserted at the end of your presentation:
+
+![author slide](https://dsz91cxz97a03.cloudfront.net/YxgwvqVZNg-1200x1200.png)
+
+### Title slide
+
+    # Cleaver 101
+    ## A first look at quick HTML presentations
+
+**h1** and **h2** elements (prefaced with *#* and *##* respectively), will
+automatically include padding to render a title slide.
+
+### Other slides
+
+    ### A list of things
+
+    * Item 1
+    * Item B
+    * Item gamma
+
+    No need for mutliple templates!
+
+Since slides are written in [Markdown](http://daringfireball.net/projects/markdown/),
+you can include things like lists, images, and arbitrary HTML.
+
+**h3** tags (prefaced `###`) are automatically given a bottom border to
+represent a slide title.
+
+### Navigation
 
 To navigate the slideshow:
 
 * **reverse**: H, J, LEFT, DOWN, and Backspace
 * **forward**: K, L, ENTER, UP, RIGHT, and Space
+
+Or click the buttons
+
+## Contributing
+
+* Fork it
+* Clone it
+* Checkout a release branch (`git checkout -b feature/cool-wordart`)
+* Open a pull request!
+
+With <3,
+
+Jordan
 
 [MIT Licensed](https://github.com/prezjordan/cleaver/blob/master/LICENSE)
