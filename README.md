@@ -132,10 +132,11 @@ Or click the buttons
 * Fork it
 * Clone it
 * Checkout a release branch (`git checkout -b feature/cool-wordart`)
+* Make changes, commit, and push
 * Open a pull request!
 
 With <3,
 
-Jordan
+[@jdan](http://jordanscales.com)
 
 [MIT Licensed](https://github.com/prezjordan/cleaver/blob/master/LICENSE)
