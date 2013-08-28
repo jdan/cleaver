@@ -87,8 +87,8 @@ the following fields.
 * **output**: A location to save the rendered document (default: *output.html*)
 * **controls**: A boolean representing whether or not arrow buttons should be included (default: *true*)
 
-Title is the only required field. If author is included, the following slide will
-be automatically inserted at the end of your presentation:
+If author is included, the following slide will be automatically inserted
+at the end of your presentation:
 
 ![author slide](https://dsz91cxz97a03.cloudfront.net/YxgwvqVZNg-1200x1200.png)
 
