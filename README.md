@@ -12,6 +12,7 @@ Cleaver turns this:
       twitter: "@jdan"
       url: "http://jordanscales.com"
     output: basic.html
+    controls: true
 
     --
 
@@ -74,6 +75,7 @@ Let's walk through the above example piece by piece.
       twitter: "@jdan"
       url: "http://jordanscales.com"
     output: basic.html
+    controls: true
 
 The first section of any cleaver document is the metadata. Currently cleaver supports
 the following fields.
