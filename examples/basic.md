@@ -3,6 +3,7 @@ author:
   name: "Jordan Scales"
   twitter: "@jdan"
   url: "http://jordanscales.com"
+output: basic.html
 
 --
 
