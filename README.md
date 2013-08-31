@@ -127,7 +127,7 @@ To navigate the slideshow:
 
 Or click the buttons
 
-## Contributing
+### Contributing
 
 * Fork it
 * Clone it
