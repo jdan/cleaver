@@ -1,6 +1,6 @@
 # Cleaver
 
-30-second slideshows for hackers
+30-second Slideshows for Hackers
 
 ## Intro
 
@@ -43,13 +43,13 @@ Into this:
 
 ## Quick Start
 
-Get it on NPM.
+Get it on NPM:
 
 ```
 npm install -g cleaver
 ```
 
-Run it.
+And run it like so:
 
 ```
 cleaver path/to/something.md
@@ -139,4 +139,4 @@ With <3,
 
 [@jdan](http://jordanscales.com)
 
-[MIT Licensed](https://github.com/prezjordan/cleaver/blob/master/LICENSE)
+[MIT Licensed](https://github.com/jdan/cleaver/blob/master/LICENSE)
