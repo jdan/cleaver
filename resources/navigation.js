@@ -61,7 +61,6 @@ function setPageNumbers() {
   for (var i = 0; i < pages.length; ++i) {
     var page = pages[i];
     page.dataset.page = i;
-    console.log(page, i);
   }
 }
 
