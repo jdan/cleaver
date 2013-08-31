@@ -1,16 +1,22 @@
 {
   "name": "cleaver",
+  "preferGlobal": true,
   "version": "0.2.0",
-  "description": "plug-n-play HTML slideshows",
-  "author": "Jordan Scales",
+  "author": "Jordan Scales <scalesjordan@gmail.com>",
+  "description": "30-second slideshows for hackers",
   "keywords":[
-    "cli",
-    "json",
+    "markdown",
     "static",
+    "slideshow",
     "presentation"
   ],
   "bin": {
     "cleaver": "./bin/cleaver"
+  },
+  "main": "./lib/cleaver",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdan/cleaver.git"
   },
   "dependencies" : {
     "optimist": "0.3.5",
@@ -18,5 +24,6 @@
     "q": "0.9.6",
     "node-markdown": "0.1.1",
     "js-yaml": "2.1.0"
-  }
+  },
+  "license": "MIT"
 }
