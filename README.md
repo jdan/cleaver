@@ -43,7 +43,7 @@ Into this:
 
 ## Quick Start
 
-Get it on NPM:
+Get it [on NPM](https://npmjs.org/package/cleaver):
 
 ```
 npm install -g cleaver
