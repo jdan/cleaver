@@ -66,7 +66,7 @@ Next we'll talk about setting up a presentation (it's super quick!)
 
 ### Metadata
 
-Each presentation contains metadata, for exaple:
+Each presentation contains metadata, for example:
 
     title: My Presentation
     author:
