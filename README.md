@@ -39,7 +39,7 @@ Cleaver turns this:
 
 Into this:
 
-![output](https://dsz91cxz97a03.cloudfront.net/hHBVUtbREK.gif)
+![output](https://i.cloudup.com/hHBVUtbREK.gif)
 
 ## Quick Start
 
@@ -92,7 +92,7 @@ the following fields.
 If author is included, the following slide will be automatically inserted
 at the end of your presentation:
 
-![author slide](https://dsz91cxz97a03.cloudfront.net/YxgwvqVZNg-1200x1200.png)
+![author slide](https://i.cloudup.com/YxgwvqVZNg-1200x1200.png)
 
 ### Title slide
 
