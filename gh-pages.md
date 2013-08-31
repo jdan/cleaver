@@ -85,7 +85,7 @@ Let's break this chunk down on the next slide.
 * **title**: The title of your presentation
 * **author**: Some fields to populate an optional author slide at the end
 * **style**: An optional external stylesheet to load
-* **output**: Where to save your file (*default: cleaver.html*)
+* **output**: Where to save your file (*default: FILENAME-cleaver.html*)
 * **controls**: Option to render navigation buttons (*default: true*)
 
 --
