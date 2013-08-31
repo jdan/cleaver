@@ -1,57 +1,55 @@
-$(function() {
-  $('section').each(function(i, v) {
-    if (i)
-      $(v).hide();
-    else
-      $(v).addClass('active');
-  });
+/**
+ * Takes the last slide and places it at the front.
+ */
+function goBack() {
+  var wrapper = document.querySelector('#wrapper');
+  var lastSlide = wrapper.lastChild;
+  while (lastSlide != null && lastSlide.nodeType !== 1) {
+    lastSlide = lastSlide.previousSibling;
+  }
 
-  // go back a slide
-  var go_back = function() {
-    var curr = $('section.active');
-    if (!curr.prev().length) {
-      $('section:last').show().addClass('active');
-    } else {
-      curr.prev().show().addClass('active');
-    }
-    curr.hide().removeClass('active');
-  };
+  wrapper.removeChild(lastSlide);
+  wrapper.insertBefore(lastSlide, wrapper.firstChild);
+}
 
-  // go forward a slide
-  var go_forward = function() {
-    var curr = $('section.active');
-    if (!curr.next().length) {
-      $('section:first').show().addClass('active');
-    } else {
-      curr.next().show().addClass('active');
-    }
-    curr.hide().removeClass('active');
-  };
+/**
+ * Takes the first slide and places it at the end.
+ */
+function goForward() {
+  var wrapper = document.querySelector('#wrapper');
+  var firstSlide = wrapper.firstChild;
+  while (firstSlide != null && firstSlide.nodeType !== 1) {
+    firstSlide = firstSlide.nextSibling;
+  }
 
-  $(document).on('keydown', function(e) {
+  wrapper.removeChild(firstSlide);
+  wrapper.appendChild(firstSlide);
+}
+
+window.onload = function () {
+
+  document.onkeydown = function (e) {
     var kc = e.keyCode;
 
     // left, down, H, J, backspace - BACK
     // up, right, K, L, space, enter - FORWARD
     if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74) {
-      go_back();
+      goBack();
     } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76) {
-      go_forward();
+      goForward();
+    }
+  }
+
+  if (document.querySelector('#next') && document.querySelector('#prev')) {
+    document.querySelector('#next').onclick = function (e) {
+      e.preventDefault();
+      goForward();
     }
 
-  });
-
-  if ($('#next') && $('#prev')) {
-    // clicking the next box
-    $('#next').on('click', function(e) {
+    document.querySelector('#prev').onclick = function (e) {
       e.preventDefault();
-      go_forward();
-    });
-
-    // clicking the prev box
-    $('#prev').on('click', function(e) {
-      e.preventDefault();
-      go_back();
-    });
+      goBack();
+    }
   }
-});
+
+}
