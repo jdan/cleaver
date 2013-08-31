@@ -35,7 +35,7 @@ Cleaver turns this:
     * Item B
     * Item gamma
 
-    No need for mutliple templates!
+    No need for multiple templates!
 
 Into this:
 
@@ -110,7 +110,7 @@ automatically include padding to render a title slide.
     * Item B
     * Item gamma
 
-    No need for mutliple templates!
+    No need for multiple templates!
 
 Since slides are written in [Markdown](http://daringfireball.net/projects/markdown/),
 you can include things like lists, images, and arbitrary HTML.

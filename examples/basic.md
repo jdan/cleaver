@@ -26,4 +26,4 @@ This will be in a separate paragraph
 * Item B
 * Item gamma
 
-No need for mutliple templates!
+No need for multiple templates!
