@@ -1,12 +1,6 @@
 <h3>Agenda</h3>
-{{#instructions}}
-	{{#indent}}
-			<ul>
-		{{/indent}}
-  	{{#unindent}}
-			</ul>
-  	{{/unindent}}
-  	{{#title}}
-  	  <li>{{{title}}}</li>
-  	{{/title}}
-{{/instructions}}
+<ul>
+{{#.}}
+  <li>{{.}}</li>
+{{/.}}
+</ul>
