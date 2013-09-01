@@ -88,6 +88,7 @@ the following fields.
 * **style**: An optional stylesheet to load
 * **output**: A location to save the rendered document (default: *FILENAME-cleaver.html*)
 * **controls**: A boolean representing whether or not arrow buttons should be included (default: *true*)
+* **agenda**: A boolean representing whether or not to create an agenda slide after the title (default: *false*). These will be generated based on the titles of your other slides.
 
 If author is included, the following slide will be automatically inserted
 at the end of your presentation:
