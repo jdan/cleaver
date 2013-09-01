@@ -4,6 +4,7 @@ author:
   twitter: "@jdan"
   url: "http://jordanscales.com"
 output: basic.html
+agenda: true
 
 --
 
@@ -27,3 +28,9 @@ This will be in a separate paragraph
 * Item gamma
 
 No need for multiple templates!
+
+--
+
+#### A fourth level title
+
+So that you know that the agenda will be properly generated and it will consider your changes of title levels accordingly.
