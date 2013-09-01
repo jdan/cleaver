@@ -132,10 +132,12 @@ Or click the buttons
 * Fork it
 * Clone it
 * Install dependencies if you don't have them already
-    npm install q
-    npm install node-markdown
-    npm install js-yaml
-    npm install mustache
+
+        npm install q
+        npm install node-markdown
+        npm install js-yaml
+        npm install mustache
+
 * Checkout a release branch (`git checkout -b feature/cool-wordart`)
 * Make changes, commit, and push
 * Open a pull request!
