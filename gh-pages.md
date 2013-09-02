@@ -86,6 +86,10 @@ Let's break this chunk down on the next slide.
 * **author**: Some fields to populate an optional author slide at the end
 * **style**: An optional external stylesheet to load
 * **output**: Where to save your file (*default: FILENAME-cleaver.html*)
+
+--
+
+### Metadata Fields
 * **controls**: Option to render navigation buttons (*default: true*)
 * **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (*default: false*)
 
