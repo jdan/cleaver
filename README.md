@@ -89,6 +89,7 @@ the following fields.
 * **output**: A location to save the rendered document (default: *FILENAME-cleaver.html*)
 * **controls**: Option whether or not arrow buttons should be included (default: *true*)
 * **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (default: *false*)
+* **encoding**: A specified content encoding (default: *utf-8*)
 
 If author is included, the following slide will be automatically inserted
 at the end of your presentation:
