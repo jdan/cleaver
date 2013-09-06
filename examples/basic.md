@@ -1,4 +1,5 @@
 title: Basic Example
+encoding: utf-8
 author:
   name: "Jordan Scales"
   twitter: "@jdan"
@@ -27,3 +28,25 @@ This will be in a separate paragraph
 * Item gamma
 
 No need for multiple templates!
+
+--
+
+### Unicode
+
+* 林花謝了春紅 太匆匆
+* 胭脂淚 留人醉 幾時重
+* Matching Pairs «»‹› “”‘’「」〈〉《》〔〕
+* Greek αβγδ εζηθ ικλμ νξοπ ρςτυ φχψω
+* currency  ¤ $ ¢ € ₠ £ ¥
+
+--
+
+### Images
+
+* Insert images through markup or html tag
+
+<img src="http://whatismarkdown.com/workspace/img/logo.gif" alt="Drawing" style="width: 150px;"/>
+
+    ![markdown-logo](logo.gif)
+    <img src="logo.gif" />
+
