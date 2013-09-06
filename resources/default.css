@@ -61,7 +61,7 @@ body {
   -webkit-border-top-left-radius: 20px;
   -moz-border-radius-topleft: 20px;
   border-top-left-radius: 20px;
-  
+
   /* Fix selection bug */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
