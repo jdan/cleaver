@@ -92,6 +92,7 @@ Let's break this chunk down on the next slide.
 ### Metadata Fields
 * **controls**: Option to render navigation buttons (*default: true*)
 * **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (*default: false*)
+* **encoding**: A specified content encoding (*default: utf-8*)
 
 --
 
