@@ -10,8 +10,19 @@ body {
   overflow: hidden;
   margin: 80px auto 0 auto;
   box-shadow: 3px 3px 3px #666;
-  background-color: #eee;
 }
+
+/* styles for print layout */
+#wrapper.nohide {
+  overflow: auto;
+  height: auto;
+  box-shadow: none;
+}
+
+#wrapper.nohide .slide {
+  margin-bottom: 30px;
+}
+/* /styles */
 
 .slide {
   width: auto;
@@ -20,6 +31,7 @@ body {
   font-weight: 200;
   font-size: 32px;
   line-height: 44px;
+  background-color: #eee;
 }
 
 #controls {
