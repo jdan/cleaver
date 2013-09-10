@@ -1,7 +1,7 @@
 /**
  * Takes the last slide and places it at the front.
  */
-function goBack() {
+ function goBack() {
   var wrapper = document.querySelector('#wrapper');
   var lastSlide = wrapper.lastChild;
   while (lastSlide != null && lastSlide.nodeType !== 1) {
@@ -17,7 +17,7 @@ function goBack() {
 /**
  * Takes the first slide and places it at the end.
  */
-function goForward() {
+ function goForward() {
   var wrapper = document.querySelector('#wrapper');
   var firstSlide = wrapper.firstChild;
   while (firstSlide != null && firstSlide.nodeType !== 1) {
@@ -33,28 +33,28 @@ function goForward() {
 /**
  * Updates the current URL to include a hashtag of the current page number.
  */
-function updateURL() {
+ function updateURL() {
   window.history.replaceState({} , null, '#' + currentPage());
 }
 
 /**
  * Returns the current page number of the presentation.
  */
-function currentPage() {
+ function currentPage() {
   return document.querySelector('#wrapper .slide').dataset.page;
 }
 
 /**
  * Returns a NodeList of each .slide element.
  */
-function allSlides() {
+ function allSlides() {
   return document.querySelectorAll('#wrapper .slide');
 }
 
 /**
  * Give each slide a "page" data attribute.
  */
-function setPageNumbers() {
+ function setPageNumbers() {
   var wrapper = document.querySelector('#wrapper');
   var pages   = wrapper.querySelectorAll('section');
   var page;
@@ -68,7 +68,7 @@ function setPageNumbers() {
 /**
  * Go to the specified page of content.
  */
-function goToPage(page) {
+ function goToPage(page) {
   // Try to find the target slide.
   var targetSlide = document.querySelector('#wrapper .slide[data-page="' + page + '"]');
 
@@ -100,6 +100,14 @@ window.onload = function () {
       goBack();
     } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76) {
       goForward();
+    } else if (kc == 70) {
+      if (RunPrefixMethod(document, "FullScreen") || RunPrefixMethod(document, "IsFullScreen")) {
+        RunPrefixMethod(document, "CancelFullScreen");
+      }
+      else {
+        RunPrefixMethod(document.getElementById('wrapper'), "RequestFullScreen");
+      }
+
     }
   }
 
