@@ -90,6 +90,8 @@ the following fields.
 * **controls**: Option whether or not arrow buttons should be included (default: *true*)
 * **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (default: *false*)
 * **encoding**: A specified content encoding (default: *utf-8*)
+* **template**: An absolute path specifying a template in which to render the slides (default:
+ *default.css*)
 
 If author is included, the following slide will be automatically inserted
 at the end of your presentation:
@@ -128,6 +130,37 @@ To navigate the slideshow:
 * **forward**: K, L, ENTER, UP, RIGHT, and Space
 
 Or click the buttons
+
+### Templates
+
+By default, cleaver slides are rendered in the following template:
+
+```html
+<div id="wrapper">
+  {{#slides}}
+    <section class="slide">{{{.}}}</section>
+  {{/slides}}
+</div>
+{{#controls}}
+  <div id="controls">
+    <div id="prev">&larr;</div>
+    <div id="next">&rarr;</div>
+  </div>
+{{/controls}}
+
+<script type="text/javascript">
+  {{{navigation}}}
+</script>
+```
+
+Power users may wish to render into custom templates. To do so, simply copy the following file
+and specify a template (with an absolute path) like so:
+
+```yaml
+title: Basic Example
+output: basic.html
+template: /Users/jordan/Slides/example/example.mustache
+```
 
 ### Contributing
 
