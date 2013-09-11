@@ -4,7 +4,7 @@
   "version": "0.2.0",
   "author": "Jordan Scales <scalesjordan@gmail.com>",
   "description": "30-second slideshows for hackers",
-  "keywords":[
+  "keywords": [
     "markdown",
     "static",
     "slideshow",
@@ -18,8 +18,8 @@
     "type": "git",
     "url": "https://github.com/jdan/cleaver.git"
   },
-  "dependencies" : {
-    "optimist": "0.3.5",
+  "dependencies": {
+    "optimist": "~0.3.5",
     "mustache": "0.7.0",
     "q": "0.9.6",
     "node-markdown": "0.1.1",
