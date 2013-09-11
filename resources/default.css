@@ -13,41 +13,6 @@ body {
   background-color: #eee;
 }
 
-#wrapper:full-screen {
-  min-height: 600px !important;
-  float: none !important;
-  margin: auto !important;
-  box-shadow: none !important;
-}
-
-#wrapper:-webkit-full-screen {
-  min-height: 600px !important;
-  float: none !important;
-  margin: auto !important;
-  box-shadow: none !important;
-}
-
-#wrapper:-moz-full-screen {
-  min-height: 600px !important;
-  float: none !important;
-  margin: auto !important;
-  box-shadow: none !important;
-}
-
-#wrapper:-ms-full-screen {
-  min-height: 600px !important;
-  float: none !important;
-  margin: auto !important;
-  box-shadow: none !important;
-}
-
-#wrapper:-o-full-screen {
-  min-height: 600px !important;
-  float: none !important;
-  margin: auto !important;
-  box-shadow: none !important;
-}
-
 .slide {
   width: auto;
   height: 540px;
