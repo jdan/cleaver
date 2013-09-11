@@ -2,6 +2,10 @@
 
 var path = require('path');
 var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
-var runner = new Cleaver(process.argv[2]);
+var argv = require('optimist')
+	.default('templatesDir', path.normalize(__dirname+path.sep+'..'+path.sep+"templates"))
+	.default('resourcesDir', path.normalize(__dirname+path.sep+'..'+path.sep+"resources"))
+	.argv;
+var runner = new Cleaver(argv._[0], argv.templatesDir, argv.resourcesDir);
 
 runner.run();
