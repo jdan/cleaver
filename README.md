@@ -153,8 +153,8 @@ By default, cleaver slides are rendered in the following template:
 </script>
 ```
 
-Power users may wish to render into custom templates. To do so, simply copy the following file
-and specify a template (with an absolute path) like so:
+Power users may wish to render into custom templates. To do so, simply copy the above file
+somewhere, make some changes, and specify the template (with an absolute path) like so:
 
 ```yaml
 title: Basic Example
