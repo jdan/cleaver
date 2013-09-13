@@ -90,7 +90,7 @@ the following fields.
 * **controls**: Option whether or not arrow buttons should be included (default: *true*)
 * **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (default: *false*)
 * **encoding**: A specified content encoding (default: *utf-8*)
-* **template**: An absolute path specifying a template in which to render the slides (default:
+* **template**: Location of the template used to render the slides (default:
  *default.css*)
 
 If author is included, the following slide will be automatically inserted
@@ -154,12 +154,12 @@ By default, cleaver slides are rendered in the following template:
 ```
 
 Power users may wish to render into custom templates. To do so, simply copy the above file
-somewhere, make some changes, and specify the template (with an absolute path) like so:
+somewhere, make some changes, and specify the template like so:
 
 ```yaml
 title: Basic Example
 output: basic.html
-template: /Users/jordan/Slides/example/example.mustache
+template: example.mustache
 ```
 
 ### Contributing
