@@ -92,6 +92,7 @@ the following fields.
 * **encoding**: A specified content encoding (default: *utf-8*)
 * **template**: Location of the template used to render the slides (default:
  *default.css*)
+* **mathjax**: Option whether or not to add a [MathJax](http://mathjax.org/) script to head from Content Delivery Network (default: *false*)
 
 If author is included, the following slide will be automatically inserted
 at the end of your presentation:
