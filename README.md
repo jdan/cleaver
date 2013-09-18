@@ -162,6 +162,10 @@ output: basic.html
 template: example.mustache
 ```
 
+You can also replace the entire layout (`<head>` tags and all) with the `layout` option. Use
+[layout.mustache](https://github.com/jdan/cleaver/blob/master/templates/layout.mustache) as
+an example to note what fields you should include in your custom layout.
+
 ### Contributing
 
 * Fork it
