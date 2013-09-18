@@ -4,6 +4,7 @@ author:
   twitter: "@jdan"
   url: "http://jordanscales.com"
 output: basic.html
+mathjax: true
 
 --
 
@@ -42,3 +43,9 @@ No need for multiple templates!
 * Matching Pairs «»‹› “”‘’「」〈〉《》〔〕
 * Greek αβγδ εζηθ ικλμ νξοπ ρςτυ φχψω
 * currency  ¤ $ ¢ € ₠ £ ¥
+
+--
+
+### Mathematics
+
+$$a^2 + b^2 = c^2$$
