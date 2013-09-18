@@ -1,0 +1,37 @@
+<div id="wrapper">
+  {{#slides}}
+    <section class="slide">{{{.}}}</section>
+  {{/slides}}
+</div>
+{{#controls}}
+  <div id="controls">
+    <div id="prev">&larr;</div>
+    <div id="next">&rarr;</div>
+  </div>
+{{/controls}}
+<div style="text-align:center; margin-top:80px">
+  <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=watch&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+
+  <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=fork&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+</div>
+
+<script type="text/javascript">
+  {{{navigation}}}
+</script>
+
+<!-- analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31067858-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>

@@ -1,5 +1,6 @@
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Cleaver</title>
   <style type="text/css">
     body {
@@ -14,8 +15,19 @@
   overflow: hidden;
   margin: 80px auto 0 auto;
   box-shadow: 3px 3px 3px #666;
-  background-color: #eee;
 }
+
+/* styles for print layout */
+#wrapper.nohide {
+  overflow: auto;
+  height: auto;
+  box-shadow: none;
+}
+
+#wrapper.nohide .slide {
+  margin-bottom: 30px;
+}
+/* /styles */
 
 .slide {
   width: auto;
@@ -24,6 +36,7 @@
   font-weight: 200;
   font-size: 32px;
   line-height: 44px;
+  background-color: #eee;
 }
 
 #controls {
@@ -152,12 +165,12 @@ pre > code {
 </head>
 <body>
   <div id="wrapper">
-      <section class="slide"><h1>Cleaver</h1>
+    <section class="slide"><h1>Cleaver</h1>
 
 <h2>30-second slideshows for hackers</h2>
 
 <div class="help">Use the buttons or arrow keys to switch slides</div></section>
-      <section class="slide"><h3>What is Cleaver?</h3>
+    <section class="slide"><h3>What is Cleaver?</h3>
 
 <p>Cleaver turns this:</p>
 
@@ -175,7 +188,7 @@ output: slideshow.html
 
 Based on our factors, we can sell **20 million** widgets.
 </code></pre></section>
-      <section class="slide"><h3>What is Cleaver?</h3>
+    <section class="slide"><h3>What is Cleaver?</h3>
 
 <p><strong>Into a slideshow like this</strong>.</p>
 
@@ -189,7 +202,7 @@ format.</p>
 
 <p>Cleaver comes with a stylesheet that looks good by default, but that you
 can extend at your heart's desire.</p></section>
-      <section class="slide"><h3>Quick Start</h3>
+    <section class="slide"><h3>Quick Start</h3>
 
 <p>Get cleaver from NPM</p>
 
@@ -202,7 +215,7 @@ can extend at your heart's desire.</p></section>
 </code></pre>
 
 <p>Next we'll talk about setting up a presentation (it's super quick!)</p></section>
-      <section class="slide"><h3>Metadata</h3>
+    <section class="slide"><h3>Metadata</h3>
 
 <p>Each presentation contains metadata, for example:</p>
 
@@ -216,7 +229,7 @@ output: something.html
 </code></pre>
 
 <p>Let's break this chunk down on the next slide.</p></section>
-      <section class="slide"><h3>Metadata Fields</h3>
+    <section class="slide"><h3>Metadata Fields</h3>
 
 <ul>
 <li><strong>title</strong>: The title of your presentation</li>
@@ -224,14 +237,22 @@ output: something.html
 <li><strong>style</strong>: An optional external stylesheet to load</li>
 <li><strong>output</strong>: Where to save your file (<em>default: FILENAME-cleaver.html</em>)</li>
 </ul></section>
-
     <section class="slide"><h3>Metadata Fields</h3>
+
 <ul>
 <li><strong>controls</strong>: Option to render navigation buttons (<em>default: true</em>)</li>
 <li><strong>agenda</strong>: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (<em>default: false</em>)</li>
 <li><strong>encoding</strong>: A specified content encoding (<em>default: utf-8</em>)</li>
 </ul></section>
-      <section class="slide"><h3>Other Slides</h3>
+    <section class="slide"><h3>Metadata Fields (Advanced)</h3>
+
+<ul>
+<li><strong>template</strong>: Location of the template used to render the slides (default:
+<em>default.mustache</em>)</li>
+<li><strong>layout</strong>: Location of the layout template used to render everything (default:
+<em>layout.mustache</em>)</li>
+</ul></section>
+    <section class="slide"><h3>Other Slides</h3>
 
 <p>Slides are separated by <code>--</code> and are written in markdown.</p>
 
@@ -239,11 +260,11 @@ output: something.html
 center and vertically align themselves for intro slides.</p>
 
 <p>h3's (denoted <strong>###</strong>) contain a bottom border for use as a slide header.</p></section>
-      <section class="slide"><h3>Author Slide</h3>
+    <section class="slide"><h3>Author Slide</h3>
 
 <p>If your metadata contains author information (name, url, twitter), an author
 slide will be inserted at the end of your presentation.</p></section>
-      <section class="slide"><h3>That's all, folks!</h3>
+    <section class="slide"><h3>That's all, folks!</h3>
 
 <p>Seriously, that's it. Cleaver is perfect for quick slideshows that you can
 create using a comfortable format. No extra software or text boxes required.</p>
@@ -253,30 +274,31 @@ create using a comfortable format. No extra software or text boxes required.</p>
 <p>With &lt;3,</p>
 
 <p>Jordan</p></section>
-      <section class="slide"><div class="author">
+    <section class="slide"><div class="author">
   <h1 class="name">Jordan Scales</h1>
   <h3 class="twitter">
-    <a href="http://twitter.com/@jdan">@jdan</a>
+    <a href="http://twitter.com/@jdan" tabindex="-1">@jdan</a>
   </h3>
   <h3 class="url">
-    <a href="http://jordanscales.com">http://jordanscales.com</a>
+    <a href="http://jordanscales.com" tabindex="-1">http://jordanscales.com</a>
   </h3>
 </div>
 </section>
+</div>
+  <div id="controls">
+    <div id="prev">&larr;</div>
+    <div id="next">&rarr;</div>
   </div>
-    <div id="controls">
-      <div id="prev">&larr;</div>
-      <div id="next">&rarr;</div>
-    </div>
-    <div style="text-align:center; margin-top:80px">
-      <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=watch&count=true"
-        allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+<div style="text-align:center; margin-top:80px">
+  <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=watch&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
 
-      <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=fork&count=true"
-        allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-    </div>
-  <script type="text/javascript">
-    /**
+  <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=fork&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+</div>
+
+<script type="text/javascript">
+  /**
  * Takes the last slide and places it at the front.
  */
 function goBack() {
@@ -288,6 +310,8 @@ function goBack() {
 
   wrapper.removeChild(lastSlide);
   wrapper.insertBefore(lastSlide, wrapper.firstChild);
+
+  updateURL();
 }
 
 /**
@@ -302,9 +326,70 @@ function goForward() {
 
   wrapper.removeChild(firstSlide);
   wrapper.appendChild(firstSlide);
+
+  updateURL();
+}
+
+/**
+ * Updates the current URL to include a hashtag of the current page number.
+ */
+function updateURL() {
+  window.history.replaceState({} , null, '#' + currentPage());
+}
+
+/**
+ * Returns the current page number of the presentation.
+ */
+function currentPage() {
+  return document.querySelector('#wrapper .slide').dataset.page;
+}
+
+/**
+ * Returns a NodeList of each .slide element.
+ */
+function allSlides() {
+  return document.querySelectorAll('#wrapper .slide');
+}
+
+/**
+ * Give each slide a "page" data attribute.
+ */
+function setPageNumbers() {
+  var wrapper = document.querySelector('#wrapper');
+  var pages   = wrapper.querySelectorAll('section');
+  var page;
+
+  for (var i = 0; i < pages.length; ++i) {
+    page = pages[i];
+    page.dataset.page = i;
+  }
+}
+
+/**
+ * Go to the specified page of content.
+ */
+function goToPage(page) {
+  // Try to find the target slide.
+  var targetSlide = document.querySelector('#wrapper .slide[data-page="' + page + '"]');
+
+  // If it actually exists, go forward until we find it.
+  if (targetSlide) {
+    var numSlides = allSlides().length;
+
+    for (var i = 0; currentPage() != page && i < numSlides; i++) {
+      goForward();
+    }
+  }
 }
 
 window.onload = function () {
+
+  // Give each slide a "page" data attribute.
+  setPageNumbers();
+
+  // If the location hash specifies a page number, go to it.
+  var page = window.location.hash.slice(1);
+  if (page) goToPage(page);
 
   document.onkeydown = function (e) {
     var kc = e.keyCode;
@@ -332,21 +417,22 @@ window.onload = function () {
 
 }
 
-  </script>
+</script>
 
-  <!-- analytics -->
-  <script type="text/javascript">
+<!-- analytics -->
+<script type="text/javascript">
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-31067858-3']);
-    _gaq.push(['_trackPageview']);
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31067858-3']);
+  _gaq.push(['_trackPageview']);
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
-  </script>
+</script>
+
 </body>
 </html>

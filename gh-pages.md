@@ -3,8 +3,9 @@ author:
   name: "Jordan Scales"
   twitter: "@jdan"
   url: "http://jordanscales.com"
-output: gh-pages.html
+output: index.html
 style: intro.css
+template: gh-pages-template.mustache
 
 --
 
@@ -93,6 +94,14 @@ Let's break this chunk down on the next slide.
 * **controls**: Option to render navigation buttons (*default: true*)
 * **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (*default: false*)
 * **encoding**: A specified content encoding (*default: utf-8*)
+
+--
+
+### Metadata Fields (Advanced)
+* **template**: Location of the template used to render the slides (default:
+ *default.mustache*)
+* **layout**: Location of the layout template used to render everything (default:
+ *layout.mustache*)
 
 --
 
