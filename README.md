@@ -80,6 +80,8 @@ Let's walk through the above example piece by piece.
 The first section of any cleaver document is the metadata. Currently cleaver supports
 the following fields.
 
+**Ordinary Users**
+
 * **title**: The title of the slideshow
 * **author**
     * **name**: Your full name
@@ -90,8 +92,13 @@ the following fields.
 * **controls**: Option whether or not arrow buttons should be included (default: *true*)
 * **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (default: *false*)
 * **encoding**: A specified content encoding (default: *utf-8*)
+
+**Power Users**
+
 * **template**: Location of the template used to render the slides (default:
- *default.css*)
+ *default.mustache*)
+* **layout**: Location of the layout template used to render everything (default:
+ *layout.mustache*)
 
 If author is included, the following slide will be automatically inserted
 at the end of your presentation:
