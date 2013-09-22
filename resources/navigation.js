@@ -11,6 +11,7 @@ function goBack() {
   wrapper.removeChild(lastSlide);
   wrapper.insertBefore(lastSlide, wrapper.firstChild);
 
+  setCurrentProgress();
   updateURL();
 }
 
@@ -27,6 +28,7 @@ function goForward() {
   wrapper.removeChild(firstSlide);
   wrapper.appendChild(firstSlide);
 
+  setCurrentProgress();
   updateURL();
 }
 
@@ -62,6 +64,21 @@ function setPageNumbers() {
   for (var i = 0; i < pages.length; ++i) {
     page = pages[i];
     page.dataset.page = i;
+  }
+}
+
+/**
+ * Set the current progress indicator.
+ */
+function setCurrentProgress() {
+  var wrapper = document.querySelector('#wrapper');
+  var progressBar = document.querySelector('.progress-bar');
+
+  if (progressBar !== null) {
+    var pagesNumber    = wrapper.querySelectorAll('section').length;
+    var currentNumber  = parseInt(currentPage());
+    var currentPercent = pagesNumber === 1 ? 100 : 100 * currentNumber / (pagesNumber - 1);
+    progressBar.style.width = currentPercent.toString() + '%';
   }
 }
 

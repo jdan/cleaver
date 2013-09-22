@@ -148,3 +148,15 @@ pre > code {
   display: none;
 }
 
+.progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background-color: #bbb;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 5px;
+  background-color: #eee;
+}
