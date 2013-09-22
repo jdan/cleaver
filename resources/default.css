@@ -148,3 +148,16 @@ pre > code {
   display: none;
 }
 
+#progress {
+  position: fixed;
+  top: 0px;
+  height: 5px;
+  width: 99%;
+  background-color: #bbb;
+}
+
+#progress #current {
+  width: 0%;
+  height: 5px;
+  background-color: #eee;
+}
