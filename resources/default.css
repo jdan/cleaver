@@ -150,9 +150,10 @@ pre > code {
 
 #progress {
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
   height: 5px;
-  width: 99%;
+  width: 100%;
   background-color: #bbb;
 }
 
