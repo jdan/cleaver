@@ -1,7 +1,17 @@
 #!/usr/bin/env node
 
 var path = require('path');
+var fs   = require('fs');
 var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
-var runner = new Cleaver(process.argv[2]);
 
-runner.run();
+if (process.argv[2] === '--watch' || process.argv[2] === '-w') {
+	fs.watch(process.argv[3], function (event, filename) {
+		console.log(Date() + ' || Catch changes in ' + process.argv[3] + '. Executes generation');
+		var runner = new Cleaver(process.argv[3]);
+		runner.run();
+	});
+} else {
+	var runner = new Cleaver(process.argv[2]);
+	runner.run();
+}
+
