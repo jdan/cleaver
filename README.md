@@ -55,6 +55,12 @@ And run it like so:
 cleaver path/to/something.md
 ```
 
+If you want cleaver to watch changes in your files and automagically generate presentation after each changes, just use flag `--watch`, or `-w`:
+
+```
+cleaver -w path/to/something.md
+```
+
 ## More Info
 
 **Cleaver** is a one-stop shop for generating HTML presentations in
