@@ -4,13 +4,29 @@ var path = require('path');
 var fs   = require('fs');
 var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
 
+function fillZeros(number, degree) {
+	var res = number;
+	for (var i = degree - 1; i >= 0; i--) {
+		if (number < Math.pow(10, i)) {
+			res = '0'+res;
+		}
+	}
+	return res;
+}
 
 if (process.argv[2] === '--watch' || process.argv[2] === '-w') {
-	var runner = new Cleaver(process.argv[3]);
-	runner.run();
-	fs.watch(process.argv[3], function (event, filename) {
-		console.log(Date() + ' || Catch changes in ' + process.argv[3] + '. Executes generation');
-		runner.run();
+	var file = process.argv[3];
+	new Cleaver(file).run();
+	fs.watchFile(process.argv[3], { persistent: true, interval: 100 }, function (curr, prev) {
+		var time = new Date(),
+			d = {
+				hours: fillZeros(time.getHours(), 2),
+				minutes: fillZeros(time.getMinutes(), 2),
+				seconds: fillZeros(time.getSeconds(), 2),
+				milliseconds: fillZeros(time.getMilliseconds(), 3)
+			};
+		console.log('Regeneration: '+d.hours+':'+d.minutes+' '+d.seconds+'.'+d.milliseconds);
+		new Cleaver(file).run();
 	});
 } else {
 	var runner = new Cleaver(process.argv[2]);
