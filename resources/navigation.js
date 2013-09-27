@@ -120,13 +120,13 @@ window.onload = function () {
     }
   }
 
-  if (document.querySelector('#next') && document.querySelector('#prev')) {
-    document.querySelector('#next').onclick = function (e) {
+  if (document.querySelector('.next') && document.querySelector('.prev')) {
+    document.querySelector('.next').onclick = function (e) {
       e.preventDefault();
       goForward();
     }
 
-    document.querySelector('#prev').onclick = function (e) {
+    document.querySelector('.prev').onclick = function (e) {
       e.preventDefault();
       goBack();
     }
