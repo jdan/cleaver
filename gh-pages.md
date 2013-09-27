@@ -4,15 +4,13 @@ author:
   twitter: "@jdan"
   url: "http://jordanscales.com"
 output: index.html
-style: intro.css
+style: help.css
 template: gh-pages-template.mustache
 
 --
 
 # Cleaver
 ## 30-second slideshows for hackers
-
-<div class="help">Use the buttons or arrow keys to switch slides</div>
 
 --
 

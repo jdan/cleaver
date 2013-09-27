@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -5,8 +6,8 @@
   <style type="text/css">
     body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #444;
-  background-color: #aaa;
+  color: #222;
+  background-color: #f7f7f7;
 }
 
 #wrapper {
@@ -14,7 +15,6 @@
   height: 600px;
   overflow: hidden;
   margin: 80px auto 0 auto;
-  box-shadow: 3px 3px 3px #666;
 }
 
 /* styles for print layout */
@@ -36,73 +36,74 @@
   font-weight: 200;
   font-size: 32px;
   line-height: 44px;
-  background-color: #eee;
 }
 
-#controls {
-  width: 850px;
-  margin: -60px auto 0 auto;
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
-#controls div {
-  width: 50px;
-  height: 50px;
-  padding: 5px 50px;
-  font-size: 36px;
-  background-color: #ccc;
+.controls .arrow {
+  width: 0; height: 0;
+  border: 30px solid #333;
+  float: left;
+  margin-right: 30px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-#controls div:hover {
-  background-color: #bbb;
+.controls .prev {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+
+  border-left-width: 0;
+  border-right-width: 50px;
+}
+
+.controls .next {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+
+  border-left-width: 50px;
+  border-right-width: 0;
+}
+
+.controls .prev:hover {
+  border-right-color: #888;
   cursor: pointer;
 }
 
-#controls #prev {
-  float: left;
-  -webkit-border-top-right-radius: 20px;
-  -moz-border-radius-topright: 20px;
-  border-top-right-radius: 20px;
-
-  /* Fix selection bug */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-#controls #next {
-  float: right;
-  text-align: right;
-  -webkit-border-top-left-radius: 20px;
-  -moz-border-radius-topleft: 20px;
-  border-top-left-radius: 20px;
-
-  /* Fix selection bug */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.controls .next:hover {
+  border-left-color: #888;
+  cursor: pointer;
 }
 
 .slide h1 {
   font-size: 100px;
+  line-height: 1.2;
   text-align: center;
-  margin-top: 200px;
-  margin-bottom: 30px;
+  margin: 140px 0 0;
 }
 
 .slide h2 {
   font-size: 30px;
+  line-height: 1.2;
+  margin: 5px 0;
   text-align: center;
   font-weight: 200;
 }
 
 .slide h3 {
   font-size: 45px;
+  line-height: 1.2;
   border-bottom: 1px solid #aaa;
   margin: 0;
   padding-bottom: 15px;
@@ -139,37 +140,54 @@ a:hover {
   color: #66b5ff;
 }
 
-code {
-  background-color: #ccc;
-}
-
-pre > code {
-  background-color: inherit;
+pre {
   font-size: 60%;
   line-height: 1.3;
 }
 
-.hidden {
-  display: none;
+code {
+  background-color: #e7e7e7;
 }
 
+pre > code {
+  background-color: inherit;
+}
+
+.progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 3px;
+  background-color: #b4b4b4;
+
+  -webkit-transition: width 0.1s ease-out;
+  -moz-transition: width 0.1s ease-out;
+  -o-transition: width 0.1s ease-out;
+  transition: width 0.1s ease-out;
+}
 
     .help {
-  font-style: italic;
-  font-size: 70%;
   text-align: center;
-  margin-top: 200px;
+  position: absolute;
+  bottom: 10px;
+  left: 0; right: 0;
 }
 
   </style>
 </head>
 <body>
-  <div id="wrapper">
+    <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+
+<div id="wrapper">
     <section class="slide"><h1>Cleaver</h1>
 
-<h2>30-second slideshows for hackers</h2>
-
-<div class="help">Use the buttons or arrow keys to switch slides</div></section>
+<h2>30-second slideshows for hackers</h2></section>
     <section class="slide"><h3>What is Cleaver?</h3>
 
 <p>Cleaver turns this:</p>
@@ -285,11 +303,16 @@ create using a comfortable format. No extra software or text boxes required.</p>
 </div>
 </section>
 </div>
-  <div id="controls">
-    <div id="prev">&larr;</div>
-    <div id="next">&rarr;</div>
+  <div class="controls">
+    <div class="arrow prev"></div>
+    <div class="arrow next"></div>
   </div>
-<div style="text-align:center; margin-top:80px">
+
+<div class="help" style="text-align: center; position: absolute; bottom: 20px">
+  <div>
+    <p><em>Use the buttons or arrow keys to switch slides</em></p>
+  </div>
+
   <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=watch&count=true"
     allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
 
@@ -311,6 +334,7 @@ function goBack() {
   wrapper.removeChild(lastSlide);
   wrapper.insertBefore(lastSlide, wrapper.firstChild);
 
+  setCurrentProgress();
   updateURL();
 }
 
@@ -327,6 +351,7 @@ function goForward() {
   wrapper.removeChild(firstSlide);
   wrapper.appendChild(firstSlide);
 
+  setCurrentProgress();
   updateURL();
 }
 
@@ -362,6 +387,21 @@ function setPageNumbers() {
   for (var i = 0; i < pages.length; ++i) {
     page = pages[i];
     page.dataset.page = i;
+  }
+}
+
+/**
+ * Set the current progress indicator.
+ */
+function setCurrentProgress() {
+  var wrapper = document.querySelector('#wrapper');
+  var progressBar = document.querySelector('.progress-bar');
+
+  if (progressBar !== null) {
+    var pagesNumber    = wrapper.querySelectorAll('section').length;
+    var currentNumber  = parseInt(currentPage());
+    var currentPercent = pagesNumber === 1 ? 100 : 100 * currentNumber / (pagesNumber - 1);
+    progressBar.style.width = currentPercent.toString() + '%';
   }
 }
 
@@ -403,13 +443,13 @@ window.onload = function () {
     }
   }
 
-  if (document.querySelector('#next') && document.querySelector('#prev')) {
-    document.querySelector('#next').onclick = function (e) {
+  if (document.querySelector('.next') && document.querySelector('.prev')) {
+    document.querySelector('.next').onclick = function (e) {
       e.preventDefault();
       goForward();
     }
 
-    document.querySelector('#prev').onclick = function (e) {
+    document.querySelector('.prev').onclick = function (e) {
       e.preventDefault();
       goBack();
     }

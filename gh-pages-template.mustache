@@ -1,15 +1,26 @@
+{{#progress}}
+  <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+{{/progress}}
+
 <div id="wrapper">
   {{#slides}}
     <section class="slide">{{{.}}}</section>
   {{/slides}}
 </div>
 {{#controls}}
-  <div id="controls">
-    <div id="prev">&larr;</div>
-    <div id="next">&rarr;</div>
+  <div class="controls">
+    <div class="arrow prev"></div>
+    <div class="arrow next"></div>
   </div>
 {{/controls}}
-<div style="text-align:center; margin-top:80px">
+
+<div class="help" style="text-align: center; position: absolute; bottom: 20px">
+  <div>
+    <p><em>Use the buttons or arrow keys to switch slides</em></p>
+  </div>
+
   <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=watch&count=true"
     allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
 
