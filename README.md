@@ -145,15 +145,21 @@ Or click the buttons
 By default, cleaver slides are rendered in the following template:
 
 ```html
+{{#progress}}
+  <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+{{/progress}}
+
 <div id="wrapper">
   {{#slides}}
     <section class="slide">{{{.}}}</section>
   {{/slides}}
 </div>
 {{#controls}}
-  <div id="controls">
-    <div id="prev">&larr;</div>
-    <div id="next">&rarr;</div>
+  <div class="controls">
+    <div class="arrow prev"></div>
+    <div class="arrow next"></div>
   </div>
 {{/controls}}
 
