@@ -128,6 +128,4 @@ create using a comfortable format. No extra software or text boxes required.
 
 Check us out [on GitHub](http://github.com/jdan/cleaver).
 
-With <3,
-
-Jordan
+With &lt;3,<br/>Jordan
