@@ -39,7 +39,7 @@ Cleaver turns this:
 
 Into this:
 
-![output](https://i.cloudup.com/hHBVUtbREK.gif)
+![output](https://i.cloudup.com/cIssKFjcB6.gif)
 
 ## Quick Start
 
@@ -105,7 +105,7 @@ the following fields.
 If author is included, the following slide will be automatically inserted
 at the end of your presentation:
 
-![author slide](https://i.cloudup.com/YxgwvqVZNg-1200x1200.png)
+![author slide](https://i.cloudup.com/f0zVsUwqF0-3000x3000.png)
 
 ### Title slide
 
@@ -145,15 +145,21 @@ Or click the buttons
 By default, cleaver slides are rendered in the following template:
 
 ```html
+{{#progress}}
+  <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+{{/progress}}
+
 <div id="wrapper">
   {{#slides}}
     <section class="slide">{{{.}}}</section>
   {{/slides}}
 </div>
 {{#controls}}
-  <div id="controls">
-    <div id="prev">&larr;</div>
-    <div id="next">&rarr;</div>
+  <div class="controls">
+    <div class="arrow prev"></div>
+    <div class="arrow next"></div>
   </div>
 {{/controls}}
 
