@@ -134,14 +134,17 @@ a:hover {
   color: #66b5ff;
 }
 
+pre {
+  font-size: 60%;
+  line-height: 1.3;
+}
+
 code {
-  background-color: #ccc;
+  background-color: #e7e7e7;
 }
 
 pre > code {
   background-color: inherit;
-  font-size: 60%;
-  line-height: 1.3;
 }
 
 .progress {
