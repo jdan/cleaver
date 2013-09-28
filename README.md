@@ -55,6 +55,14 @@ And run it like so:
 cleaver path/to/something.md
 ```
 
+### Generate html file when save .md file
+
+Require [`inotify-tools`](https://github.com/rvoicilas/inotify-tools/wiki).
+
+```bash
+while true; do inotifywait -e close_write path/to/something.md; cleaver path/to/something.md; done
+```
+
 ## More Info
 
 **Cleaver** is a one-stop shop for generating HTML presentations in
