@@ -92,7 +92,7 @@ the following fields.
 * **controls**: Option whether or not arrow buttons should be included (default: *true*)
 * **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (default: *false*)
 * **encoding**: A specified content encoding (default: *utf-8*)
-* **progress*: Option whether or not to display a small progress bar at the top of the page
+* **progress**: Option whether or not to display a small progress bar at the top of the page
 (default: *true*)
 
 **Power Users**
