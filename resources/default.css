@@ -2,6 +2,7 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #222;
   background-color: #f7f7f7;
+  font-size: 100%;
 }
 
 #wrapper {
@@ -28,8 +29,8 @@ body {
   height: 540px;
   padding: 30px;
   font-weight: 200;
-  font-size: 32px;
-  line-height: 44px;
+  font-size: 200%;
+  line-height: 1.375;
 }
 
 .controls {
@@ -81,14 +82,14 @@ body {
 }
 
 .slide h1 {
-  font-size: 100px;
+  font-size: 300%;
   line-height: 1.2;
   text-align: center;
-  margin: 140px 0 0;
+  margin: 170px 0 0;
 }
 
 .slide h2 {
-  font-size: 30px;
+  font-size: 100%;
   line-height: 1.2;
   margin: 5px 0;
   text-align: center;
@@ -96,7 +97,7 @@ body {
 }
 
 .slide h3 {
-  font-size: 45px;
+  font-size: 140%;
   line-height: 1.2;
   border-bottom: 1px solid #aaa;
   margin: 0;
@@ -106,22 +107,20 @@ body {
 .slide ul {
   padding: 20px 0 0 60px;
   font-weight: 200;
-  font-size: 32px;
-  line-height: 44px;
+  line-height: 1.375;
 }
 
 .slide .author h1.name {
-  font-size: 55px;
+  font-size: 170%;
   font-weight: 200;
   text-align: center;
-  margin-top: 185px;
   margin-bottom: 30px;
 }
 
 .slide .author h3 {
   font-weight: 100;
   text-align: center;
-  font-size: 30px;
+  font-size: 95%;
   border: none;
 }
 
@@ -162,4 +161,55 @@ pre > code {
   -moz-transition: width 0.1s ease-out;
   -o-transition: width 0.1s ease-out;
   transition: width 0.1s ease-out;
+}
+
+@media (max-width: 850px) {
+  #wrapper {
+    width: auto;
+  }
+
+  body {
+    font-size: 70%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .slide h1 {
+    margin-top: 120px;
+  }
+
+  .controls .prev, .controls .prev:hover {
+    border-right-color: rgba(135, 135, 135, 0.5);
+  }
+
+  .controls .next, .controls .next:hover {
+    border-left-color: rgba(135, 135, 135, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 50%;
+    overflow: hidden;
+  }
+
+  #wrapper {
+    margin-top: 10px;
+    height: 340px;
+  }
+
+  .slide {
+    padding: 10px;
+    height: 340px;
+  }
+
+  .slide h1 {
+    margin-top: 50px;
+  }
+
+  .slide ul {
+    padding-left: 25px;
+  }
 }
