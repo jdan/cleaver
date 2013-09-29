@@ -1,6 +1,6 @@
 # Cleaver
 
-30-second Slideshows for Hackers
+30-second Slideshows for Hackers. http://jdan.github.io/cleaver/
 
 ## Intro
 
@@ -64,6 +64,8 @@ or placing a measly textbox.
 
 All you need to do is write some blocks of markdown, separated by `--`
 on its own line and include metadata at the top.
+
+Cleaver also looks great on mobile.
 
 Let's walk through the above example piece by piece.
 
@@ -190,8 +192,8 @@ an example to note what fields you should include in your custom layout.
 * Make changes, commit, and push
 * Open a pull request!
 
-With <3,
+With &lt;3,<br/>[@jdan](http://jordanscales.com)
 
-[@jdan](http://jordanscales.com)
+--
 
 [MIT Licensed](https://github.com/jdan/cleaver/blob/master/LICENSE)
