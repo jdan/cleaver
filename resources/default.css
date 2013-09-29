@@ -85,7 +85,7 @@ body {
   font-size: 300%;
   line-height: 1.2;
   text-align: center;
-  margin: 140px 0 0;
+  margin: 170px 0 0;
 }
 
 .slide h2 {
@@ -114,7 +114,6 @@ body {
   font-size: 170%;
   font-weight: 200;
   text-align: center;
-  margin-top: 160px;
   margin-bottom: 30px;
 }
 
@@ -162,4 +161,55 @@ pre > code {
   -moz-transition: width 0.1s ease-out;
   -o-transition: width 0.1s ease-out;
   transition: width 0.1s ease-out;
+}
+
+@media (max-width: 850px) {
+  #wrapper {
+    width: auto;
+  }
+
+  body {
+    font-size: 70%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .slide h1 {
+    margin-top: 120px;
+  }
+
+  .controls .prev, .controls .prev:hover {
+    border-right-color: rgba(135, 135, 135, 0.5);
+  }
+
+  .controls .next, .controls .next:hover {
+    border-left-color: rgba(135, 135, 135, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 50%;
+    overflow: hidden;
+  }
+
+  #wrapper {
+    margin-top: 10px;
+    height: 340px;
+  }
+
+  .slide {
+    padding: 10px;
+    height: 340px;
+  }
+
+  .slide h1 {
+    margin-top: 50px;
+  }
+
+  .slide ul {
+    padding-left: 25px;
+  }
 }
