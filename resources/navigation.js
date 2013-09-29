@@ -99,6 +99,22 @@ function goToPage(page) {
   }
 }
 
+/**
+ * Flashes a given element by adding an "active" class and removing it after
+ * a specified amount of time.
+ */
+function flash(selector, time) {
+  time = time || 200;
+  var className = 'active';
+  var el = document.querySelector(selector);
+
+  el.classList.add(className);
+
+  setTimeout(function () {
+    el.classList.remove(className);
+  }, time);
+}
+
 window.onload = function () {
 
   // Give each slide a "page" data attribute.
@@ -115,8 +131,10 @@ window.onload = function () {
     // up, right, K, L, space, enter - FORWARD
     if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74) {
       goBack();
+      flash('.arrow.prev');
     } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76) {
       goForward();
+      flash('.arrow.next');
     }
   }
 

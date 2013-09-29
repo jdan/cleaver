@@ -50,6 +50,11 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  -webkit-transition: all 0.05s ease-out;
+  -moz-transition: all 0.05s ease-out;
+  -o-transition: all 0.05s ease-out;
+  transition: all 0.05s ease-out;all
 }
 
 .controls .prev {
@@ -70,12 +75,12 @@ body {
   border-right-width: 0;
 }
 
-.controls .prev:hover {
+.controls .prev:hover, .controls .prev.active {
   border-right-color: #888;
   cursor: pointer;
 }
 
-.controls .next:hover {
+.controls .next:hover, .controls .next.active {
   border-left-color: #888;
   cursor: pointer;
 }
