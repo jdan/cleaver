@@ -4,32 +4,17 @@ var path = require('path');
 var fs   = require('fs');
 var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
 
-function fillZeros(number, degree) {
-	var res = number;
-	for (var i = degree - 1; i >= 0; i--) {
-		if (number < Math.pow(10, i)) {
-			res = '0'+res;
-		}
-	}
-	return res;
-}
-
-if (process.argv[2] === '--watch' || process.argv[2] === '-w') {
+if (process.argv[2] === 'watch') {
 	var file = process.argv[3];
 	new Cleaver(file).run();
-	fs.watchFile(process.argv[3], { persistent: true, interval: 100 }, function (curr, prev) {
-		var time = new Date(),
-			d = {
-				hours: fillZeros(time.getHours(), 2),
-				minutes: fillZeros(time.getMinutes(), 2),
-				seconds: fillZeros(time.getSeconds(), 2),
-				milliseconds: fillZeros(time.getMilliseconds(), 3)
-			};
-		console.log('Regeneration: '+d.hours+':'+d.minutes+' '+d.seconds+'.'+d.milliseconds);
+
+	console.log('Watching for changes on ' + process.argv[3] + '. Ctrl-C to abort.');
+	fs.watchFile(file, { persistent: true, interval: 100 }, function () {
+		console.log('Rebuilding: ' + new Date());
 		new Cleaver(file).run();
 	});
 } else {
-	var runner = new Cleaver(process.argv[2]);
-	runner.run();
+	var cleaver = new Cleaver(process.argv[2]);
+	cleaver.run();
 }
 

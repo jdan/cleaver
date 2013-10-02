@@ -51,14 +51,11 @@ npm install -g cleaver
 
 And run it like so:
 
-```
+```bash
 cleaver path/to/something.md
-```
 
-If you want cleaver to watch changes in your files and automagically generate presentation after each changes, just use flag `--watch`, or `-w`:
-
-```
-cleaver -w path/to/something.md
+# to recompile on changes:
+# cleaver watch path/to/something.md
 ```
 
 ## More Info
