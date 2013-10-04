@@ -16,7 +16,7 @@ template: gh-pages-template.mustache
 
 ### What is Cleaver?
 
-Cleaver turns this:
+Cleaver turns the following:
 
     title: My Slideshow
     output: slideshow.html
