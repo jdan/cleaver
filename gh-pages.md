@@ -59,7 +59,7 @@ And run it against your shiny new presentation
 
     cleaver path/to/presentation.md
 
-Next we'll talk about setting up a presentation (it's super quick!)
+Next we'll talk about setting up a quick presentation.
 
 --
 
