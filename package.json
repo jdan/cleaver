@@ -4,7 +4,7 @@
   "version": "0.4.0",
   "author": "Jordan Scales <scalesjordan@gmail.com>",
   "description": "30-second slideshows for hackers",
-  "keywords":[
+  "keywords": [
     "markdown",
     "static",
     "slideshow",
@@ -18,13 +18,13 @@
     "type": "git",
     "url": "https://github.com/jdan/cleaver.git"
   },
-  "dependencies" : {
+  "dependencies": {
     "optimist": "0.3.5",
     "mustache": "0.7.0",
     "q": "0.9.6",
-    "node-markdown": "0.1.1",
     "js-yaml": "2.1.0",
-    "highlight.js": "~7.3.0"
+    "highlight.js": "~7.3.0",
+    "marked": "~0.2.9"
   },
   "license": "MIT"
 }
