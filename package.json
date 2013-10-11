@@ -23,7 +23,8 @@
     "mustache": "0.7.0",
     "q": "0.9.6",
     "node-markdown": "0.1.1",
-    "js-yaml": "2.1.0"
+    "js-yaml": "2.1.0",
+    "highlight.js": "~7.3.0"
   },
   "license": "MIT"
 }
