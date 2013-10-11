@@ -108,15 +108,31 @@ window.onload = function () {
   var page = window.location.hash.slice(1);
   if (page) goToPage(page);
 
+  var queryPage = "";
+
   document.onkeydown = function (e) {
     var kc = e.keyCode;
 
     // left, down, H, J, backspace, PgUp - BACK
-    // up, right, K, L, space, enter, PgDn - FORWARD
+    // up, right, K, L, space, PgDn - FORWARD
+    // enter - GO TO PAGE or FORWARD
+    // escape - CLEAR PAGE NUMBER
+    // numbers (0-9) - PAGE NUMBER
     if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74 || kc == 33) {
       goBack();
-    } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76 || kc == 34) {
+    } else if (kc == 38 || kc == 39 || kc == 32 || kc == 75 || kc == 76 || kc == 34) {
       goForward();
+    } else if (kc == 27) {
+      queryPage = "";
+    } else if (kc == 13) {
+      if(!queryPage) {
+        goForward();
+      } else {
+        goToPage(queryPage);
+        queryPage = "";
+      }
+    } else if ([48, 49, 50, 51, 52, 53, 54, 55, 56, 57].indexOf(kc) > -1) {
+      queryPage += "" + (kc - 48);
     }
   }
 
