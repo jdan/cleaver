@@ -187,8 +187,8 @@ Cleaver supports keyboard navigation for switching between slides.
 
 To navigate the slideshow:
 
-* **reverse**: H, J, LEFT, DOWN, and Backspace
-* **forward**: K, L, ENTER, UP, RIGHT, and Space
+* **forward**: K, L, ENTER, UP, RIGHT, PgDn, and Space
+* **reverse**: H, J, LEFT, DOWN, PgUp, and Backspace
 
 Alternatively, click the control buttons located below the presentation.
 

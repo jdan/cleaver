@@ -135,11 +135,11 @@ window.onload = function () {
   document.onkeydown = function (e) {
     var kc = e.keyCode;
 
-    // left, down, H, J, backspace - BACK
-    // up, right, K, L, space, enter - FORWARD
-    if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74) {
+    // left, down, H, J, backspace, PgUp - BACK
+    // up, right, K, L, space, enter, PgDn - FORWARD
+    if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74 || kc == 33) {
       goBack();
-    } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76) {
+    } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76 || kc == 34) {
       goForward();
     }
   }
