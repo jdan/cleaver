@@ -42,3 +42,18 @@ No need for multiple templates!
 * Matching Pairs «»‹› “”‘’「」〈〉《》〔〕
 * Greek αβγδ εζηθ ικλμ νξοπ ρςτυ φχψω
 * currency  ¤ $ ¢ € ₠ £ ¥
+
+--
+
+### A code example
+
+```
+// cool looking code
+var func = function (arg1) {
+    return function (arg2) {
+        return "arg1: " + arg1 + "arg2: " + arg2;
+    };
+};
+
+console.log(func(1)(2)); // result is three
+```
