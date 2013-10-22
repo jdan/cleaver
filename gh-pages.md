@@ -116,8 +116,8 @@ h3's (denoted **###**) contain a bottom border for use as a slide header.
 
 ### Author Slide
 
-If your metadata contains author information (name, url, twitter), an author
-slide will be inserted at the end of your presentation.
+If your metadata contains any author information (name, url, twitter, email),
+an author slide will be inserted at the end of your presentation.
 
 --
 
