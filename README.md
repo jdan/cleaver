@@ -76,14 +76,14 @@ Let's walk through the above example piece by piece.
 
     title: Basic Example
     author:
-      name: "Jordan Scales"
-      twitter: "@jdan"
-      url: "http://jordanscales.com"
+      name: Jordan Scales
+      twitter: @jdan
+      url: http://jordanscales.com
     output: basic.html
     controls: true
 
 The first section of any cleaver document is the metadata. Currently cleaver supports
-the following fields.
+the following fields. **All metadata is optional**.
 
 **Ordinary Users**
 
@@ -92,6 +92,7 @@ the following fields.
     * **name**: Your full name
     * **url**: A url to your website
     * **twitter**: Your twitter handle
+    * **email**: Your email address
 * **style**: An optional stylesheet to load
 * **output**: A location to save the rendered document (default: *FILENAME-cleaver.html*)
 * **controls**: Option whether or not arrow buttons should be included (default: *true*)
