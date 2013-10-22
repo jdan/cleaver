@@ -76,9 +76,9 @@ Let's walk through the above example piece by piece.
 
     title: Basic Example
     author:
-      name: Jordan Scales
-      twitter: @jdan
-      url: http://jordanscales.com
+      name: "Jordan Scales"
+      twitter: "@jdan"
+      url: "http://jordanscales.com"
     output: basic.html
     controls: true
 
