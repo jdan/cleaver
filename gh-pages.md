@@ -1,8 +1,8 @@
 title: Cleaver
 author:
-  name: "Jordan Scales"
-  twitter: "@jdan"
-  url: "http://jordanscales.com"
+  name: Jordan Scales
+  twitter: jdan
+  url: http://jordanscales.com
 output: index.html
 style: help.css
 template: gh-pages-template.mustache
@@ -69,9 +69,9 @@ Each presentation contains metadata, for example:
 
     title: My Presentation
     author:
-        name: "Jordan Scales"
-        url: "http://jordanscales.com"
-        twitter: "@jdan"
+        name: Jordan Scales
+        twitter: jdan
+        url: http://jordanscales.com
     style: /absolute/path/to/style.css
     output: something.html
 
