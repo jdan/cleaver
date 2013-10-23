@@ -1,7 +1,7 @@
 title: Basic Example
 author:
   name: Jordan Scales
-  twitter: "@jdan"
+  twitter: jdan
   url: http://jordanscales.com
 output: basic.html
 

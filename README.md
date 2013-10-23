@@ -8,9 +8,9 @@ Cleaver turns this:
 
     title: Basic Example
     author:
-      name: "Jordan Scales"
-      twitter: "@jdan"
-      url: "http://jordanscales.com"
+      name: Jordan Scales
+      twitter: jdan
+      url: http://jordanscales.com
     output: basic.html
     controls: true
 
@@ -76,9 +76,9 @@ Let's walk through the above example piece by piece.
 
     title: Basic Example
     author:
-      name: "Jordan Scales"
-      twitter: "@jdan"
-      url: "http://jordanscales.com"
+      name: Jordan Scales
+      twitter: jdan
+      url: http://jordanscales.com
     output: basic.html
     controls: true
 
@@ -91,7 +91,8 @@ the following fields. **All metadata is optional**.
 * **author**
     * **name**: Your full name
     * **url**: A url to your website
-    * **twitter**: Your twitter handle
+    * **twitter**: Your twitter handle (*please note that the character '@'
+      must be wrapped in quotes - e.g. "@jdan" - as per the YAML specification*)
     * **email**: Your email address
 * **style**: An optional stylesheet to load
 * **output**: A location to save the rendered document (default: *FILENAME-cleaver.html*)
