@@ -368,10 +368,10 @@ pre .chunk {
   </div>
 
 <div id="wrapper">
-    <section class="slide"><h1>Cleaver</h1>
-<h2>30-second slideshows for hackers</h2>
+    <section class="slide"><h1 id="cleaver">Cleaver</h1>
+<h2 id="30-second-slideshows-for-hackers">30-second slideshows for hackers</h2>
 </section>
-    <section class="slide"><h3>What is Cleaver?</h3>
+    <section class="slide"><h3 id="what-is-cleaver-">What is Cleaver?</h3>
 <p>Cleaver turns the following:</p>
 <pre><code><span class="attribute">title</span>: <span class="string">My Slideshow</span>
 <span class="attribute">output</span>: <span class="string">slideshow.html</span>
@@ -387,7 +387,7 @@ pre .chunk {
 
 Based <span class="function_start"><span class="keyword">on</span> <span class="title">our</span></span> factors, we can sell **<span class="number">20</span> million** widgets.</span></code></pre>
 </section>
-    <section class="slide"><h3>What is Cleaver?</h3>
+    <section class="slide"><h3 id="what-is-cleaver-">What is Cleaver?</h3>
 <p><strong>Into a slideshow like this</strong>.</p>
 <p>Cleaver uses a simple <a href="http://daringfireball.net/projects/markdown/">Markdown</a>
 format.</p>
@@ -398,14 +398,14 @@ format.</p>
 <p>Cleaver comes with a stylesheet that looks good by default, but that you
 can extend at your heart&#39;s desire.</p>
 </section>
-    <section class="slide"><h3>Quick Start</h3>
+    <section class="slide"><h3 id="quick-start">Quick Start</h3>
 <p>Get cleaver from NPM</p>
 <pre><code><span class="title">npm</span> install -g cleaver</code></pre>
 <p>And run it against your shiny new presentation</p>
 <pre><code><span class="title">cleaver</span> path/to/presentation.md</code></pre>
 <p>Next we&#39;ll talk about setting up a quick presentation.</p>
 </section>
-    <section class="slide"><h3>Metadata</h3>
+    <section class="slide"><h3 id="metadata">Metadata</h3>
 <p>Each presentation contains metadata, for example:</p>
 <pre><code><span class="method">title:</span> <span class="class">My</span> <span class="class">Presentation</span>
 <span class="method">author:</span>
@@ -416,7 +416,7 @@ can extend at your heart&#39;s desire.</p>
 <span class="method">output:</span> something.html</code></pre>
 <p>Let&#39;s break this chunk down on the next slide.</p>
 </section>
-    <section class="slide"><h3>Metadata Fields</h3>
+    <section class="slide"><h3 id="metadata-fields">Metadata Fields</h3>
 <ul>
 <li><strong>title</strong>: The title of your presentation</li>
 <li><strong>author</strong>: Some fields to populate an optional author slide at the end</li>
@@ -424,14 +424,14 @@ can extend at your heart&#39;s desire.</p>
 <li><strong>output</strong>: Where to save your file (<em>default: FILENAME-cleaver.html</em>)</li>
 </ul>
 </section>
-    <section class="slide"><h3>Metadata Fields</h3>
+    <section class="slide"><h3 id="metadata-fields">Metadata Fields</h3>
 <ul>
 <li><strong>controls</strong>: Option to render navigation buttons (<em>default: true</em>)</li>
 <li><strong>agenda</strong>: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (<em>default: false</em>)</li>
 <li><strong>encoding</strong>: A specified content encoding (<em>default: utf-8</em>)</li>
 </ul>
 </section>
-    <section class="slide"><h3>Metadata Fields (Advanced)</h3>
+    <section class="slide"><h3 id="metadata-fields-advanced-">Metadata Fields (Advanced)</h3>
 <ul>
 <li><strong>template</strong>: Location of the template used to render the slides (default:
 <em>default.mustache</em>)</li>
@@ -439,17 +439,17 @@ can extend at your heart&#39;s desire.</p>
 <em>layout.mustache</em>)</li>
 </ul>
 </section>
-    <section class="slide"><h3>Other Slides</h3>
+    <section class="slide"><h3 id="other-slides">Other Slides</h3>
 <p>Slides are separated by <code>--</code> and are written in markdown.</p>
 <p>h1&#39;s and h2&#39;s (denoted <strong>#</strong> and <strong>##</strong> respectively) contain styling to
 center and vertically align themselves for intro slides.</p>
 <p>h3&#39;s (denoted <strong>###</strong>) contain a bottom border for use as a slide header.</p>
 </section>
-    <section class="slide"><h3>Author Slide</h3>
+    <section class="slide"><h3 id="author-slide">Author Slide</h3>
 <p>If your metadata contains any author information (name, url, twitter, email),
 an author slide will be inserted at the end of your presentation.</p>
 </section>
-    <section class="slide"><h3>That&#39;s all, folks!</h3>
+    <section class="slide"><h3 id="that-s-all-folks-">That&#39;s all, folks!</h3>
 <p>Seriously, that&#39;s it. Cleaver is perfect for quick slideshows that you can
 create using a comfortable format. No extra software or text boxes required.</p>
 <p>Check us out <a href="http://github.com/jdan/cleaver">on GitHub</a>.</p>
@@ -458,10 +458,10 @@ create using a comfortable format. No extra software or text boxes required.</p>
     <section class="slide"><div class="author">
   <h1 class="name">Jordan Scales</h1>
     <h3 class="twitter">
-      <a href="http://twitter.com/@jdan" tabindex="-1">@jdan</a>
+      <a href="http://twitter.com/@jdan">@jdan</a>
     </h3>
     <h3 class="url">
-      <a href="http://jordanscales.com" tabindex="-1">http://jordanscales.com</a>
+      <a href="http://jordanscales.com">http://jordanscales.com</a>
     </h3>
 </div>
 </section>
@@ -499,6 +499,7 @@ function goBack() {
 
   setCurrentProgress();
   updateURL();
+  updateTabIndex();
 }
 
 /**
@@ -516,6 +517,7 @@ function goForward() {
 
   setCurrentProgress();
   updateURL();
+  updateTabIndex();
 }
 
 /**
@@ -585,10 +587,32 @@ function goToPage(page) {
   }
 }
 
+/**
+ * Removes tabindex property from all links on the current slide, sets
+ * tabindex = -1 for all links on other slides. Prevents slides from appearing
+ * out of control.
+ */
+function updateTabIndex() {
+  var allLinks = document.querySelectorAll('.slide a');
+  var currentPageLinks = document.querySelector('.slide').querySelectorAll('a');
+  var i;
+
+  for (i = 0; i < allLinks.length; i++) {
+    allLinks[i].setAttribute('tabindex', -1);
+  }
+
+  for (i = 0; i < currentPageLinks.length; i++) {
+    allLinks[i].removeAttribute('tabindex');
+  }
+}
+
 window.onload = function () {
 
   // Give each slide a "page" data attribute.
   setPageNumbers();
+
+  // Update the tabindex to prevent weird slide transitioning
+  updateTabIndex();
 
   // If the location hash specifies a page number, go to it.
   var page = window.location.hash.slice(1);
