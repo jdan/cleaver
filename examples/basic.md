@@ -23,6 +23,8 @@ This will be in a separate paragraph.
     ![markdown-logo](logo.gif)
     <img src="logo.gif" />
 
+[Here's a link](http://google.com).
+
 --
 
 ### A list of things
@@ -31,7 +33,7 @@ This will be in a separate paragraph.
 * Item B
 * Item gamma
 
-No need for multiple templates!
+No need for multiple templates! [Another link](http://google.com).
 
 --
 

@@ -13,6 +13,7 @@ function goBack() {
 
   setCurrentProgress();
   updateURL();
+  updateTabIndex();
 }
 
 /**
@@ -30,6 +31,7 @@ function goForward() {
 
   setCurrentProgress();
   updateURL();
+  updateTabIndex();
 }
 
 /**
@@ -99,10 +101,32 @@ function goToPage(page) {
   }
 }
 
+/**
+ * Removes tabindex property from all links on the current slide, sets
+ * tabindex = -1 for all links on other slides. Prevents slides from appearing
+ * out of control.
+ */
+function updateTabIndex() {
+  var allLinks = document.querySelectorAll('.slide a');
+  var currentPageLinks = document.querySelector('.slide').querySelectorAll('a');
+  var i;
+
+  for (i = 0; i < allLinks.length; i++) {
+    allLinks[i].setAttribute('tabindex', -1);
+  }
+
+  for (i = 0; i < currentPageLinks.length; i++) {
+    allLinks[i].removeAttribute('tabindex');
+  }
+}
+
 window.onload = function () {
 
   // Give each slide a "page" data attribute.
   setPageNumbers();
+
+  // Update the tabindex to prevent weird slide transitioning
+  updateTabIndex();
 
   // If the location hash specifies a page number, go to it.
   var page = window.location.hash.slice(1);
