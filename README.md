@@ -53,9 +53,18 @@ And run it like so:
 
 ```bash
 cleaver path/to/something.md
+```
 
-# to recompile on changes:
-# cleaver watch path/to/something.md
+You can also watch for changes on a file and automatically recompile with:
+
+```bash
+cleaver path/to/something-changing.md
+
+# Watching for changes on presentation.md. Ctrl-C to abort.
+# Rebuilding: Thu Nov 07 2013 00:15:03 GMT-0500 (EST)
+# Rebuilding: Thu Nov 07 2013 00:15:21 GMT-0500 (EST)
+# Rebuilding: Thu Nov 07 2013 00:16:01 GMT-0500 (EST)
+# Rebuilding: Thu Nov 07 2013 00:16:09 GMT-0500 (EST)
 ```
 
 ## More Info
@@ -66,53 +75,77 @@ good-looking, interactive presentations without writing any code
 or placing a measly textbox.
 
 All you need to do is write some blocks of markdown, separated by `--`
-on its own line and include metadata at the top.
+on its own line and include options at the top.
 
 Cleaver also looks great on mobile.
 
-Let's walk through the above example piece by piece.
-
-### Metadata
+## Options
 
     title: Basic Example
     author:
       name: Jordan Scales
       twitter: jdan
       url: http://jordanscales.com
+    style: basic-style.css
     output: basic.html
-    controls: true
 
-The first section of any cleaver document is the metadata. Currently cleaver supports
-the following fields. **All metadata is optional**.
+Cleaver supports several basic options that allow you to further customize the
+look and feel of your presentation, including author info, stylesheets, and
+custom templates.
 
-**Ordinary Users**
+See the documentation on
+[options](https://github.com/jdan/cleaver/blob/master/doc/options.md) for more
+information.
 
-* **title**: The title of the slideshow
-* **author**
-    * **name**: Your full name
-    * **url**: A url to your website
-    * **twitter**: Your twitter handle (*please note that the character '@'
-      must be wrapped in quotes - e.g. "@jdan" - as per the YAML specification*)
-    * **email**: Your email address
-* **style**: An optional stylesheet to load
-* **output**: A location to save the rendered document (default: *FILENAME-cleaver.html*)
-* **controls**: Option whether or not arrow buttons should be included (default: *true*)
-* **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (default: *false*)
-* **encoding**: A specified content encoding (default: *utf-8*)
-* **progress**: Option whether or not to display a small progress bar at the top of the page
-(default: *true*)
+## Themes
 
-**Power Users**
+    title: Theme Example
+    output: theme.html
+    theme: jdan/cleaver-retro
 
-* **template**: Location of the template used to render the slides (default:
- *default.mustache*)
-* **layout**: Location of the layout template used to render everything (default:
- *layout.mustache*)
+Cleaver has substantial theme support to give you more fine-grained control
+over your presentation, similar to [options](#options). Instead of manually
+specifying a stylesheet, template, layout, and others, you can specify a single
+theme containing each of these assets. More specifically, a theme may contain:
 
-If author is included, the following slide will be automatically inserted
-at the end of your presentation:
+* style.css - styles for your presentation
+* template.mustache - a template used to render the slides in your presentation
+* layout.mustache - a template used to render the entire document of your
+presentation
+* script.js - javascript to be included in your slideshow
 
-![author slide](https://i.cloudup.com/f0zVsUwqF0-3000x3000.png)
+A theme does not need to contain all of these files, only the ones present
+will be loaded into your slideshow.
+
+### Specifying Themes
+
+Themes may be specified by one of the following options:
+
+* An absolute or relative path to a directory
+* A URL to a directory
+* A github repostitory in the form of *username/reponame*
+
+### Overriding Themes
+
+By default, *style.css* and *script.js* will be **appended** to the default
+stylesheets and javascripts included in cleaver presentations. If you wish to
+completely override these defaults, you must include another file in your
+theme - options.json - corresponding to the following:
+
+```json
+{
+  "override": true
+}
+```
+
+### Examples
+
+* [jdan/cleaver-retro](http://github.com/jdan/cleaver-retro)
+* [jdan/cleaver-github](http://github.com/)
+
+Template files will automatically override the default templates.
+
+## Slide Types
 
 ### Title slide
 
@@ -138,57 +171,18 @@ you can include things like lists, images, and arbitrary HTML.
 **h3** tags (prefaced `###`) are automatically given a bottom border to
 represent a slide title.
 
-### Navigation
+## Navigation
+
+Cleaver supports keyboard navigation for switching between slides.
 
 To navigate the slideshow:
 
 * **reverse**: H, J, LEFT, DOWN, and Backspace
 * **forward**: K, L, ENTER, UP, RIGHT, and Space
 
-Or click the buttons
+Alternatively, click the control buttons located below the presentation.
 
-### Templates
-
-By default, cleaver slides are rendered in the following template:
-
-```html
-{{#progress}}
-  <div class="progress">
-    <div class="progress-bar"></div>
-  </div>
-{{/progress}}
-
-<div id="wrapper">
-  {{#slides}}
-    <section class="slide">{{{.}}}</section>
-  {{/slides}}
-</div>
-{{#controls}}
-  <div class="controls">
-    <div class="arrow prev"></div>
-    <div class="arrow next"></div>
-  </div>
-{{/controls}}
-
-<script type="text/javascript">
-  {{{navigation}}}
-</script>
-```
-
-Power users may wish to render into custom templates. To do so, simply copy the above file
-somewhere, make some changes, and specify the template like so:
-
-```yaml
-title: Basic Example
-output: basic.html
-template: example.mustache
-```
-
-You can also replace the entire layout (`<head>` tags and all) with the `layout` option. Use
-[layout.mustache](https://github.com/jdan/cleaver/blob/master/templates/layout.mustache) as
-an example to note what fields you should include in your custom layout.
-
-### Contributing
+## Contributing
 
 * Fork it
 * Clone it
