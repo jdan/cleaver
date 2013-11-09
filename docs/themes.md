@@ -54,7 +54,7 @@ Template files will automatically override the default templates.
 ### Theme Behavior
 
 Themes group together many options such as style, template, and layout. Please
-not that the individual options will be loaded *after* the theme, allowing you
+note that the individual options will be loaded *after* the theme, allowing you
 to override a theme's properties. This is not recommended, however, as the
 theme author may construct his or her styles in such a way that they are not
 meant to be overridden.
