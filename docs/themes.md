@@ -18,6 +18,16 @@ presentation
 A theme does not need to contain all of these files, only the ones present
 will be loaded into your slideshow.
 
+### Examples
+
+* [jdan/cleaver-retro](http://github.com/jdan/cleaver-retro)
+
+![cleaver-retro](https://i.cloudup.com/HLtcPJWJJl-1200x1200.png)
+
+* [matmuchrapna/cleaver-ribbon](http://github.com/matmuchrapna/cleaver-ribbon)
+
+![cleaver-ribbon](https://i.cloudup.com/GECEx5BmxI-1200x1200.png)
+
 ### Specifying Themes
 
 Themes may be specified by one of the following options:
@@ -39,6 +49,8 @@ theme - options.json - corresponding to the following:
 }
 ```
 
+Template files will automatically override the default templates.
+
 ### Theme Behavior
 
 Themes group together many options such as style, template, and layout. Please
@@ -46,10 +58,3 @@ not that the individual options will be loaded *after* the theme, allowing you
 to override a theme's properties. This is not recommended, however, as the
 theme author may construct his or her styles in such a way that they are not
 meant to be overridden.
-
-### Examples
-
-* [jdan/cleaver-retro](http://github.com/jdan/cleaver-retro)
-* [matmuchrapna/cleaver-ribbon](http://github.com/matmuchrapna/cleaver-ribbon)
-
-Template files will automatically override the default templates.

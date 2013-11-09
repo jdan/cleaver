@@ -58,7 +58,7 @@ cleaver path/to/something.md
 You can also watch for changes on a file and automatically recompile with:
 
 ```bash
-cleaver path/to/something-changing.md
+cleaver watch path/to/something-changing.md
 
 # Watching for changes on presentation.md. Ctrl-C to abort.
 # Rebuilding: Thu Nov 07 2013 00:15:03 GMT-0500 (EST)
@@ -71,13 +71,13 @@ cleaver path/to/something-changing.md
 
 **Cleaver** is a one-stop shop for generating HTML presentations in
 record time. Using some spiced up markdown, you can produce
-good-looking, interactive presentations without writing any code
-or placing a measly textbox.
+good-looking, interactive presentations with a just a few lines of text.
 
 All you need to do is write some blocks of markdown, separated by `--`
 on its own line and include options at the top.
 
-Cleaver also looks great on mobile.
+Slides are written in [Markdown](http://daringfireball.net/projects/markdown/),
+and are separated by two dashes (`--`).
 
 ## Options
 
@@ -117,6 +117,16 @@ presentation
 A theme does not need to contain all of these files, only the ones present
 will be loaded into your slideshow.
 
+### Examples
+
+* [jdan/cleaver-retro](http://github.com/jdan/cleaver-retro)
+
+![cleaver-retro](https://i.cloudup.com/HLtcPJWJJl-1200x1200.png)
+
+* [matmuchrapna/cleaver-ribbon](http://github.com/matmuchrapna/cleaver-ribbon)
+
+![cleaver-ribbon](https://i.cloudup.com/GECEx5BmxI-1200x1200.png)
+
 ### Specifying Themes
 
 Themes may be specified by one of the following options:
@@ -138,12 +148,9 @@ theme - options.json - corresponding to the following:
 }
 ```
 
-### Examples
-
-* [jdan/cleaver-retro](http://github.com/jdan/cleaver-retro)
-* [matmuchrapna/cleaver-ribbon](http://github.com/matmuchrapna/cleaver-ribbon)
-
 Template files will automatically override the default templates.
+
+### More Info
 
 For more information on themes, check out
 [the documentation]([options](https://github.com/jdan/cleaver/blob/master/docs/themes.md)
