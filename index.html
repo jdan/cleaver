@@ -395,18 +395,18 @@ format.</p>
 <li>Simply write your slides in Markdown</li>
 <li>... and separate them with <code>--</code></li>
 </ul>
-<p>Cleaver comes with a stylesheet that looks good by default, but that you
-can extend at your heart&#39;s desire.</p>
+<p>Cleaver comes with a stylesheet that looks good by default, but you can extend
+it at your heart&#39;s desire.</p>
 </section>
     <section class="slide"><h3 id="quick-start">Quick Start</h3>
 <p>Get cleaver from NPM</p>
 <pre><code><span class="title">npm</span> install -g cleaver</code></pre>
 <p>And run it against your shiny new presentation</p>
 <pre><code><span class="title">cleaver</span> path/to/presentation.md</code></pre>
-<p>Next we&#39;ll talk about setting up a quick presentation.</p>
+<p>Next we&#39;ll talk about setting up a cleaver document.</p>
 </section>
-    <section class="slide"><h3 id="metadata">Metadata</h3>
-<p>Each presentation contains metadata, for example:</p>
+    <section class="slide"><h3 id="options">Options</h3>
+<p>Each presentation contains options, for example:</p>
 <pre><code><span class="method">title:</span> <span class="class">My</span> <span class="class">Presentation</span>
 <span class="method">author:</span>
     <span class="method">name:</span> <span class="class">Jordan</span> <span class="class">Scales</span>
@@ -414,44 +414,50 @@ can extend at your heart&#39;s desire.</p>
     <span class="method">url:</span> <span class="method">http:</span>//jordanscales.com
 <span class="method">style:</span> /absolute/path/to/style.css
 <span class="method">output:</span> something.html</code></pre>
-<p>Let&#39;s break this chunk down on the next slide.</p>
+<p>These allow you to change the look and feel of your presentation. They are all
+<em>optional</em>.</p>
 </section>
-    <section class="slide"><h3 id="metadata-fields">Metadata Fields</h3>
+    <section class="slide"><h3 id="options">Options</h3>
+<p>So what sort of things can you change with options?</p>
 <ul>
-<li><strong>title</strong>: The title of your presentation</li>
-<li><strong>author</strong>: Some fields to populate an optional author slide at the end</li>
-<li><strong>style</strong>: An optional external stylesheet to load</li>
-<li><strong>output</strong>: Where to save your file (<em>default: FILENAME-cleaver.html</em>)</li>
+<li>Add your own styles with a <code>style</code> attribute</li>
+<li>Change the document&#39;s name with <code>output</code></li>
+<li>Add your information with <code>author</code></li>
 </ul>
+<p>And many others. Check out the full documentation <a href="https://github.com/jdan/cleaver/blob/master/docs/options.md">here</a>.</p>
 </section>
-    <section class="slide"><h3 id="metadata-fields">Metadata Fields</h3>
-<ul>
-<li><strong>controls</strong>: Option to render navigation buttons (<em>default: true</em>)</li>
-<li><strong>agenda</strong>: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (<em>default: false</em>)</li>
-<li><strong>encoding</strong>: A specified content encoding (<em>default: utf-8</em>)</li>
-</ul>
+    <section class="slide"><h3 id="themes">Themes</h3>
+<p>Themes are prepackaged options you can invoke from a directory, URL, or
+even a GitHub repository.</p>
+<center>
+    <a href="https://i.cloudup.com/HLtcPJWJJl-3000x3000.png">
+        <img src="https://i.cloudup.com/HLtcPJWJJl-600x600.png" height="350">
+    </a>
+</center></section>
+    <section class="slide"><h3 id="themes">Themes</h3>
+<p>A theme is simply a directory containing an optional stylesheet, templates,
+and javascript.</p>
+<p>Theme styles and scripts can either be loaded
+alongside the defaults or overridden with a simple option.</p>
+<p>For more information on themes, check out <a href="https://github.com/jdan/cleaver/blob/master/docs/themes.md">our documentation</a>.</p>
 </section>
-    <section class="slide"><h3 id="metadata-fields-advanced-">Metadata Fields (Advanced)</h3>
-<ul>
-<li><strong>template</strong>: Location of the template used to render the slides (default:
-<em>default.mustache</em>)</li>
-<li><strong>layout</strong>: Location of the layout template used to render everything (default:
-<em>layout.mustache</em>)</li>
-</ul>
-</section>
-    <section class="slide"><h3 id="other-slides">Other Slides</h3>
+    <section class="slide"><h3 id="slide-properties">Slide Properties</h3>
 <p>Slides are separated by <code>--</code> and are written in markdown.</p>
 <p>h1&#39;s and h2&#39;s (denoted <strong>#</strong> and <strong>##</strong> respectively) contain styling to
 center and vertically align themselves for intro slides.</p>
 <p>h3&#39;s (denoted <strong>###</strong>) contain a bottom border for use as a slide header.</p>
 </section>
     <section class="slide"><h3 id="author-slide">Author Slide</h3>
-<p>If your metadata contains any author information (name, url, twitter, email),
+<p>If your options contain any author information (name, url, twitter, email),
 an author slide will be inserted at the end of your presentation.</p>
-</section>
+<center>
+    <a href="https://i.cloudup.com/Ya9g4x3QDR-3000x3000.png">
+        <img src="https://i.cloudup.com/Ya9g4x3QDR-600x600.png" height="300">
+    </a>
+</center></section>
     <section class="slide"><h3 id="that-s-all-folks-">That&#39;s all, folks!</h3>
-<p>Seriously, that&#39;s it. Cleaver is perfect for quick slideshows that you can
-create using a comfortable format. No extra software or text boxes required.</p>
+<p>Seriously, that&#39;s it. Cleaver aims for ease of use: quick presentations with
+no extra software or text boxes required.</p>
 <p>Check us out <a href="http://github.com/jdan/cleaver">on GitHub</a>.</p>
 <p>With &lt;3,<br/>Jordan</p>
 </section>
@@ -471,8 +477,36 @@ create using a comfortable format. No extra software or text boxes required.</p>
     <div class="arrow next"></div>
   </div>
 
-<script type="text/javascript">
-  /**
+
+  <div class="help" style="text-align: center; position: absolute; bottom: 20px">
+    <div>
+      <p><em>Use the buttons or arrow keys to switch slides</em></p>
+    </div>
+
+    <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=watch&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+
+    <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=fork&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+  </div>
+
+  <!-- analytics -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31067858-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+  <script type="text/javascript">
+    /**
  * Takes the last slide and places it at the front.
  */
 function goBack() {
@@ -632,38 +666,7 @@ window.onload = function () {
 
 }
 
-</script>
 
-
-  <div class="help" style="text-align: center; position: absolute; bottom: 20px">
-    <div>
-      <p><em>Use the buttons or arrow keys to switch slides</em></p>
-    </div>
-
-    <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=watch&count=true"
-      allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-
-    <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=fork&count=true"
-      allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
-  </div>
-
-  <!-- analytics -->
-  <script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-31067858-3']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
-
-  <script type="text/javascript">
-    
   </script>
 </body>
 </html>

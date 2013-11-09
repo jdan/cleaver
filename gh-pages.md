@@ -44,8 +44,8 @@ format.
 * Simply write your slides in Markdown
 * ... and separate them with `--`
 
-Cleaver comes with a stylesheet that looks good by default, but that you
-can extend at your heart's desire.
+Cleaver comes with a stylesheet that looks good by default, but you can extend
+it at your heart's desire.
 
 --
 
@@ -59,13 +59,13 @@ And run it against your shiny new presentation
 
     cleaver path/to/presentation.md
 
-Next we'll talk about setting up a quick presentation.
+Next we'll talk about setting up a cleaver document.
 
 --
 
-### Metadata
+### Options
 
-Each presentation contains metadata, for example:
+Each presentation contains options, for example:
 
     title: My Presentation
     author:
@@ -75,35 +75,49 @@ Each presentation contains metadata, for example:
     style: /absolute/path/to/style.css
     output: something.html
 
-Let's break this chunk down on the next slide.
+These allow you to change the look and feel of your presentation. They are all
+*optional*.
 
 --
 
-### Metadata Fields
+### Options
 
-* **title**: The title of your presentation
-* **author**: Some fields to populate an optional author slide at the end
-* **style**: An optional external stylesheet to load
-* **output**: Where to save your file (*default: FILENAME-cleaver.html*)
+So what sort of things can you change with options?
 
---
+* Add your own styles with a `style` attribute
+* Change the document's name with `output`
+* Add your information with `author`
 
-### Metadata Fields
-* **controls**: Option to render navigation buttons (*default: true*)
-* **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (*default: false*)
-* **encoding**: A specified content encoding (*default: utf-8*)
+And many others. Check out the full documentation [here](https://github.com/jdan/cleaver/blob/master/docs/options.md).
 
 --
 
-### Metadata Fields (Advanced)
-* **template**: Location of the template used to render the slides (default:
- *default.mustache*)
-* **layout**: Location of the layout template used to render everything (default:
- *layout.mustache*)
+### Themes
+
+Themes are prepackaged options you can invoke from a directory, URL, or
+even a GitHub repository.
+
+<center>
+    <a href="https://i.cloudup.com/HLtcPJWJJl-3000x3000.png">
+        <img src="https://i.cloudup.com/HLtcPJWJJl-600x600.png" height="350">
+    </a>
+</center>
 
 --
 
-### Other Slides
+### Themes
+
+A theme is simply a directory containing an optional stylesheet, templates,
+and javascript.
+
+Theme styles and scripts can either be loaded
+alongside the defaults or overridden with a simple option.
+
+For more information on themes, check out [our documentation](https://github.com/jdan/cleaver/blob/master/docs/themes.md).
+
+--
+
+### Slide Properties
 
 Slides are separated by `--` and are written in markdown.
 
@@ -116,15 +130,21 @@ h3's (denoted **###**) contain a bottom border for use as a slide header.
 
 ### Author Slide
 
-If your metadata contains any author information (name, url, twitter, email),
+If your options contain any author information (name, url, twitter, email),
 an author slide will be inserted at the end of your presentation.
+
+<center>
+    <a href="https://i.cloudup.com/Ya9g4x3QDR-3000x3000.png">
+        <img src="https://i.cloudup.com/Ya9g4x3QDR-600x600.png" height="300">
+    </a>
+</center>
 
 --
 
 ### That's all, folks!
 
-Seriously, that's it. Cleaver is perfect for quick slideshows that you can
-create using a comfortable format. No extra software or text boxes required.
+Seriously, that's it. Cleaver aims for ease of use: quick presentations with
+no extra software or text boxes required.
 
 Check us out [on GitHub](http://github.com/jdan/cleaver).
 
