@@ -153,7 +153,7 @@ Template files will automatically override the default templates.
 ### More Info
 
 For more information on themes, check out
-[the documentation]([options](https://github.com/jdan/cleaver/blob/master/docs/themes.md)
+[our documentation](https://github.com/jdan/cleaver/blob/master/docs/themes.md).
 
 ## Slide Types
 
