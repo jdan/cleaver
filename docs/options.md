@@ -36,6 +36,18 @@ Please note that some characters must be escaped. For example, "@username"
 would need to be wrapped in quotes. You can leave out the "@" when specifying
 a twitter handle.
 
+### theme
+
+An optional theme to load. A theme is a directory, URL, or a github repo in
+the form of *username/repo* that may contain stylesheets, javascript, or
+rewritten templates. Themes group together many of the other options listed
+in this article.
+
+For example, check out the [retro theme](http://github.com/jdan/cleaver-retro).
+
+For more information on themes, check out
+[the documentation]([options](https://github.com/jdan/cleaver/blob/master/docs/themes.md).
+
 ### style
 
 An optional stylesheet to load. This can be either a URL, or an

@@ -94,7 +94,7 @@ look and feel of your presentation, including author info, stylesheets, and
 custom templates.
 
 See the documentation on
-[options](https://github.com/jdan/cleaver/blob/master/doc/options.md) for more
+[options](https://github.com/jdan/cleaver/blob/master/docs/options.md) for more
 information.
 
 ## Themes
@@ -141,9 +141,12 @@ theme - options.json - corresponding to the following:
 ### Examples
 
 * [jdan/cleaver-retro](http://github.com/jdan/cleaver-retro)
-* [jdan/cleaver-github](http://github.com/)
+* [matmuchrapna/cleaver-ribbon](http://github.com/matmuchrapna/cleaver-ribbon)
 
 Template files will automatically override the default templates.
+
+For more information on themes, check out
+[the documentation]([options](https://github.com/jdan/cleaver/blob/master/docs/themes.md)
 
 ## Slide Types
 
