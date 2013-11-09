@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="{{encoding}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>{{title}}</title>
+  <style type="text/css">
+    {{{style}}}
+  </style>
+</head>
+<body>
+  {{{slideshow}}}
+
+  <div class="help" style="text-align: center; position: absolute; bottom: 20px">
+    <div>
+      <p><em>Use the buttons or arrow keys to switch slides</em></p>
+    </div>
+
+    <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=watch&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+
+    <iframe src="http://ghbtns.com/github-btn.html?user=jdan&repo=cleaver&type=fork&count=true"
+      allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+  </div>
+
+  <!-- analytics -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31067858-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+  <script type="text/javascript">
+    {{{script}}}
+  </script>
+</body>
+</html>

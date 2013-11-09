@@ -5,7 +5,7 @@ author:
   url: http://jordanscales.com
 output: index.html
 style: help.css
-template: gh-pages-template.mustache
+layout: layout.mustache
 
 --
 
