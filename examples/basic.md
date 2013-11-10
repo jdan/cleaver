@@ -49,13 +49,15 @@ No need for multiple templates! [Another link](http://google.com).
 
 ### A code example
 
-    // cool looking code
-    var func = function (arg1) {
-        return function (arg2) {
-            return "arg1: " + arg1 + "arg2: " + arg2;
-        };
+```javascript
+// cool looking code
+var func = function (arg1) {
+    return function (arg2) {
+        return "arg1: " + arg1 + "arg2: " + arg2;
     };
+};
 
-    console.log(func(1)(2)); // result is three
+console.log(func(1)(2)); // result is three
+```
 
 And here is some `inline code` to check out.
