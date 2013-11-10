@@ -2,9 +2,21 @@
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 */
 
-pre code {
-  display: block; padding: 0.5em;
-  color: #333;
+code, pre {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: auto;
+  padding: 6px 10px;
+}
+
+code {
+  padding: 0 5px;
+}
+
+pre>code {
+  margin: 0; padding: 0;
+  border: none;
+  background: transparent;
 }
 
 pre .comment,

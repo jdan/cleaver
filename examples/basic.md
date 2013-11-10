@@ -57,3 +57,5 @@ No need for multiple templates! [Another link](http://google.com).
     };
 
     console.log(func(1)(2)); // result is three
+
+And here is some `inline code` to check out.
