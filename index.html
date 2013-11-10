@@ -145,14 +145,6 @@ pre {
   line-height: 1.3;
 }
 
-code {
-  background-color: #e7e7e7;
-}
-
-pre > code {
-  background-color: inherit;
-}
-
 .progress {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -225,9 +217,21 @@ pre > code {
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 */
 
-pre code {
-  display: block; padding: 0.5em;
-  color: #333;
+code, pre {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: auto;
+  padding: 6px 10px;
+}
+
+code {
+  padding: 0 5px;
+}
+
+pre>code {
+  margin: 0; padding: 0;
+  border: none;
+  background: transparent;
 }
 
 pre .comment,
@@ -373,19 +377,19 @@ pre .chunk {
 </section>
     <section class="slide"><h3 id="what-is-cleaver-">What is Cleaver?</h3>
 <p>Cleaver turns the following:</p>
-<pre><code><span class="attribute">title</span>: <span class="string">My Slideshow</span>
-<span class="attribute">output</span>: <span class="string">slideshow.html</span>
+<pre><code>title: My Slideshow
+output: slideshow.html
 
-<span class="applescript"><span class="comment">--</span>
+--
 
-<span class="comment"># Hello, world!</span>
-<span class="comment">## This is my slideshow</span>
+# Hello, world!
+## This is my slideshow
 
-<span class="comment">--</span>
+--
 
-<span class="comment">### How many widgets can we sell?</span>
+### How many widgets can we sell?
 
-Based <span class="function_start"><span class="keyword">on</span> <span class="title">our</span></span> factors, we can sell **<span class="number">20</span> million** widgets.</span></code></pre>
+Based on our factors, we can sell **20 million** widgets.</code></pre>
 </section>
     <section class="slide"><h3 id="what-is-cleaver-">What is Cleaver?</h3>
 <p><strong>Into a slideshow like this</strong>.</p>
@@ -400,20 +404,20 @@ it at your heart&#39;s desire.</p>
 </section>
     <section class="slide"><h3 id="quick-start">Quick Start</h3>
 <p>Get cleaver from NPM</p>
-<pre><code><span class="title">npm</span> install -g cleaver</code></pre>
+<pre><code>npm install -g cleaver</code></pre>
 <p>And run it against your shiny new presentation</p>
-<pre><code><span class="title">cleaver</span> path/to/presentation.md</code></pre>
+<pre><code>cleaver path/to/presentation.md</code></pre>
 <p>Next we&#39;ll talk about setting up a cleaver document.</p>
 </section>
     <section class="slide"><h3 id="options">Options</h3>
 <p>Each presentation contains options, for example:</p>
-<pre><code><span class="method">title:</span> <span class="class">My</span> <span class="class">Presentation</span>
-<span class="method">author:</span>
-    <span class="method">name:</span> <span class="class">Jordan</span> <span class="class">Scales</span>
-    <span class="method">twitter:</span> jdan
-    <span class="method">url:</span> <span class="method">http:</span>//jordanscales.com
-<span class="method">style:</span> /absolute/path/to/style.css
-<span class="method">output:</span> something.html</code></pre>
+<pre><code>title: My Presentation
+author:
+    name: Jordan Scales
+    twitter: jdan
+    url: http://jordanscales.com
+style: /absolute/path/to/style.css
+output: something.html</code></pre>
 <p>These allow you to change the look and feel of your presentation. They are all
 <em>optional</em>.</p>
 </section>
@@ -643,11 +647,11 @@ window.onload = function () {
   document.onkeydown = function (e) {
     var kc = e.keyCode;
 
-    // left, down, H, J, backspace - BACK
-    // up, right, K, L, space, enter - FORWARD
-    if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74) {
+    // left, down, H, J, backspace, PgUp - BACK
+    // up, right, K, L, space, enter, PgDn - FORWARD
+    if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74 || kc == 33) {
       goBack();
-    } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76) {
+    } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76 || kc == 34) {
       goForward();
     }
   }
