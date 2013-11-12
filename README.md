@@ -73,9 +73,6 @@ cleaver watch path/to/something-changing.md
 record time. Using some spiced up markdown, you can produce
 good-looking, interactive presentations with a just a few lines of text.
 
-All you need to do is write some blocks of markdown, separated by `--`
-on its own line and include options at the top.
-
 Slides are written in [Markdown](http://daringfireball.net/projects/markdown/),
 and are separated by two dashes (`--`).
 
