@@ -12,18 +12,6 @@ body {
   margin: 80px auto 0 auto;
 }
 
-/* styles for print layout */
-#wrapper.nohide {
-  overflow: auto;
-  height: auto;
-  box-shadow: none;
-}
-
-#wrapper.nohide .slide {
-  margin-bottom: 30px;
-}
-/* /styles */
-
 .slide {
   width: auto;
   height: 540px;
@@ -203,5 +191,52 @@ pre {
 
   .slide ul {
     padding-left: 25px;
+  }
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+
+  @page {
+    size: letter;
+  }
+
+  html {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  body {
+    margin: 0 auto !important;
+    border: 0;
+    padding: 0;
+    float: none !important;
+    overflow: visible;
+    background: none !important;
+    font-size: 52%;
+  }
+
+  .progress, .controls {
+    display: none;
+  }
+
+  #wrapper {
+    overflow: visible;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .slide {
+    border: 1px solid #222;
+    margin-bottom: 40px;
+    height: 3.5in;
+  }
+
+  .slide:nth-child(odd) {
+    /* 2 slides per page */
+    page-break-before: always;
   }
 }
