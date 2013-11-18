@@ -2,6 +2,8 @@
 
 30-second Slideshows for Hackers. http://jdan.github.io/cleaver/
 
+[![NPM version](https://badge.fury.io/js/cleaver.png)](http://badge.fury.io/js/cleaver)
+
 ## Intro
 
 Cleaver turns this:
