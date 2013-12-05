@@ -132,7 +132,7 @@ Themes may be specified by one of the following options:
 
 * An absolute or relative path to a directory
 * A URL to a directory
-* A github repostitory in the form of *username/reponame*
+* A github repository in the form of *username/reponame*
 
 ### Overriding Themes
 
