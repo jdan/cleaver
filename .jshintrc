@@ -1,33 +1,4 @@
 {
-	"predef": [
-		"after",
-		"afterEach",
-		"afterEach",
-		"before",
-		"beforeEach",
-		"chai",
-		"describe",
-		"expect",
-		"iit",
-		"it",
-		"runs",
-		"sinon",
-		"spyOn",
-		"waits",
-		"waitsFor",
-		"xit",
-		"xdescribe",
-		"define",
-		"module",
-		"exports",
-		"require",
-		"window",
-		"process",
-		"console",
-		"__dirname",
-		"Buffer"
-	],
-
 	"asi" : false,
 	"bitwise" : true,
 	"boss" : false,
@@ -55,5 +26,6 @@
 	"sub": false,
 	"trailing" : true,
 	"undef": true,
-	"unused": "vars"
+	"unused": "vars",
+	"node": true
 }
