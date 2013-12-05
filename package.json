@@ -26,5 +26,11 @@
     "highlight.js": "~7.3.0",
     "marked": "~0.2.9"
   },
+  "devDependencies": {
+    "jshint": "~2.3.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/jshint lib/ resources/script.js bin/cleaver"
+  },
   "license": "MIT"
 }

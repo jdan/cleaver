@@ -4,7 +4,7 @@
 function goBack() {
   var wrapper = document.querySelector('#wrapper');
   var lastSlide = wrapper.lastChild;
-  while (lastSlide != null && lastSlide.nodeType !== 1) {
+  while (lastSlide !== null && lastSlide.nodeType !== 1) {
     lastSlide = lastSlide.previousSibling;
   }
 
@@ -22,7 +22,7 @@ function goBack() {
 function goForward() {
   var wrapper = document.querySelector('#wrapper');
   var firstSlide = wrapper.firstChild;
-  while (firstSlide != null && firstSlide.nodeType !== 1) {
+  while (firstSlide !== null && firstSlide.nodeType !== 1) {
     firstSlide = firstSlide.nextSibling;
   }
 
@@ -78,7 +78,7 @@ function setCurrentProgress() {
 
   if (progressBar !== null) {
     var pagesNumber    = wrapper.querySelectorAll('section').length;
-    var currentNumber  = parseInt(currentPage());
+    var currentNumber  = parseInt(currentPage(), 10);
     var currentPercent = pagesNumber === 1 ? 100 : 100 * currentNumber / (pagesNumber - 1);
     progressBar.style.width = currentPercent.toString() + '%';
   }
@@ -95,7 +95,7 @@ function goToPage(page) {
   if (targetSlide) {
     var numSlides = allSlides().length;
 
-    for (var i = 0; currentPage() != page && i < numSlides; i++) {
+    for (var i = 0; currentPage() !== page && i < numSlides; i++) {
       goForward();
     }
   }
@@ -130,30 +130,32 @@ window.onload = function () {
 
   // If the location hash specifies a page number, go to it.
   var page = window.location.hash.slice(1);
-  if (page) goToPage(page);
+  if (page) {
+    goToPage(page);
+  }
 
   document.onkeydown = function (e) {
     var kc = e.keyCode;
 
     // left, down, H, J, backspace, PgUp - BACK
     // up, right, K, L, space, enter, PgDn - FORWARD
-    if (kc == 37 || kc == 40 || kc == 8 || kc == 72 || kc == 74 || kc == 33) {
+    if (kc === 37 || kc === 40 || kc === 8 || kc === 72 || kc === 74 || kc === 33) {
       goBack();
-    } else if (kc == 38 || kc == 39 || kc == 13 || kc == 32 || kc == 75 || kc == 76 || kc == 34) {
+    } else if (kc === 38 || kc === 39 || kc === 13 || kc === 32 || kc === 75 || kc === 76 || kc === 34) {
       goForward();
     }
-  }
+  };
 
   if (document.querySelector('.next') && document.querySelector('.prev')) {
     document.querySelector('.next').onclick = function (e) {
       e.preventDefault();
       goForward();
-    }
+    };
 
     document.querySelector('.prev').onclick = function (e) {
       e.preventDefault();
       goBack();
-    }
+    };
   }
 
-}
+};

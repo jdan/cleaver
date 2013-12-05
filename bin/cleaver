@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var path = require('path');
-var fs   = require('fs');
+var fs = require('fs');
 var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
 
 if (process.argv[2] === 'watch') {
