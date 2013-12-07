@@ -2,6 +2,7 @@
 
 30-second Slideshows for Hackers. http://jdan.github.io/cleaver/
 
+[![Travis Build](https://travis-ci.org/jdan/cleaver.png)](https://travis-ci.org/jdan/cleaver)
 [![NPM version](https://badge.fury.io/js/cleaver.png)](http://badge.fury.io/js/cleaver)
 
 ## Intro
