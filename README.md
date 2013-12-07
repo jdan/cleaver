@@ -198,7 +198,7 @@ Alternatively, click the control buttons located below the presentation.
 * Clone it
 * Install dependencies (`npm install`)
 * Checkout a release branch (`git checkout -b feature/cool-wordart`)
-* Make changes, commit, and push
+* Make changes, commit, and push (`npm test` and make sure it passes)
 * Open a pull request!
 
 With &lt;3,<br/>[@jdan](http://jordanscales.com)
