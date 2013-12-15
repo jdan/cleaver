@@ -24,7 +24,8 @@
     "q": "0.9.6",
     "js-yaml": "2.1.0",
     "highlight.js": "~7.3.0",
-    "marked": "~0.2.9"
+    "marked": "~0.2.9",
+    "commander": "~2.1.0"
   },
   "devDependencies": {
     "jshint": "~2.3.0"
