@@ -3,18 +3,33 @@
 var path = require('path');
 var fs = require('fs');
 var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
+var program = require('commander');
 
-if (process.argv[2] === 'watch') {
-	var file = process.argv[3];
-	new Cleaver(file).run();
+program
+  .version(require('../package.json').version)
+  .usage('[command] [file]');
 
-	console.log('Watching for changes on ' + process.argv[3] + '. Ctrl-C to abort.');
-	fs.watchFile(file, { persistent: true, interval: 100 }, function () {
-		console.log('Rebuilding: ' + new Date());
-		new Cleaver(file).run();
-	});
+program
+  .command('watch')
+  .description('Watch for changes on markdown file')
+  .action(function(){
+    file = program.args[0];
+    new Cleaver(file).run();
+
+    console.log('Watching for changes on ' + file + '. Ctrl-C to abort.');
+    fs.watchFile(file, { persistent: true, interval: 100 }, function () {
+      console.log('Rebuilding: ' + new Date());
+      new Cleaver(file).run();
+    });
+  });
+
+program.parse(process.argv);
+
+if (!program.args.length) {
+  program.help();
 } else {
-	var cleaver = new Cleaver(process.argv[2]);
-	cleaver.run();
+  var file = program.args[0];
+  var cleaver = new Cleaver(file);
+  cleaver.run();
 }
 
