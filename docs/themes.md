@@ -28,6 +28,10 @@ will be loaded into your slideshow.
 
 ![cleaver-ribbon](https://i.cloudup.com/GECEx5BmxI-1200x1200.png)
 
+* [sudodoki/reveal-cleaver-theme](http://github.com/sudodoki/reveal-cleaver-theme)
+
+![reveal-cleaver-theme](https://i.cloudup.com/wlzisDLe32-1200x1200.png)
+
 ### Specifying Themes
 
 Themes may be specified by one of the following options:

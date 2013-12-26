@@ -124,8 +124,14 @@ will be loaded into your slideshow.
 ![cleaver-retro](https://i.cloudup.com/HLtcPJWJJl-1200x1200.png)
 
 * [matmuchrapna/cleaver-ribbon](http://github.com/matmuchrapna/cleaver-ribbon)
+– Mozilla's [shower](http://shwr.me/) implemented in cleaver.
 
 ![cleaver-ribbon](https://i.cloudup.com/GECEx5BmxI-1200x1200.png)
+
+* [sudodoki/reveal-cleaver-theme](http://github.com/sudodoki/reveal-cleaver-theme)
+– cleaver meets [reveal.js](http://lab.hakim.se/reveal-js/#/).
+
+![reveal-cleaver-theme](https://i.cloudup.com/wlzisDLe32-1200x1200.png)
 
 ### Specifying Themes
 
