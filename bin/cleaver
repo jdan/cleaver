@@ -33,6 +33,7 @@ if (!program.args.length) {
   cleaver.run()
     .fail(function (err) {
       console.log('!!', err.message);
+      process.exit(1);
     });
 }
 
