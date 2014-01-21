@@ -2,7 +2,7 @@
 
 var path = require('path');
 var fs = require('fs');
-var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
+var Cleaver = require(path.resolve(__dirname,'../lib/cleaver'));
 var program = require('commander');
 
 program
@@ -13,7 +13,7 @@ program
   .command('watch')
   .description('Watch for changes on markdown file')
   .action(function(){
-    file = program.args[0];
+    var file = program.args[0];
     new Cleaver(file).run();
 
     console.log('Watching for changes on ' + file + '. Ctrl-C to abort.');
@@ -23,13 +23,22 @@ program
     });
   });
 
+program
+  .command('init')
+  .description('Boilerplate your presentation')
+  .action(function(){
+    require('../lib/wizard').init(program);
+  });
+program
+  .command('*')
+  .action(function(env){
+    var file = program.args[0];
+    var cleaver = new Cleaver(file);
+    cleaver.run();
+  });
 program.parse(process.argv);
 
 if (!program.args.length) {
   program.help();
-} else {
-  var file = program.args[0];
-  var cleaver = new Cleaver(file);
-  cleaver.run();
 }
 
