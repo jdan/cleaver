@@ -3,7 +3,9 @@ author:
   name: Jordan Scales
   twitter: jdan
   url: http://jordanscales.com
-output: basic.html
+outlet: '>>'
+iterator: '<<'
+output: index.html
 
 --
 
@@ -60,4 +62,22 @@ var func = function (arg1) {
 console.log(func(1)(2)); // result is three
 ```
 
+--
+
+### Speaking
+When points are appearing one by one is
+>> so
+>> more
+>> effective
+>> not really.
+
+--
+### Giving talk
+
+You might want to
+<< give single reason
+<< show same caption for figures
+<< reuse some stuff on slide
+
+--
 And here is some `inline code` to check out.
