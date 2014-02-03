@@ -23,7 +23,7 @@ function navigate(n) {
   document.getElementById('slide-' + position).classList.add('hidden');
   document.getElementById('slide-' + nextPosition).classList.remove('hidden');
 
-  setCurrentProgress();
+  updateProgress();
   updateURL();
   updateTabIndex();
 }
@@ -38,14 +38,14 @@ function updateURL() {
 
 
 /**
- * Set the current progress indicator.
+ * Sets the progress indicator.
  */
-function setCurrentProgress() {
+function updateProgress() {
   var progressBar = document.querySelector('.progress-bar');
 
   if (progressBar !== null) {
-    var numSlides = document.getElementsByClassName('.slide').length;
-    var position = parseInt(currentPosition());
+    var numSlides = document.getElementsByClassName('slide').length;
+    var position = parseInt(currentPosition()) - 1;
     var percent = (numSlides === 1) ? 100 : 100 * position / (numSlides - 1);
     progressBar.style.width = percent.toString() + '%';
   }

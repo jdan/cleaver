@@ -139,10 +139,10 @@ pre {
   height: 3px;
   background-color: #b4b4b4;
 
-  -webkit-transition: width 0.1s ease-out;
-  -moz-transition: width 0.1s ease-out;
-  -o-transition: width 0.1s ease-out;
-  transition: width 0.1s ease-out;
+  -webkit-transition: width 0.05s ease-out;
+  -moz-transition: width 0.05s ease-out;
+  -o-transition: width 0.05s ease-out;
+  transition: width 0.05s ease-out;
 }
 
 .hidden {
