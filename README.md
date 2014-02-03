@@ -161,6 +161,43 @@ Template files will automatically override the default templates.
 For more information on themes, check out
 [our documentation](https://github.com/jdan/cleaver/blob/master/docs/themes.md).
 
+## Markup
+
+Cleaver slides are rendered using the following template:
+
+```handlebars
+{{#slides}}
+  <div class="slide{{#hidden}} hidden{{/hidden}}" id="slide-{{id}}">
+    <section class="slide-content">{{{content}}}</section>
+  </div>
+{{/slides}}
+```
+
+And produce the following markup:
+
+```
++-------------------------------+
+| #slide-N                      |
+|     +-------------------+     |
+|     | .slide-content    |     |
+|     |                   |     |
+|     |                   |     |
+|     |                   |     |
+|     |                   |     |
+|     +-------------------+     |
+|                               |
+|                               |
+| (navigation)                  |
++-------------------------------+
+```
+
+**#slide-N** (for example, *#slide-3*) allows you to identify a particular
+full-bleed slide by its position in the slideshow. It extends to the bounds of
+the page.
+
+**.slide-content** is a smaller window which holds the actual content of the
+slide.
+
 ## Slide Types
 
 ### Title slide
