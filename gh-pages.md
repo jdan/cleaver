@@ -4,7 +4,7 @@ author:
   twitter: jdan
   url: http://jordanscales.com
 output: index.html
-style: help.css
+style: style.css
 layout: layout.mustache
 
 --
@@ -46,6 +46,16 @@ format.
 
 Cleaver comes with a stylesheet that looks good by default, but you can extend
 it at your heart's desire.
+
+--
+
+# Make it beautiful
+## with full-bleed images
+
+--
+
+# Or keep it simple
+## and classy, don't forget classy
 
 --
 

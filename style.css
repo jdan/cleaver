@@ -1,0 +1,24 @@
+#slide-4 {
+  background: url('747.jpg');
+  background-size: cover;
+  color: #eee;
+}
+
+#slide-5 {
+  background-color: #222;
+  color: #eee;
+}
+
+.help {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0; right: 0;
+  z-index: -1;
+}
+
+@media (max-width: 480px) {
+  .help {
+    display: none;
+  }
+}
