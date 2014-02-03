@@ -72,8 +72,6 @@ function updateTabIndex() {
 }
 
 window.onload = function () {
-  /* Reveal the first slide */
-  document.getElementById('slide-1').classList.remove('hidden');
 
   // Update the tabindex to prevent weird slide transitioning
   updateTabIndex();

@@ -5,7 +5,7 @@
 {{/progress}}
 
 {{#slides}}
-  <div class="slide hidden" id="slide-{{id}}">
+  <div class="slide{{#hidden}} hidden{{/hidden}}" id="slide-{{id}}">
     <section class="slide-content">{{{content}}}</section>
   </div>
 {{/slides}}
