@@ -2,7 +2,7 @@
  * Returns the current page number of the presentation.
  */
 function currentPosition() {
-  return document.querySelector('.slide:not(.hidden)').id.slice(6);
+  return parseInt(document.querySelector('.slide:not(.hidden)').id.slice(6));
 }
 
 
@@ -11,7 +11,7 @@ function currentPosition() {
  * If n is negative, we will navigate in reverse
  */
 function navigate(n) {
-  var position = parseInt(currentPosition());
+  var position = currentPosition();
   var numSlides = document.getElementsByClassName('slide').length;
 
   /* Positions are 1-indexed, so we need to add and subtract 1 */
@@ -45,7 +45,7 @@ function updateProgress() {
 
   if (progressBar !== null) {
     var numSlides = document.getElementsByClassName('slide').length;
-    var position = parseInt(currentPosition()) - 1;
+    var position = currentPosition() - 1;
     var percent = (numSlides === 1) ? 100 : 100 * position / (numSlides - 1);
     progressBar.style.width = percent.toString() + '%';
   }
@@ -59,7 +59,8 @@ function updateProgress() {
  */
 function updateTabIndex() {
   var allLinks = document.querySelectorAll('.slide a');
-  var currentPageLinks = document.querySelector('.slide').querySelectorAll('a');
+  var position = currentPosition();
+  var currentPageLinks = document.getElementById('slide-' + position).querySelectorAll('a');
   var i;
 
   for (i = 0; i < allLinks.length; i++) {
@@ -67,12 +68,11 @@ function updateTabIndex() {
   }
 
   for (i = 0; i < currentPageLinks.length; i++) {
-    allLinks[i].removeAttribute('tabindex');
+    currentPageLinks[i].removeAttribute('tabindex');
   }
 }
 
 window.onload = function () {
-
   // Update the tabindex to prevent weird slide transitioning
   updateTabIndex();
 
