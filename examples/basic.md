@@ -18,10 +18,7 @@ Content can be written in **Markdown!** New lines no longer need two angle brack
 
 This will be in a separate paragraph.
 
-<img src="http://whatismarkdown.com/workspace/img/logo.gif" alt="Drawing" style="width: 150px;"/>
-
-    ![markdown-logo](logo.gif)
-    <img src="logo.gif" />
+<img src="https://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Logo.png" width="50%">
 
 [Here's a link](http://google.com).
 
