@@ -72,7 +72,7 @@ function updateTabIndex() {
   }
 }
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
   // Update the tabindex to prevent weird slide transitioning
   updateTabIndex();
 
@@ -105,4 +105,4 @@ window.onload = function () {
       navigate(-1);
     };
   }
-};
+});
