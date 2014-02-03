@@ -4,11 +4,12 @@
   </div>
 {{/progress}}
 
-<div id="wrapper">
-  {{#slides}}
-    <section class="slide">{{{.}}}</section>
-  {{/slides}}
-</div>
+{{#slides}}
+  <div class="slide{{#hidden}} hidden{{/hidden}}" id="slide-{{id}}">
+    <section class="slide-content">{{{content}}}</section>
+  </div>
+{{/slides}}
+
 {{#controls}}
   <div class="controls">
     <div class="arrow prev"></div>

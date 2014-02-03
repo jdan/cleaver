@@ -77,13 +77,6 @@ Displays a small progress bar at the top of your document.
 
 **Default**: true
 
-### agenda
-
-Inserts an agenda (table of contents) slide at the beginning of your
-presentation, based on the titles of your individual slides.
-
-**Default**: false
-
 ### encoding
 
 Content encoding to use on the rendered document.
