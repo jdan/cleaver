@@ -46,7 +46,7 @@ in this article.
 For example, check out the [retro theme](http://github.com/jdan/cleaver-retro).
 
 For more information on themes, check out
-[the documentation]([options](https://github.com/jdan/cleaver/blob/master/docs/themes.md).
+[the documentation](https://github.com/jdan/cleaver/blob/master/docs/themes.md#options).
 
 ### style
 
