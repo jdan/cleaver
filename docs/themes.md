@@ -45,7 +45,7 @@ Themes may be specified by one of the following options:
 By default, *style.css* and *script.js* will be **appended** to the default
 stylesheets and javascripts included in cleaver presentations. If you wish to
 completely override these defaults, you must include another file in your
-theme - options.json - corresponding to the following:
+theme - `settings.json` - corresponding to the following:
 
 ```json
 {
