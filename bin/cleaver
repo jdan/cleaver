@@ -30,6 +30,10 @@ if (!program.args.length) {
 } else {
   var file = program.args[0];
   var cleaver = new Cleaver(file);
-  cleaver.run();
+  cleaver.run()
+    .fail(function (err) {
+      console.log('!!', err.message);
+      process.exit(1);
+    });
 }
 
