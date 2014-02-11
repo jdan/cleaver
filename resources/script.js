@@ -72,6 +72,38 @@ function updateTabIndex() {
   }
 }
 
+/**
+ * Toggle fullScreen mode on document element.
+ * Works on chrome (>= 15), firefox (>= 9), ie (>= 11), opera(>= 12.1), safari (>= 5).
+ */
+function toggleFullScreen() {
+  // detect any current fullscreen element
+  if (!document.fullscreenElement &&
+      !document.mozFullScreenElement &&
+      !document.webkitFullscreenElement &&
+      !document.msFullscreenElement ) {
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) {
+      document.documentElement.msRequestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // Update the tabindex to prevent weird slide transitioning
   updateTabIndex();
@@ -86,11 +118,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var kc = e.keyCode;
 
     // left, down, H, J, backspace, PgUp - BACK
-    // up, right, K, L, space, enter, PgDn - FORWARD
+    // up, right, K, L, space, PgDn - FORWARD
+    // enter - FULLSCREEN
     if (kc === 37 || kc === 40 || kc === 8 || kc === 72 || kc === 74 || kc === 33) {
       navigate(-1);
-    } else if (kc === 38 || kc === 39 || kc === 13 || kc === 32 || kc === 75 || kc === 76 || kc === 34) {
+    } else if (kc === 38 || kc === 39 || kc === 32 || kc === 75 || kc === 76 || kc === 34) {
       navigate(1);
+    } else if (kc === 13) {
+      toggleFullScreen();
     }
   };
 
