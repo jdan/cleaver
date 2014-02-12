@@ -149,6 +149,18 @@ pre {
   display: none;
 }
 
+@media (min-width: 850px) {
+  #wrapper {
+    width: auto;
+    height: 100vh;
+  }
+
+  .slide {
+    height: calc(100% - 10%);
+    padding: 10%;
+  }
+}
+
 @media (max-width: 850px) {
 
   body {
