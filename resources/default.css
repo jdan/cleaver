@@ -149,20 +149,23 @@ pre {
   display: none;
 }
 
-@media (min-width: 850px) {
-  #wrapper {
+:-webkit-full-screen #wrapper,
+:-moz-full-screen #wrapper,
+:-ms-fullscreen #wrapper,
+:full-screen #wrapper {
     width: auto;
     height: 100vh;
-  }
+}
 
-  .slide {
-    height: calc(100% - 10%);
+:-webkit-full-screen .slide,
+:-moz-full-screen .slide,
+:-ms-fullscreen .slide,
+:full-screen .slide {
+    height: calc(100% - 20%);
     padding: 10%;
-  }
 }
 
 @media (max-width: 850px) {
-
   body {
     font-size: 70%;
   }
