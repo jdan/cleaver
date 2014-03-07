@@ -410,6 +410,10 @@ pre .chunk {
   left: 0; right: 0;
 }
 
+.controls {
+  z-index: 1;
+}
+
 @media (max-width: 480px) {
   .help {
     display: none;
@@ -423,12 +427,12 @@ pre .chunk {
     <div class="progress-bar"></div>
   </div>
 
-  <div class="slide" id="slide-1">
+  <div class="slide " id="slide-1">
     <section class="slide-content"><h1 id="cleaver">Cleaver</h1>
 <h2 id="30-second-slideshows-for-hackers">30-second slideshows for hackers</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-2">
+  <div class="slide hidden " id="slide-2">
     <section class="slide-content"><h3 id="what-is-cleaver-">What is Cleaver?</h3>
 <p>Cleaver turns the following:</p>
 <pre><code>title: My Slideshow
@@ -446,7 +450,7 @@ output: slideshow.html
 Based on our factors, we can sell **20 million** widgets.</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-3">
+  <div class="slide hidden " id="slide-3">
     <section class="slide-content"><h3 id="what-is-cleaver-">What is Cleaver?</h3>
 <p><strong>Into a slideshow like this</strong>.</p>
 <p>Cleaver uses a simple <a href="http://daringfireball.net/projects/markdown/">Markdown</a>
@@ -459,17 +463,17 @@ format.</p>
 it at your heart&#39;s desire.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-4">
+  <div class="slide hidden " id="slide-4">
     <section class="slide-content"><h1 id="make-it-beautiful">Make it beautiful</h1>
 <h2 id="with-full-bleed-images">with full-bleed images</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-5">
+  <div class="slide hidden " id="slide-5">
     <section class="slide-content"><h1 id="or-keep-it-simple">Or keep it simple</h1>
 <h2 id="and-classy-don-t-forget-classy">and classy, don&#39;t forget classy</h2>
 </section>
   </div>
-  <div class="slide hidden" id="slide-6">
+  <div class="slide hidden " id="slide-6">
     <section class="slide-content"><h3 id="quick-start">Quick Start</h3>
 <p>Get cleaver from NPM</p>
 <pre><code>npm install -g cleaver</code></pre>
@@ -478,7 +482,7 @@ it at your heart&#39;s desire.</p>
 <p>Next we&#39;ll talk about setting up a cleaver document.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-7">
+  <div class="slide hidden " id="slide-7">
     <section class="slide-content"><h3 id="options">Options</h3>
 <p>Each presentation contains options, for example:</p>
 <pre><code>title: My Presentation
@@ -492,7 +496,7 @@ output: something.html</code></pre>
 <em>optional</em>.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-8">
+  <div class="slide hidden " id="slide-8">
     <section class="slide-content"><h3 id="options">Options</h3>
 <p>So what sort of things can you change with options?</p>
 <ul>
@@ -503,7 +507,7 @@ output: something.html</code></pre>
 <p>And many others. Check out the full documentation <a href="https://github.com/jdan/cleaver/blob/master/docs/options.md">here</a>.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-9">
+  <div class="slide hidden " id="slide-9">
     <section class="slide-content"><h3 id="themes">Themes</h3>
 <p>Themes are prepackaged options you can invoke from a directory, URL, or
 even a GitHub repository.</p>
@@ -513,7 +517,7 @@ even a GitHub repository.</p>
     </a>
 </center></section>
   </div>
-  <div class="slide hidden" id="slide-10">
+  <div class="slide hidden " id="slide-10">
     <section class="slide-content"><h3 id="themes">Themes</h3>
 <p>A theme is simply a directory containing an optional stylesheet, templates,
 and javascript.</p>
@@ -522,7 +526,7 @@ alongside the defaults or overridden with a simple option.</p>
 <p>For more information on themes, check out <a href="https://github.com/jdan/cleaver/blob/master/docs/themes.md">our documentation</a>.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-11">
+  <div class="slide hidden " id="slide-11">
     <section class="slide-content"><h3 id="slide-properties">Slide Properties</h3>
 <p>Slides are separated by <code>--</code> and are written in markdown.</p>
 <p>h1&#39;s and h2&#39;s (denoted <strong>#</strong> and <strong>##</strong> respectively) contain styling to
@@ -530,7 +534,7 @@ center and vertically align themselves for intro slides.</p>
 <p>h3&#39;s (denoted <strong>###</strong>) contain a bottom border for use as a slide header.</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
+  <div class="slide hidden " id="slide-12">
     <section class="slide-content"><h3 id="author-slide">Author Slide</h3>
 <p>If your options contain any author information (name, url, twitter, email),
 an author slide will be inserted at the end of your presentation.</p>
@@ -540,7 +544,7 @@ an author slide will be inserted at the end of your presentation.</p>
     </a>
 </center></section>
   </div>
-  <div class="slide hidden" id="slide-13">
+  <div class="slide hidden " id="slide-13">
     <section class="slide-content"><h3 id="that-s-all-folks-">That&#39;s all, folks!</h3>
 <p>Seriously, that&#39;s it. Cleaver aims for ease of use: quick presentations with
 no extra software or text boxes required.</p>
@@ -548,7 +552,7 @@ no extra software or text boxes required.</p>
 <p>With &lt;3,<br/>Jordan</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-14">
+  <div class="slide hidden " id="slide-14">
     <section class="slide-content"><div class="author">
   <h1 class="name">Jordan Scales</h1>
     <h3 class="twitter">
@@ -672,6 +676,40 @@ function updateTabIndex() {
   }
 }
 
+/**
+ * Determines whether or not we are currently in full screen mode
+ */
+function isFullScreen() {
+  return document.fullscreenElement ||
+         document.mozFullScreenElement ||
+         document.webkitFullscreenElement ||
+         document.msFullscreenElement;
+}
+
+/**
+ * Toggle fullScreen mode on document element.
+ * Works on chrome (>= 15), firefox (>= 9), ie (>= 11), opera(>= 12.1), safari (>= 5).
+ */
+function toggleFullScreen() {
+  /* Convenient renames */
+  var docElem = document.documentElement;
+  var doc = document;
+
+  docElem.requestFullscreen =
+      docElem.requestFullscreen ||
+      docElem.msRequestFullscreen ||
+      docElem.mozRequestFullScreen ||
+      docElem.webkitRequestFullscreen.bind(docElem, Element.ALLOW_KEYBOARD_INPUT);
+
+  doc.exitFullscreen =
+      doc.exitFullscreen ||
+      doc.msExitFullscreen ||
+      doc.mozCancelFullScreen ||
+      doc.webkitExitFullscreen;
+
+  isFullScreen() ? doc.exitFullscreen() : docElem.requestFullscreen();
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // Update the tabindex to prevent weird slide transitioning
   updateTabIndex();
@@ -686,11 +724,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var kc = e.keyCode;
 
     // left, down, H, J, backspace, PgUp - BACK
-    // up, right, K, L, space, enter, PgDn - FORWARD
+    // up, right, K, L, space, PgDn - FORWARD
+    // enter - FULLSCREEN
     if (kc === 37 || kc === 40 || kc === 8 || kc === 72 || kc === 74 || kc === 33) {
       navigate(-1);
-    } else if (kc === 38 || kc === 39 || kc === 13 || kc === 32 || kc === 75 || kc === 76 || kc === 34) {
+    } else if (kc === 38 || kc === 39 || kc === 32 || kc === 75 || kc === 76 || kc === 34) {
       navigate(1);
+    } else if (kc === 13) {
+      toggleFullScreen();
     }
   };
 
