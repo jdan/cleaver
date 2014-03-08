@@ -1,5 +1,7 @@
 ## Themes
 
+**Pssst**: Did you know the wiki [has its own page](https://github.com/jdan/cleaver/wiki/Theme-Index) dedicated to themes?
+
     title: Theme Example
     output: theme.html
     theme: jdan/cleaver-retro

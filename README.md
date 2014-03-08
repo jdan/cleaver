@@ -97,7 +97,12 @@ See the documentation on
 [options](https://github.com/jdan/cleaver/blob/master/docs/options.md) for more
 information.
 
+Be sure to check out the [wiki](https://github.com/jdan/cleaver/wiki) as well.
+
 ## Themes
+
+Check out the [themes](https://github.com/jdan/cleaver/wiki/Theme-Index)
+page on our [wiki](http://github.com/jdan/cleaver/wiki).
 
     title: Theme Example
     output: theme.html
