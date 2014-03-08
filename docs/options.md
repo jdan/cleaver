@@ -1,5 +1,10 @@
 ## Options
 
+Quick links: [title](#title), [author](#author), [theme](#theme),
+[style](#style), [output](#output), [controls](#controls),
+[progress](#progress), [encoding](#encoding), [template](#template),
+[layout](#layout)
+
 Cleaver supports several basic options for adding a bit of customization to
 your presentations. These options are placed at the top of your document, in
 YAML format. A typical option setup resembles the following.
