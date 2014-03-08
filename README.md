@@ -247,13 +247,14 @@ represent a slide title.
 ## Navigation
 
 Cleaver supports keyboard navigation for switching between slides.
+Alternatively, click the control buttons located below the presentation.
 
 To navigate the slideshow:
 
-* **forward**: K, L, ENTER, UP, RIGHT, PgDn, and Space
+* **forward**: K, L, UP, RIGHT, PgDn, and Space
 * **reverse**: H, J, LEFT, DOWN, PgUp, and Backspace
 
-Alternatively, click the control buttons located below the presentation.
+The toggle fullscreen mode, press the **ENTER** key.
 
 ## Contributing
 
