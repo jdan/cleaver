@@ -167,7 +167,7 @@ Cleaver slides are rendered using the following template:
 
 ```handlebars
 {{#slides}}
-  <div class="slide{{#hidden}} hidden{{/hidden}}" id="slide-{{id}}">
+  <div class="slide{{#hidden}} hidden{{/hidden}} {{classList}}" id="slide-{{id}}">
     <section class="slide-content">{{{content}}}</section>
   </div>
 {{/slides}}
@@ -197,6 +197,21 @@ the page.
 
 **.slide-content** is a smaller window which holds the actual content of the
 slide.
+
+### Class List
+
+A class list can be placed after each "slice" (denoted `--`) to help you
+style individual slides without worrying about their index.
+
+```
+-- bg
+
+This slide will have a class "bg" associated with it
+
+-- bg blink
+
+This one, too, but it will also have the class "blink"
+```
 
 ## Slide Types
 
