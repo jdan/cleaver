@@ -5,6 +5,27 @@ var fs = require('fs');
 var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
 var program = require('commander');
 
+/**
+ * Helper function to use the cleaver API to create and save a new
+ * presentation
+ */
+function createAndSave(file) {
+  fs.readFile(file, 'utf-8', function (err, contents) {
+    var presentation = new Cleaver(contents, path.resolve(path.dirname(file)));
+    var promise = presentation.run();
+
+    promise
+      .then(function (product) {
+        var outputFile = presentation.metadata.output;
+        fs.writeFile(outputFile, product);
+      })
+      .fail(function (err) {
+        process.stderr.write('!! ' + err.message + '\n');
+        process.exit(1);
+      });
+  });
+}
+
 program
   .version(require('../package.json').version)
   .usage('[command] [file]');
@@ -13,13 +34,13 @@ program
   .command('watch')
   .description('Watch for changes on markdown file')
   .action(function(){
-    file = program.args[0];
-    new Cleaver(file).run();
+    var file = program.args[0];
+    createAndSave(file);
 
     console.log('Watching for changes on ' + file + '. Ctrl-C to abort.');
     fs.watchFile(file, { persistent: true, interval: 100 }, function () {
       console.log('Rebuilding: ' + new Date());
-      new Cleaver(file).run();
+      createAndSave(file);
     });
   });
 
@@ -28,12 +49,6 @@ program.parse(process.argv);
 if (!program.args.length) {
   program.help();
 } else {
-  var file = program.args[0];
-  var cleaver = new Cleaver(file);
-  cleaver.run()
-    .fail(function (err) {
-      console.log('!!', err.message);
-      process.exit(1);
-    });
+  createAndSave(program.args[0]);
 }
 
