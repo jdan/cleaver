@@ -70,6 +70,8 @@ cleaver watch path/to/something-changing.md
 # Rebuilding: Thu Nov 07 2013 00:16:09 GMT-0500 (EST)
 ```
 
+If you are using a theme from github, you can use `cleaver --cache path/to-something.md` to enable cache the theme into files.
+
 ## More Info
 
 **Cleaver** is a one-stop shop for generating HTML presentations in
