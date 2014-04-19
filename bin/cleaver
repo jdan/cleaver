@@ -16,7 +16,7 @@ function createAndSave(file) {
 
     promise
       .then(function (product) {
-        var outputFile = presentation.metadata.output;
+        var outputFile = presentation.metadata.output || path.basename(file, '.md') + '-cleaver.html';
         fs.writeFile(outputFile, product);
       })
       .fail(function (err) {
