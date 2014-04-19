@@ -9,9 +9,9 @@ var program = require('commander');
  * Helper function to use the cleaver API to create and save a new
  * presentation
  */
-function createAndSave(file) {
+function createAndSave(file, cache) {
   fs.readFile(file, 'utf-8', function (err, contents) {
-    var presentation = new Cleaver(contents, path.resolve(path.dirname(file)));
+    var presentation = new Cleaver(contents, path.resolve(path.dirname(file)), cache);
     var promise = presentation.run();
 
     promise
@@ -28,6 +28,7 @@ function createAndSave(file) {
 
 program
   .version(require('../package.json').version)
+  .option('-c, --cache', 'cache http response content')
   .usage('[command] [file]');
 
 program
@@ -35,12 +36,12 @@ program
   .description('Watch for changes on markdown file')
   .action(function(){
     var file = program.args[0];
-    createAndSave(file);
+    createAndSave(file, program.cache);
 
     console.log('Watching for changes on ' + file + '. Ctrl-C to abort.');
     fs.watchFile(file, { persistent: true, interval: 100 }, function () {
       console.log('Rebuilding: ' + new Date());
-      createAndSave(file);
+      createAndSave(file, program.cache);
     });
   });
 
@@ -49,6 +50,6 @@ program.parse(process.argv);
 if (!program.args.length) {
   program.help();
 } else {
-  createAndSave(program.args[0]);
+  createAndSave(program.args[0], program.cache);
 }
 
