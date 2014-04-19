@@ -129,7 +129,7 @@ will be loaded into your slideshow.
 ![cleaver-retro](https://i.cloudup.com/HLtcPJWJJl-1200x1200.png)
 
 * [matmuchrapna/cleaver-ribbon](http://github.com/matmuchrapna/cleaver-ribbon)
-– Mozilla's [shower](http://shwr.me/) implemented in cleaver.
+– [Shower](http://shwr.me/) implemented in cleaver.
 
 ![cleaver-ribbon](https://i.cloudup.com/GECEx5BmxI-1200x1200.png)
 
