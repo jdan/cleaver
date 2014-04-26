@@ -70,6 +70,24 @@ cleaver watch path/to/something-changing.md
 # Rebuilding: Thu Nov 07 2013 00:16:09 GMT-0500 (EST)
 ```
 
+Use the `--debug` flag to display debug information:
+
+```bash
+$ cleaver --debug examples/basic.md
+  cleaver loaded input document +0ms
+  helper read /Users/jordan/Projects/cleaver/templates/layout.mustache +0ms
+  helper read /Users/jordan/Projects/cleaver/templates/author.mustache +0ms
+  helper read /Users/jordan/Projects/cleaver/templates/default.mustache +0ms
+  cleaver loaded templates +3ms
+  cleaver parsed metadata +4ms
+  helper read /Users/jordan/Projects/cleaver/resources/default.css +13ms
+  helper read /Users/jordan/Projects/cleaver/resources/github.css +0ms
+  helper read /Users/jordan/Projects/cleaver/resources/script.js +0ms
+  cleaver loaded static assets +9ms
+  cleaver rendered slides +1ms
+  cleaver rendered presentation +1ms
+```
+
 ## More Info
 
 **Cleaver** is a one-stop shop for generating HTML presentations in

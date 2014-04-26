@@ -2,8 +2,8 @@
 
 var path = require('path');
 var fs = require('fs');
-var Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
 var program = require('commander');
+var Cleaver;
 
 /**
  * Helper function to use the cleaver API to create and save a new
@@ -21,6 +21,9 @@ function createAndSave(file) {
       })
       .fail(function (err) {
         process.stderr.write('!! ' + err.message + '\n');
+        if (program.debug) {
+          process.stderr.write(err.stack);
+        }
         process.exit(1);
       });
   });
@@ -33,7 +36,7 @@ program
 program
   .command('watch')
   .description('Watch for changes on markdown file')
-  .action(function(){
+  .action(function () {
     var file = program.args[0];
     createAndSave(file);
 
@@ -44,11 +47,28 @@ program
     });
   });
 
+program
+  .option('--debug', 'Enable debug output');
+
 program.parse(process.argv);
 
 if (!program.args.length) {
   program.help();
 } else {
+  /**
+   * Enable debugging
+   *
+   * For finer-tuned debugging you can ignore the --debug flag and
+   * instead use the DEBUG environment variable that the `debug` module
+   * reads automatically.
+   *
+   * $ DEBUG=[cleaver,helper] cleaver path/to/presentation.md
+   */
+  if (program.debug) {
+    process.env.DEBUG = '*';
+  }
+
+  /* Load cleaver with the new ENV for debugging */
+  Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
   createAndSave(program.args[0]);
 }
-
