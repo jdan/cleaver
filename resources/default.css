@@ -100,16 +100,18 @@ ul {
   line-height: 1.375;
 }
 
+.author {
+    text-align: center;
+}
+
 .author h1 {
   font-size: 170%;
   font-weight: 200;
-  text-align: center;
   margin-bottom: 30px;
 }
 
 .author h3 {
   font-weight: 100;
-  text-align: center;
   font-size: 95%;
   border: none;
 }
