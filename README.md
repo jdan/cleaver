@@ -17,7 +17,7 @@ Cleaver turns this:
       github: keith3
       google+: keith3
       gmail: lufengd3@gmail.com
-      url: http://jordanscales.com
+      url: http://lufeng.me
     output: basic.html
     controls: true
 
