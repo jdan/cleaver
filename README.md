@@ -11,9 +11,13 @@ Cleaver turns this:
 
     title: Basic Example
     author:
-      name: Jordan Scales
-      twitter: jdan
-      url: http://jordanscales.com
+      name: keith
+      twitter: keith_lu
+      weibo: lufengd3
+      github: keith3
+      google+: keith3
+      gmail: lufengd3@gmail.com
+      url: http://lufeng.me
     output: basic.html
     controls: true
 

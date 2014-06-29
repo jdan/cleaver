@@ -11,9 +11,13 @@ YAML format. A typical option setup resembles the following.
 
     title: Basic Example
     author:
-      name: Jordan Scales
-      twitter: jdan
-      url: http://jordanscales.com
+      name: 快餐店长
+      twitter: keith_lu
+      weibo: lufengd3
+      github: keith3
+      google+: keith3
+      gmail: lufengd3@gmail.com
+      url: http://lufeng.me
     style: basic-styles.css
     output: basic.html
 
@@ -35,6 +39,10 @@ These fields include:
 * **name**: Your full name
 * **url**: A url to your website
 * **twitter**: Your twitter handle
+* **weibo**: Your weibo handle
+* **github**: Your github handle
+* **google+**: Your google+ handle
+* **gamil**: Your gmail address
 * **email**: Your email address
 
 Please note that some characters must be escaped. For example, "@username"

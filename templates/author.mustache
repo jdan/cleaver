@@ -1,15 +1,43 @@
 <div class="author">
   <h1 class="name">{{name}}</h1>
+  
   {{#twitter}}
-    <h3 class="twitter">
-      <a href="http://twitter.com/{{{twitter}}}">{{{twitter}}}</a>
-    </h3>
+    <a href="https://twitter.com/{{{twitter}}}" target="_blank" >
+      <img src='resources/social_icon/twitter.png' title={{{twitter}}} >
+    </a>
   {{/twitter}}
+
+  {{#weibo}}
+    <a href="http://weibo.com/{{{weibo}}}" target="_blank" >
+      <img src='resources/social_icon/weibo.png' title={{{weibo}}} >
+    </a>
+  {{/weibo}}
+
+  {{#github}}
+    <a href="https://github.com/{{{github}}}" target="_blank" >
+      <img src='resources/social_icon/github.png' title={{{github}}} >
+    </a>
+  {{/github}}
+
+  {{#google+}}
+    <a href="https://plus.google.com/{{{google+}}}">
+      <img src='resources/social_icon/google+.png' title={{{google+}}} >
+    </a>
+  {{/google+}}
+
+  {{#gmail}}
+    <a href="mailto:{{{gmail}}}">
+      <img src='resources/social_icon/gmail.png' title={{{gmail}}} >
+    </a>
+  {{/gmail}}
+  <br><br>
+
   {{#url}}
     <h3 class="url">
       <a href="{{{url}}}">{{{url}}}</a>
     </h3>
   {{/url}}
+  
   {{#email}}
     <h3 class="email">
       <a href="mailto:{{{email}}}">{{{email}}}</a>
