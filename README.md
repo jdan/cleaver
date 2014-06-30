@@ -13,6 +13,7 @@ Cleaver turns this:
     author:
       name: Jordan Scales
       twitter: jdan
+      weibo: lufengd3
       url: http://jordanscales.com
     output: basic.html
     controls: true
