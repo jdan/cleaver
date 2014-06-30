@@ -34,7 +34,7 @@ These fields include:
 
 * **name**: Your full name
 * **url**: A url to your website
-* **twitter**: Your twitter handle
+* **twitter**: Your twitter handle (weibo also supported)
 * **email**: Your email address
 
 Please note that some characters must be escaped. For example, "@username"
