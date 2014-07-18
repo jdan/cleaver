@@ -24,7 +24,7 @@
     "q": "0.9.6",
     "js-yaml": "2.1.0",
     "highlight.js": "~7.3.0",
-    "marked": "~0.2.9",
+    "marked": "~0.3.2",
     "commander": "~2.1.0",
     "debug": "~0.8.0"
   },

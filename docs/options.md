@@ -3,7 +3,7 @@
 Quick links: [title](#title), [author](#author), [theme](#theme),
 [style](#style), [output](#output), [controls](#controls),
 [progress](#progress), [encoding](#encoding), [template](#template),
-[layout](#layout)
+[layout](#layout), [base64](#base64)
 
 Cleaver supports several basic options for adding a bit of customization to
 your presentations. These options are placed at the top of your document, in
@@ -100,3 +100,17 @@ URL or absolute/relative path to a mustache template used to render the entire
 slideshow. See
 [layout.mustache](https://github.com/jdan/cleaver/blob/master/templates/layout.mustache)
 for inspiration.
+
+### base64
+
+Allow the inclusion of resources as data uri, base64 encoded
+
+For the moment, the only asset supported are local images (i.e. images present on the machine where cleaver is run, with a path relative to the md file) .
+
+This is achieved with the following field:
+* localImages (default to false)
+
+The option is therefore:
+
+    base64:
+      localImages: true
