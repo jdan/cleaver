@@ -111,5 +111,6 @@ This is achieved with the following field:
 * localImages (default to false)
 
 The option is therefore:
-    base64
-        localImages: true
+
+    base64:
+      localImages: true
