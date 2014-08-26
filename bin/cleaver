@@ -69,6 +69,6 @@ if (!program.args.length) {
   }
 
   /* Load cleaver with the new ENV for debugging */
-  Cleaver = require(path.join(__dirname,'../lib/cleaver.js'));
+  Cleaver = require('../');
   createAndSave(program.args[0]);
 }
