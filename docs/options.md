@@ -19,7 +19,7 @@ YAML format. A typical option setup resembles the following.
 
 ### title
 
-The title of the slidshow.
+The title of the rendered document.
 
 **Default**: Untitled
 
@@ -90,13 +90,13 @@ Content encoding to use on the rendered document.
 
 ### template
 
-URL or absolute/relative path to a mustache template used to render the slides.
+URL or path to a mustache template used to render the slides.
 See [default.mustache](https://github.com/jdan/cleaver/blob/master/templates/default.mustache)
 for inspiration.
 
 ### layout
 
-URL or absolute/relative path to a mustache template used to render the entire
+URL or path to a mustache template used to render the entire
 slideshow. See
 [layout.mustache](https://github.com/jdan/cleaver/blob/master/templates/layout.mustache)
 for inspiration.

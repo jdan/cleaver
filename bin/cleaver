@@ -9,14 +9,14 @@ var Cleaver;
  * Helper function to use the cleaver API to create and save a new
  * presentation
  */
-function createAndSave(file) {
+function createAndSave(file, options) {
   fs.readFile(file, 'utf-8', function (err, contents) {
-    var presentation = new Cleaver(contents, path.resolve(path.dirname(file)));
+    var presentation = new Cleaver(contents, options, path.resolve(path.dirname(file)));
     var promise = presentation.run();
 
     promise
       .then(function (product) {
-        var outputFile = presentation.metadata.output || path.basename(file, '.md') + '-cleaver.html';
+        var outputFile = presentation.options.output || path.basename(file, '.md') + '-cleaver.html';
         fs.writeFile(outputFile, product);
       })
       .fail(function (err) {
@@ -38,7 +38,7 @@ program
   .description('Watch for changes on markdown file')
   .action(function () {
     var file = program.args[0];
-    createAndSave(file);
+    createAndSave(file, parsedOpts);
 
     console.log('Watching for changes on ' + file + '. Ctrl-C to abort.');
     fs.watchFile(file, { persistent: true, interval: 100 }, function () {
@@ -48,11 +48,43 @@ program
   });
 
 program
+  .option('--title <title>', 'The title of the rendered document ' +
+          '(default: Untitled')
+  // TODO: author options
+  .option('--theme <theme>', 'An theme to load')
+  .option('--style <css>', 'A particular stylesheet to load')
+  .option('--output <filename>', 'The filename of the rendered document ' +
+          '(default: [INPUT]-cleaver.html)')
+  .option('--controls', 'Whether or not to include simple navigation ' +
+          'controls in your presentation (default: true)')
+  .option('--progress', 'Option to display a small progress bar at the top ' +
+          'of your presentation (default: true)')
+  .option('--encoding <encoding>', 'Content encoding used for the rendered ' +
+          'document (default: utf-8)')
+  .option('--template <path>', 'URL or path to a mustache template used for ' +
+          'individual slides')
+  .option('--layout <path>', 'URL or path to a mustache template used to ' +
+          'render the entire presentation')
   .option('--debug', 'Enable debug output');
 
 program.parse(process.argv);
 
+// TODO: a lot of code duplication here
+var parsedOpts = {
+  title: program.title,
+  theme: program.theme,
+  style: program.style,
+  output: program.output,
+  controls: program.controls,
+  progress: program.progress,
+  encoding: program.encoding,
+  template: program.template,
+  layout: program.layout,
+  debug: program.debug
+};
+
 if (!program.args.length) {
+  // TODO: custom help screen
   program.help();
 } else {
   /**
@@ -71,5 +103,5 @@ if (!program.args.length) {
   // Load cleaver with the new ENV for debugging
   // TODO: This seems a little janky, maybe handle this in lib/
   Cleaver = require('../');
-  createAndSave(program.args[0]);
+  createAndSave(program.args[0], parsedOpts);
 }
