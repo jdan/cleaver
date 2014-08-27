@@ -3,6 +3,7 @@
 var path = require('path');
 var fs = require('fs');
 var program = require('commander');
+var pluck = require('../lib/pluck');
 var Cleaver;
 
 /**
@@ -70,19 +71,9 @@ program
 
 program.parse(process.argv);
 
-// TODO: a lot of code duplication here
-var parsedOpts = {
-  title: program.title,
-  theme: program.theme,
-  style: program.style,
-  output: program.output,
-  controls: program.controls,
-  progress: program.progress,
-  encoding: program.encoding,
-  template: program.template,
-  layout: program.layout,
-  debug: program.debug
-};
+var parsedOpts = pluck(program, [
+    'title', 'theme', 'style', 'output', 'controls', 'progress', 'encoding',
+    'template', 'layout', 'debug']);
 
 if (!program.args.length) {
   // TODO: custom help screen
