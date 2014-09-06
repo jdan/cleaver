@@ -13,7 +13,10 @@ var Cleaver = require('../');
 function createAndSave(files, options) {
   files.forEach(function (file) {
     fs.readFile(file, 'utf-8', function (err, contents) {
-      if (err) throw err;
+      if (err) {
+        throw err;
+      }
+
       var presentation = new Cleaver(contents, options, path.resolve(path.dirname(file)));
 
       presentation.run()
