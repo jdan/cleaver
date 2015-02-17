@@ -1,7 +1,7 @@
 {
   "name": "cleaver",
   "preferGlobal": true,
-  "version": "0.7.2",
+  "version": "0.7.3",
   "author": "Jordan Scales <scalesjordan@gmail.com>",
   "description": "30-second slideshows for hackers",
   "keywords": [
@@ -19,13 +19,13 @@
     "url": "https://github.com/jdan/cleaver.git"
   },
   "dependencies": {
-    "mustache": "0.7.0",
-    "q": "0.9.6",
-    "js-yaml": "2.1.0",
-    "highlight.js": "~7.3.0",
-    "marked": "~0.2.9",
     "commander": "~2.1.0",
-    "debug": "~0.8.0"
+    "debug": "^2.1.1",
+    "highlight.js": "~7.3.0",
+    "js-yaml": "2.1.0",
+    "marked": "~0.2.9",
+    "mustache": "0.7.0",
+    "q": "0.9.6"
   },
   "devDependencies": {
     "jshint": "~2.3.0"

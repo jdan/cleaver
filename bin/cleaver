@@ -6,6 +6,7 @@ var program = require('commander');
 var pluck = require('../lib/pluck');
 var Cleaver = require('../');
 
+
 /**
  * Helper function to use the cleaver API to create and save a new
  * presentation
@@ -35,6 +36,18 @@ function createAndSave(files, options) {
   });
 }
 
+
+/**
+ * Exposes the options sent to the program as an object
+ */
+function getOptions() {
+  return pluck(program, [
+    'title', 'theme', 'style', 'output', 'controls', 'progress', 'encoding',
+    'template', 'layout', 'debug'
+  ]);
+}
+
+
 program
   .version(require('../package.json').version)
   .usage('[command] [file]');
@@ -53,12 +66,12 @@ program
   .description('Watch for changes on markdown file')
   .action(function () {
     var file = program.args[0];
-    createAndSave([file], parsedOpts);
+    createAndSave([file], getOptions());
 
     console.log('Watching for changes on ' + file + '. Ctrl-C to abort.');
     fs.watchFile(file, { persistent: true, interval: 100 }, function () {
       console.log('Rebuilding: ' + new Date());
-      createAndSave([file], parsedOpts);
+      createAndSave([file], getOptions());
     });
   });
 
@@ -81,23 +94,10 @@ program
       return typeof arg === 'string';
     });
 
-    /**
-     * Enable debugging
-     *
-     * For finer-tuned debugging you can ignore the --debug flag and
-     * instead use the DEBUG environment variable that the `debug` module
-     * reads automatically.
-     *
-     * $ DEBUG=[cleaver,helper] cleaver path/to/presentation.md
-     */
-    if (program.debug) {
-      process.env.DEBUG = '*';
-    }
-
     // Reload cleaver with the new ENV for debugging
     // TODO: This seems a little janky, maybe handle this in lib/
     Cleaver = require('../');
-    createAndSave(files, parsedOpts);
+    createAndSave(files, getOptions());
   });
 
 program
@@ -121,10 +121,6 @@ program
   .option('--debug', 'Enable debug output');
 
 program.parse(process.argv);
-
-var parsedOpts = pluck(program, [
-    'title', 'theme', 'style', 'output', 'controls', 'progress', 'encoding',
-    'template', 'layout', 'debug']);
 
 if (!program.args.length) {
   // TODO: custom help screen
