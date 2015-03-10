@@ -75,6 +75,21 @@ program
     });
   });
 
+/**
+ * Command to create boilerplate cleaver presentation
+ *
+ * Usage:
+ *     cleaver init --some-options
+ */
+
+program
+  .command('init')
+  .description('Boilerplate your presentation')
+  .option('-y', 'Skip prompt')
+  .action(function(){
+    require('../lib/wizard').init(getOptions(), program.args[0].Y);
+  });
+
 
 /**
  * The default command, running cleaver on one or more files.
