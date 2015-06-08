@@ -1,0 +1,15 @@
+{{#bkgImages}}
+  #{{slideId}} {
+    background: url({{{bkgImage}}});
+  }
+{{/bkgImages}}
+
+{{#bkgImages}}
+  #{{slideId}},
+{{/bkgImages}}
+#dummyIdToAvoidTrailingComma {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
