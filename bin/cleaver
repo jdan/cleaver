@@ -66,13 +66,23 @@ program
   .description('Watch for changes on markdown file')
   .action(function () {
     var file = program.args[0];
-    createAndSave([file], getOptions());
-
+    var options = getOptions();
+    createAndSave([file], options);
+    
     console.log('Watching for changes on ' + file + '. Ctrl-C to abort.');
     fs.watchFile(file, { persistent: true, interval: 100 }, function () {
       console.log('Rebuilding: ' + new Date());
-      createAndSave([file], getOptions());
+      createAndSave([file], options);
     });
+    
+    // also watch on stylesheet if included via command prompt
+    if ('style' in options) {
+      console.log('Also watching for changes on ' + options.style);
+      fs.watchFile(options.style, { persistent: true,  interval: 100 }, function () {
+        console.log('Rebuilding: ' + new Date());
+        createAndSave([file], options);
+      });
+    }
   });
 
 
