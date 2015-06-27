@@ -78,6 +78,7 @@ program
     // also watch on stylesheet if included via command prompt
     if ('style' in options) {
       fs.watchFile(options.style, { persistent: true,  interval: 100 }, function () {
+        console.log('Also watching for changes on ' + options.style);
         console.log('Rebuilding: ' + new Date());
         createAndSave([file], options);
       });
