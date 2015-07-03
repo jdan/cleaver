@@ -156,6 +156,14 @@ will be loaded into your slideshow.
 
 ![reveal-cleaver-theme](https://i.cloudup.com/wlzisDLe32-1200x1200.png)
 
+* [sjaakvandenberg/cleaver-dark](https://github.com/sjaakvandenberg/cleaver-dark)
+
+![cleaver-dark](https://raw.githubusercontent.com/sjaakvandenberg/cleaver-dark/master/cleaver-dark.png)
+
+* [sjaakvandenberg/cleaver-light](https://github.com/sjaakvandenberg/cleaver-light)
+
+![cleaver-light](https://raw.githubusercontent.com/sjaakvandenberg/cleaver-light/master/cleaver-light.png)
+
 ### Specifying Themes
 
 Themes may be specified by one of the following options:
