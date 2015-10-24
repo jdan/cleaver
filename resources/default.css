@@ -23,6 +23,15 @@ body {
   line-height: 1.375;
 }
 
+.page-number {
+  position: absolute;
+  padding: 30px;
+
+  font-weight: 200;
+  font-size: 200%;
+  line-height: 1.375;
+}
+
 .controls {
   position: absolute;
   bottom: 20px;
