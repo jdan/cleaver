@@ -5,6 +5,16 @@ body {
   font-size: 100%;
 }
 
+*:fullscreen {
+    background-color: #f7f7f7;
+}
+*:-webkit-full-screen {
+    background-color: #f7f7f7;
+}
+*:-moz-full-screen {
+    background-color: #f7f7f7;
+}
+
 .slide {
   position: absolute;
   top: 0; bottom: 0;
