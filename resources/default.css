@@ -1,24 +1,14 @@
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #222;
-  background-color: #f7f7f7;
   font-size: 100%;
-}
-
-*:fullscreen {
-    background-color: #f7f7f7;
-}
-*:-webkit-full-screen {
-    background-color: #f7f7f7;
-}
-*:-moz-full-screen {
-    background-color: #f7f7f7;
 }
 
 .slide {
   position: absolute;
   top: 0; bottom: 0;
   left: 0; right: 0;
+  background-color: #f7f7f7;
 }
 
 .slide-content {
