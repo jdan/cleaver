@@ -24,8 +24,11 @@
     "highlight.js": "~9.0.0",
     "js-yaml": "2.1.0",
     "marked": "~0.2.9",
+    "merge": "^1.2.0",
     "mustache": "0.7.0",
-    "q": "0.9.6"
+    "prompt": "~0.2.14",
+    "q": "0.9.6",
+    "underscore.string": "^3.0.3"
   },
   "devDependencies": {
     "jshint": "~2.3.0"
