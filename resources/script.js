@@ -33,7 +33,12 @@ function navigate(n) {
  * Updates the current URL to include a hashtag of the current page number.
  */
 function updateURL() {
-  window.history.replaceState({} , null, '#' + currentPosition());
+  try {
+    window.history.replaceState({} , null, '#' + currentPosition());
+  }
+  catch (e) {
+    window.location.hash = currentPosition();
+  }
 }
 
 
