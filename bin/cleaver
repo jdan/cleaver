@@ -3,6 +3,7 @@
 var path = require('path');
 var fs = require('fs');
 var program = require('commander');
+var tinylr = require('tiny-lr');
 var pluck = require('../lib/pluck');
 var Cleaver = require('../');
 
@@ -69,10 +70,17 @@ program
     var options = getOptions();
     createAndSave([file], options);
 
+    var port = 35729;
+    tinylr().listen(port, function() {
+      console.log('Live reload listening on %s', port);
+    });
+
     console.log('Watching for changes on ' + file + '. Ctrl-C to abort.');
     fs.watchFile(file, { persistent: true, interval: 100 }, function () {
       console.log('Rebuilding: ' + new Date());
       createAndSave([file], options);
+      console.log('Notifying live reload.');
+      tinylr.changed(file);
     });
 
     // Also watch on stylesheet if included via command prompt
@@ -81,6 +89,8 @@ program
       fs.watchFile(options.style, { persistent: true,  interval: 100 }, function () {
         console.log('Rebuilding: ' + new Date());
         createAndSave([file], options);
+        console.log('Notifying live reload.');
+        tinylr.changed(file);
       });
     }
   });
