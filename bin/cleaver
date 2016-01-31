@@ -13,10 +13,6 @@ var Cleaver = require('../');
  * presentation
  */
 function createAndSave(files, options, done) {
-  if (!done) {
-    done = function(){};
-  }
-
   files.forEach(function (file) {
     fs.readFile(file, 'utf-8', function (err, contents) {
       if (err) {
@@ -28,8 +24,7 @@ function createAndSave(files, options, done) {
       presentation.run()
         .then(function (product) {
           var outputFile = presentation.options.output || path.basename(file, '.md') + '-cleaver.html';
-          fs.writeFile(outputFile, product);
-          done();
+          fs.writeFile(outputFile, product, done);
         })
         .fail(function (err) {
           process.stderr.write('!! ' + err.message + '\n');
@@ -84,9 +79,9 @@ program
     console.log('Watching for changes on ' + file + '. Ctrl-C to abort.');
     fs.watchFile(file, { persistent: true, interval: 100 }, function () {
       console.log('Rebuilding: ' + new Date());
-      createAndSave([file], options);
-      console.log('Notifying live reload.');
-      tinylr.changed(file);
+      createAndSave([file], options, function() {
+        tinylr.changed(file);
+      });
     });
 
     // Also watch on stylesheet if included via command prompt
@@ -94,9 +89,9 @@ program
       console.log('Also watching for changes on ' + options.style);
       fs.watchFile(options.style, { persistent: true,  interval: 100 }, function () {
         console.log('Rebuilding: ' + new Date());
-        createAndSave([file], options);
-        console.log('Notifying live reload.');
-        tinylr.changed(file);
+        createAndSave([file], options, function() {
+          tinylr.changed(file);
+        });
       });
     }
 

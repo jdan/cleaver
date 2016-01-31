@@ -35,8 +35,7 @@ function navigate(n) {
 function updateURL() {
   try {
     window.history.replaceState({} , null, '#' + currentPosition());
-  }
-  catch (e) {
+  } catch (e) {
     window.location.hash = currentPosition();
   }
 }
