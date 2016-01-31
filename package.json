@@ -25,7 +25,8 @@
     "js-yaml": "2.1.0",
     "marked": "~0.2.9",
     "mustache": "0.7.0",
-    "q": "0.9.6"
+    "q": "0.9.6",
+    "tiny-lr": "^0.2.1"
   },
   "devDependencies": {
     "jshint": "~2.3.0"

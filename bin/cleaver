@@ -3,6 +3,7 @@
 var path = require('path');
 var fs = require('fs');
 var program = require('commander');
+var tinylr = require('tiny-lr');
 var pluck = require('../lib/pluck');
 var Cleaver = require('../');
 
@@ -11,7 +12,7 @@ var Cleaver = require('../');
  * Helper function to use the cleaver API to create and save a new
  * presentation
  */
-function createAndSave(files, options) {
+function createAndSave(files, options, done) {
   files.forEach(function (file) {
     fs.readFile(file, 'utf-8', function (err, contents) {
       if (err) {
@@ -23,7 +24,7 @@ function createAndSave(files, options) {
       presentation.run()
         .then(function (product) {
           var outputFile = presentation.options.output || path.basename(file, '.md') + '-cleaver.html';
-          fs.writeFile(outputFile, product);
+          fs.writeFile(outputFile, product, done);
         })
         .fail(function (err) {
           process.stderr.write('!! ' + err.message + '\n');
@@ -67,12 +68,20 @@ program
   .action(function () {
     var file = program.args[0];
     var options = getOptions();
+    options.watch = true;
     createAndSave([file], options);
+
+    var port = 35729;
+    tinylr().listen(port, function() {
+      console.log('Live reload listening on %s', port);
+    });
 
     console.log('Watching for changes on ' + file + '. Ctrl-C to abort.');
     fs.watchFile(file, { persistent: true, interval: 100 }, function () {
       console.log('Rebuilding: ' + new Date());
-      createAndSave([file], options);
+      createAndSave([file], options, function() {
+        tinylr.changed(file);
+      });
     });
 
     // Also watch on stylesheet if included via command prompt
@@ -80,9 +89,19 @@ program
       console.log('Also watching for changes on ' + options.style);
       fs.watchFile(options.style, { persistent: true,  interval: 100 }, function () {
         console.log('Rebuilding: ' + new Date());
-        createAndSave([file], options);
+        createAndSave([file], options, function() {
+          tinylr.changed(file);
+        });
       });
     }
+
+    process.on('SIGINT', function () {
+      console.log('\nRebuilding without watch mode: ' + new Date());
+      options.watch = false;
+      createAndSave([file], options, function() {
+        process.exit();
+      });
+    });
   });
 
 
