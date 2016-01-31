@@ -68,6 +68,7 @@ program
   .action(function () {
     var file = program.args[0];
     var options = getOptions();
+    options.watch = true;
     createAndSave([file], options);
 
     var port = 35729;
