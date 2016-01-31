@@ -12,7 +12,11 @@ var Cleaver = require('../');
  * Helper function to use the cleaver API to create and save a new
  * presentation
  */
-function createAndSave(files, options) {
+function createAndSave(files, options, done) {
+  if (!done) {
+    done = function(){};
+  }
+
   files.forEach(function (file) {
     fs.readFile(file, 'utf-8', function (err, contents) {
       if (err) {
@@ -25,6 +29,7 @@ function createAndSave(files, options) {
         .then(function (product) {
           var outputFile = presentation.options.output || path.basename(file, '.md') + '-cleaver.html';
           fs.writeFile(outputFile, product);
+          done();
         })
         .fail(function (err) {
           process.stderr.write('!! ' + err.message + '\n');
@@ -94,6 +99,14 @@ program
         tinylr.changed(file);
       });
     }
+
+    process.on('SIGINT', function () {
+      console.log('\nRebuilding without watch mode: ' + new Date());
+      options.watch = false;
+      createAndSave([file], options, function() {
+        process.exit();
+      });
+    });
   });
 
 
