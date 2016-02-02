@@ -1,7 +1,7 @@
 {
   "name": "cleaver",
   "preferGlobal": true,
-  "version": "0.8.1",
+  "version": "0.8.2",
   "author": "Jordan Scales <scalesjordan@gmail.com>",
   "description": "30-second slideshows for hackers",
   "keywords": [
