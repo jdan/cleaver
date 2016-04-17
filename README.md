@@ -50,7 +50,7 @@ Get it [on NPM](https://npmjs.org/package/cleaver):
 
 ```sh
 npm install -g cleaver
-# To update: npm upgrade -g cleaver
+# To update: npm update -g cleaver
 ```
 
 And run it like so:
