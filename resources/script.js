@@ -13,6 +13,9 @@ function currentPosition() {
 function navigate(n) {
   var position = currentPosition();
   var numSlides = document.getElementsByClassName('slide').length;
+  if (n < 0 && position <= 1) {
+    return;
+  }
 
   /* Positions are 1-indexed, so we need to add and subtract 1 */
   var nextPosition = (position - 1 + n) % numSlides + 1;
