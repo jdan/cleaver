@@ -16,6 +16,9 @@ function navigate(n) {
   if (n < 0 && position <= 1) {
     return;
   }
+  if (n > 0 && position >= numSlides) {
+    return;
+  }
 
   /* Positions are 1-indexed, so we need to add and subtract 1 */
   var nextPosition = (position - 1 + n) % numSlides + 1;
