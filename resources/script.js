@@ -25,9 +25,9 @@ function navigate(n) {
   var position = currentPosition();
   var numSlides = document.getElementsByClassName('slide').length;
   var nextPosition;
-  if (n == FIRST_SLIDE) {
+  if (n === FIRST_SLIDE) {
       nextPosition = 1;
-  } else if (n == LAST_SLIDE) {
+  } else if (n === LAST_SLIDE) {
       nextPosition = numSlides;
   } else {
       if (n < 0 && position <= 1) {
@@ -154,9 +154,9 @@ document.addEventListener('DOMContentLoaded', function () {
       navigate(-1);
     } else if (kc === 38 || kc === 39 || kc === 32 || kc === 75 || kc === 76 || kc === 34) {
       navigate(1);
-    } else if (kc == 36) {
+    } else if (kc === 36) {
       navigate(FIRST_SLIDE);
-    } else if (kc == 35) {
+    } else if (kc === 35) {
       navigate(LAST_SLIDE);
     } else if (kc === 13) {
       toggleFullScreen();
