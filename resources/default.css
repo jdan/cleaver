@@ -132,6 +132,7 @@ pre {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: 3px;
+  z-index: 1;
 }
 
 .progress-bar {
