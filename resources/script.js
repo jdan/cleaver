@@ -18,6 +18,12 @@ var FIRST_SLIDE = -9999999;
 var LAST_SLIDE = 9999999;
 
 /**
+ * Whether to allow looping from the last back to the first or backwards from
+ * the first to the last.
+ */
+var ALLOW_LOOPING = true;
+
+/**
  * Navigates forward n pages
  * If n is negative, we will navigate in reverse
  */
