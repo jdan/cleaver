@@ -36,20 +36,20 @@ function navigate(n) {
   } else if (n === LAST_SLIDE) {
       nextPosition = numSlides;
   } else {
-      if (! ALLOW_LOOPING) {
-          if (n < 0 && position <= 1) {
-            return;
-          }
-          if (n > 0 && position >= numSlides) {
-            return;
-          }
+    if (! ALLOW_LOOPING) {
+      if (n < 0 && position <= 1) {
+        return;
       }
+      if (n > 0 && position >= numSlides) {
+        return;
+      }
+    }
 
-      /* Positions are 1-indexed, so we need to add and subtract 1 */
-      nextPosition = (position - 1 + n) % numSlides + 1;
+    /* Positions are 1-indexed, so we need to add and subtract 1 */
+    nextPosition = (position - 1 + n) % numSlides + 1;
 
-      /* Normalize nextPosition in-case of a negative modulo result */
-      nextPosition = (nextPosition - 1 + numSlides) % numSlides + 1;
+    /* Normalize nextPosition in-case of a negative modulo result */
+    nextPosition = (nextPosition - 1 + numSlides) % numSlides + 1;
   }
 
   document.getElementById('slide-' + position).classList.add('hidden');
