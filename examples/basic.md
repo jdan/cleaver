@@ -4,7 +4,6 @@ author:
   twitter: jdan
   url: http://jordanscales.com
 output: basic.html
-theme: C://Users//Nuno Silva//cleaver//examples//cleaver-retro-master
 
 --
 
