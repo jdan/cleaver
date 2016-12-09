@@ -84,6 +84,22 @@ program
       });
     });
 
+    // Watch theme files on local repository if included via command prompt
+    if(options.theme) {
+      if(fs.existsSync(options.theme)) {
+        var files = fs.readdirSync(options.theme);
+        files.forEach (function(file) {
+          console.log('Also watching for changes on ' + file);
+          fs.watchFile(file, { persistent: true, interval: 100 }, function () {
+            console.log('Rebuilding: ' + new Date());
+            createAndSave([file], options, function() {
+              tinylr.changed(file);
+            });
+          });
+        }); 
+      }
+    }
+
     // Also watch on stylesheet if included via command prompt
     if (options.style) {
       console.log('Also watching for changes on ' + options.style);
