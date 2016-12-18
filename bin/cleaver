@@ -101,7 +101,7 @@ program
           }
         });
       }
-    } 
+    }
 
     // Also watch on stylesheet if included via command prompt
     if (options.style) {
