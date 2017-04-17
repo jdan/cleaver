@@ -275,6 +275,16 @@ To navigate the slideshow:
 
 The toggle fullscreen mode, press the **ENTER** key.
 
+## Upgrade clever to get latest Relase
+
+`npm update -g cleaver`
+
+or (on debian) :
+
+`sudo npm update -g cleaver`
+
+... and you're done.
+
 ## Contributing
 
 * Fork it
