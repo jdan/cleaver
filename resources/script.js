@@ -5,6 +5,17 @@ function currentPosition() {
   return parseInt(document.querySelector('.slide:not(.hidden)').id.slice(6));
 }
 
+/**
+ * If passed to navigate, will move to the first slide, independent of the
+ * current location, rather than a relative amount.
+ */
+var FIRST_SLIDE = -9999999;
+
+/**
+ * If passed to navigate, will move to the last slide, independent of the
+ * current location, rather than a relative amount.
+ */
+var LAST_SLIDE = 9999999;
 
 /**
  * Navigates forward n pages
@@ -13,12 +24,25 @@ function currentPosition() {
 function navigate(n) {
   var position = currentPosition();
   var numSlides = document.getElementsByClassName('slide').length;
+  var nextPosition;
+  if (n === FIRST_SLIDE) {
+      nextPosition = 1;
+  } else if (n === LAST_SLIDE) {
+      nextPosition = numSlides;
+  } else {
+      if (n < 0 && position <= 1) {
+        return;
+      }
+      if (n > 0 && position >= numSlides) {
+        return;
+      }
 
-  /* Positions are 1-indexed, so we need to add and subtract 1 */
-  var nextPosition = (position - 1 + n) % numSlides + 1;
+      /* Positions are 1-indexed, so we need to add and subtract 1 */
+      nextPosition = (position - 1 + n) % numSlides + 1;
 
-  /* Normalize nextPosition in-case of a negative modulo result */
-  nextPosition = (nextPosition - 1 + numSlides) % numSlides + 1;
+      /* Normalize nextPosition in-case of a negative modulo result */
+      nextPosition = (nextPosition - 1 + numSlides) % numSlides + 1;
+  }
 
   document.getElementById('slide-' + position).classList.add('hidden');
   document.getElementById('slide-' + nextPosition).classList.remove('hidden');
@@ -130,6 +154,10 @@ document.addEventListener('DOMContentLoaded', function () {
       navigate(-1);
     } else if (kc === 38 || kc === 39 || kc === 32 || kc === 75 || kc === 76 || kc === 34) {
       navigate(1);
+    } else if (kc === 36) {
+      navigate(FIRST_SLIDE);
+    } else if (kc === 35) {
+      navigate(LAST_SLIDE);
     } else if (kc === 13) {
       toggleFullScreen();
     }
