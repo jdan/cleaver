@@ -69,7 +69,9 @@ program
     var file = program.args[0];
     var options = getOptions();
     options.watch = true;
-    createAndSave([file], options);
+    createAndSave([file], options, function() {
+
+    });
 
     var port = 35729;
     tinylr().listen(port, function() {
@@ -126,7 +128,7 @@ program
     // Reload cleaver with the new ENV for debugging
     // TODO: This seems a little janky, maybe handle this in lib/
     Cleaver = require('../');
-    createAndSave(files, getOptions());
+    createAndSave(files, getOptions(), function(){});
   });
 
 program
