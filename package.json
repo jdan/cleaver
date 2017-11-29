@@ -14,17 +14,17 @@
     "url": "https://github.com/jdan/cleaver.git"
   },
   "dependencies": {
-    "commander": "~2.1.0",
-    "debug": "^2.1.1",
-    "highlight.js": "~9.0.0",
-    "js-yaml": "2.1.0",
+    "commander": "~2.12.2",
+    "debug": "^3.1.0",
+    "highlight.js": "~9.12.0",
+    "js-yaml": "3.10.0",
     "marked": "^0.3.7",
     "mustache": "^2.3.0",
-    "q": "0.9.6",
-    "tiny-lr": "^0.2.1"
+    "q": "1.5.1",
+    "tiny-lr": "^1.0.5"
   },
   "devDependencies": {
-    "jshint": "~2.3.0"
+    "jshint": "~2.9.5"
   },
   "scripts": {
     "test": "./node_modules/.bin/jshint lib/ resources/script.js bin/cleaver"
