@@ -136,6 +136,7 @@ theme containing each of these assets. More specifically, a theme may contain:
 * template.mustache - a template used to render the slides in your presentation
 * layout.mustache - a template used to render the entire document of your
 presentation
+* author.mustache – a template used to render final slide with author details in your presentation
 * script.js - javascript to be included in your slideshow
 
 A theme does not need to contain all of these files, only the ones present
