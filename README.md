@@ -272,6 +272,8 @@ To navigate the slideshow:
 
 * **forward**: K, L, UP, RIGHT, PgDn, and Space
 * **reverse**: H, J, LEFT, DOWN, PgUp, and Backspace
+* **first slide**: Home
+* **last slide**: End
 
 The toggle fullscreen mode, press the **ENTER** key.
 

@@ -82,6 +82,13 @@ Displays a small progress bar at the top of your document.
 
 **Default**: true
 
+### loop
+
+Allows looping from the last slide to the first, or backwards from the first to
+the last.
+
+**Default**: true
+
 ### encoding
 
 Content encoding to use on the rendered document.
