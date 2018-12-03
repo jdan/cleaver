@@ -7,6 +7,16 @@ function currentPosition() {
 
 
 /**
+ * Register event handlers for slide navigation
+ */
+var onNavigateHandlers = [];
+function onNavigate(fn) {
+  if (onNavigateHandlers.indexOf(fn) < 0) {
+    onNavigateHandlers.push(fn);
+  }
+}
+
+/**
  * Navigates forward n pages
  * If n is negative, we will navigate in reverse
  */
@@ -23,9 +33,9 @@ function navigate(n) {
   document.getElementById('slide-' + position).classList.add('hidden');
   document.getElementById('slide-' + nextPosition).classList.remove('hidden');
 
-  updateProgress();
-  updateURL();
-  updateTabIndex();
+  for (var i = 0; i < onNavigateHandlers.length; i++) {
+    onNavigateHandlers[i](nextPosition, numSlides);
+  }
 }
 
 
@@ -111,6 +121,11 @@ function toggleFullScreen() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  onNavigate(updateProgress);
+  onNavigate(updateURL);
+  onNavigate(updateTabIndex);
+
   // Update the tabindex to prevent weird slide transitioning
   updateTabIndex();
 
