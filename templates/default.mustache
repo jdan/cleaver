@@ -1,8 +1,8 @@
-{{#progress}}
+{{#options.progress}}
   <div class="progress">
     <div class="progress-bar"></div>
   </div>
-{{/progress}}
+{{/options.progress}}
 
 {{#slides}}
   <div class="slide{{#hidden}} hidden{{/hidden}}{{#classList}} {{classList}}{{/classList}}" id="slide-{{id}}">
@@ -10,9 +10,9 @@
   </div>
 {{/slides}}
 
-{{#controls}}
+{{#options.controls}}
   <div class="controls">
     <div class="arrow prev"></div>
     <div class="arrow next"></div>
   </div>
-{{/controls}}
+{{/options.controls}}
