@@ -4,7 +4,12 @@
   "version": "0.8.6",
   "author": "Jordan Scales <scalesjordan@gmail.com>",
   "description": "30-second slideshows for hackers",
-  "keywords": ["markdown", "static", "slideshow", "presentation"],
+  "keywords": [
+    "markdown",
+    "static",
+    "slideshow",
+    "presentation"
+  ],
   "bin": {
     "cleaver": "./bin/cleaver"
   },
@@ -18,7 +23,8 @@
     "debug": "^3.1.0",
     "highlight.js": "~9.12.0",
     "js-yaml": "3.10.0",
-    "marked": "^0.3.7",
+    "markdown-it": "^12.2.0",
+    "markdown-it-attrs": "^4.1.0",
     "mustache": "^2.3.0",
     "q": "1.5.1",
     "tiny-lr": "^1.0.5"
